@@ -1,0 +1,11 @@
+URL Repository GitHub:
+ISI_DENGAN_URL_REPOSITORY_GITHUB_ANDA
+
+Branch utama:
+main
+
+Branch pengembangan:
+Web-Bootstrap
+
+Nama proyek:
+Bebek Gongso Kinanthi - Website Portofolio Bootstrap
