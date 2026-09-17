@@ -9,78 +9,66 @@
 // ======================================================
 
 const firebaseConfig = {
-   appId: "ISI_APP_ID_FIREBASE_KAMU",
+    apiKey: "API_KEY_KAMU",
     authDomain: "bebek-gongso-kinanthi.firebaseapp.com",
     projectId: "bebek-gongso-kinanthi",
     storageBucket: "bebek-gongso-kinanthi.firebasestorage.app",
     messagingSenderId: "856389419837",
- appId: "ISI_APP_ID_FIREBASE_KAMU"
+    appId: "APP_ID_KAMU"
 };
-
 
 // ======================================================
 // 2. DATA MENU CADANGAN
-// Dipakai jika Firestore belum memiliki data menu
 // ======================================================
 
 let menuData = [
 
-    // ================= BEBEK =================
-
+    // BEBEK
     {
         name: "Bebek Goreng",
         price: "Rp27.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Kremes",
         price: "Rp30.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Gongso",
         price: "Rp30.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Lombok Ijo",
         price: "Rp32.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Bacem",
         price: "Rp32.000",
         category: "bebek"
     },
-
     {
         name: "Kepala Bebek Goreng",
         price: "Rp15.000",
         category: "bebek"
     },
-
     {
         name: "Kepala Bebek Gongso",
         price: "Rp18.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Utuh Goreng",
         price: "Rp130.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Utuh Kremes",
         price: "Rp135.000",
         category: "bebek"
     },
-
     {
         name: "Bebek Utuh Gongso",
         price: "Rp135.000",
@@ -88,50 +76,42 @@ let menuData = [
     },
 
 
-    // ================= AYAM =================
-
+    // AYAM
     {
         name: "Ayam Kampung Goreng",
         price: "Rp27.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Kampung Kremes",
         price: "Rp30.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Kampung Gongso",
         price: "Rp30.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Kampung Lombok Ijo",
         price: "Rp32.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Negri Goreng",
         price: "Rp16.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Negri Kremes",
         price: "Rp20.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Negri Gongso",
         price: "Rp22.000",
         category: "ayam"
     },
-
     {
         name: "Ayam Negri Lombok Ijo",
         price: "Rp22.000",
@@ -139,86 +119,72 @@ let menuData = [
     },
 
 
-    // ================= LAINNYA =================
-
+    // LAINNYA
     {
         name: "Pepes Nila",
         price: "Rp30.000",
         category: "lain"
     },
-
     {
         name: "Nila Telur Asin",
         price: "Rp35.000",
         category: "lain"
     },
-
     {
         name: "Nila Crispy",
         price: "Rp30.000",
         category: "lain"
     },
-
     {
         name: "Nila Goreng",
         price: "Rp16.000",
         category: "lain"
     },
-
     {
         name: "Lele Goreng",
         price: "Rp12.000",
         category: "lain"
     },
-
     {
         name: "Sup Iga",
         price: "Rp38.000",
         category: "lain"
     },
-
     {
         name: "Kangkung Tumis",
         price: "Rp10.000",
         category: "lain"
     },
-
     {
         name: "Tauge Tumis",
         price: "Rp10.000",
         category: "lain"
     },
-
     {
         name: "Terong Goreng",
         price: "Rp7.000",
         category: "lain"
     },
-
     {
         name: "Pete",
         price: "Rp7.000",
         category: "lain"
     },
-
     {
         name: "Kol Goreng",
         price: "Rp5.000",
         category: "lain"
     },
-
     {
         name: "Tahu Goreng",
         price: "Rp2.000",
         category: "lain"
     },
-
     {
         name: "Tempe Goreng",
         price: "Rp2.000",
         category: "lain"
     },
-
     {
         name: "Mix Tahu Tempe",
         price: "Rp4.000",
@@ -226,44 +192,37 @@ let menuData = [
     },
 
 
-    // ================= COFFEE =================
-
+    // COFFEE
     {
         name: "Kopi Susu Kinanthi",
         price: "Rp22.000",
         category: "coffee"
     },
-
     {
         name: "Lime Coffee",
         price: "Rp20.000",
         category: "coffee"
     },
-
     {
         name: "Kopi Susu Blueberry",
         price: "Rp20.000",
         category: "coffee"
     },
-
     {
         name: "Kopi Susu Caramel",
         price: "Rp20.000",
         category: "coffee"
     },
-
     {
         name: "Coffee Latte",
         price: "Rp18.000",
         category: "coffee"
     },
-
     {
         name: "Americano",
         price: "Rp15.000",
         category: "coffee"
     },
-
     {
         name: "Kopi Tubruk",
         price: "Rp15.000",
@@ -271,86 +230,72 @@ let menuData = [
     },
 
 
-    // ================= CAMILAN =================
-
+    // CAMILAN
     {
         name: "Mix Platter",
         price: "Rp25.000",
         category: "camilan"
     },
-
     {
         name: "Onion Ring",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Tahu Cabai Garam",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Tahu Tuna",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Pisang Lumer",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Kentang Goreng",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Singkong Goreng",
         price: "Rp12.000",
         category: "camilan"
     },
-
     {
         name: "Singkong Keju",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Mendoan",
         price: "Rp12.000",
         category: "camilan"
     },
-
     {
         name: "Jamur Tepung",
         price: "Rp12.000",
         category: "camilan"
     },
-
     {
         name: "Sosis Goreng",
         price: "Rp12.000",
         category: "camilan"
     },
-
     {
         name: "Cireng Goreng",
         price: "Rp10.000",
         category: "camilan"
     },
-
     {
         name: "Lumpia Goreng",
         price: "Rp15.000",
         category: "camilan"
     },
-
     {
         name: "Pastel Goreng",
         price: "Rp15.000",
@@ -358,98 +303,82 @@ let menuData = [
     },
 
 
-    // ================= MINUMAN =================
-
+    // MINUMAN
     {
         name: "Jahe Geprek",
         price: "Rp10.000",
         category: "minuman"
     },
-
     {
         name: "Jahe Serai",
         price: "Rp12.000",
         category: "minuman"
     },
-
     {
         name: "Jahe Susu",
         price: "Rp12.000",
         category: "minuman"
     },
-
     {
         name: "Hot Coklat",
         price: "Rp15.000",
         category: "minuman"
     },
-
     {
         name: "Hot Matcha",
         price: "Rp20.000",
         category: "minuman"
     },
-
     {
         name: "Soda Gembira",
         price: "Rp12.000",
         category: "minuman"
     },
-
     {
         name: "Lemon Squash",
         price: "Rp12.000",
         category: "minuman"
     },
-
     {
         name: "Jus Alpukat",
         price: "Rp14.000",
         category: "minuman"
     },
-
     {
         name: "Jus Mangga",
         price: "Rp14.000",
         category: "minuman"
     },
-
     {
         name: "Jus Jambu",
         price: "Rp12.000",
         category: "minuman"
     },
-
     {
         name: "Es Teh Manis",
         price: "Rp6.000",
         category: "minuman"
     },
-
     {
         name: "Es Jeruk",
         price: "Rp7.000",
         category: "minuman"
     },
-
     {
         name: "Milo Es",
         price: "Rp10.000",
         category: "minuman"
     },
-
     {
         name: "Milkshake Coklat",
         price: "Rp18.000",
         category: "minuman"
     },
-
     {
         name: "Milkshake Strawberry",
         price: "Rp18.000",
         category: "minuman"
     },
-
     {
         name: "Milkshake Vanila",
         price: "Rp18.000",
@@ -464,44 +393,39 @@ let menuData = [
 // ======================================================
 
 let sampleReviews = [
-
     {
         name: "Pelanggan",
         rating: 5,
         message: "Makanannya enak dan tempatnya nyaman."
     },
-
     {
         name: "Pelanggan",
         rating: 5,
         message: "Bebek gongsonya mantap. Cocok untuk makan bersama keluarga."
     }
-
 ];
 
 
 // ======================================================
-// 4. TAMPILKAN MENU
+// 4. RENDER MENU
 // ======================================================
 
 function renderMenus(category = "semua") {
 
     const container = document.getElementById("menuContainer");
 
-    if (!container) return;
+    if (!container) {
+        return;
+    }
 
     let filteredMenus;
 
     if (category === "semua") {
-
         filteredMenus = menuData;
-
     } else {
-
         filteredMenus = menuData.filter(
             menu => menu.category === category
         );
-
     }
 
     container.innerHTML = "";
@@ -519,15 +443,11 @@ function renderMenus(category = "semua") {
         return;
     }
 
-
     filteredMenus.forEach(menu => {
 
         container.innerHTML += `
-
             <div class="col-md-6 col-lg-4">
-
                 <div class="card h-100 border-0 shadow-sm menu-card">
-
                     <div class="card-body p-4">
 
                         <div class="d-flex justify-content-between align-items-start">
@@ -549,11 +469,8 @@ function renderMenus(category = "semua") {
                         </h5>
 
                     </div>
-
                 </div>
-
             </div>
-
         `;
 
     });
@@ -562,61 +479,50 @@ function renderMenus(category = "semua") {
 
 
 // ======================================================
-// 5. TAMPILKAN REVIEW
+// 5. RENDER REVIEW
 // ======================================================
 
 function renderReviews(reviews) {
 
     const container = document.getElementById("reviewContainer");
 
-    if (!container) return;
+    if (!container) {
+        return;
+    }
 
     container.innerHTML = "";
-
 
     if (!reviews || reviews.length === 0) {
 
         container.innerHTML = `
-
             <div class="col-12">
-
                 <div class="alert alert-info">
                     Belum ada review pelanggan.
                 </div>
-
             </div>
-
         `;
 
         return;
     }
 
-
     reviews.forEach(review => {
 
-        let rating = Number(review.rating) || 5;
+        const rating = Number(review.rating) || 5;
 
         let stars = "";
 
         for (let i = 1; i <= 5; i++) {
 
             if (i <= rating) {
-
                 stars += "★";
-
             } else {
-
                 stars += "☆";
-
             }
 
         }
 
-
         container.innerHTML += `
-
             <div class="col-md-6">
-
                 <div class="card border-0 shadow-sm h-100">
 
                     <div class="card-body p-4">
@@ -636,9 +542,7 @@ function renderReviews(reviews) {
                     </div>
 
                 </div>
-
             </div>
-
         `;
 
     });
@@ -647,12 +551,12 @@ function renderReviews(reviews) {
 
 
 // ======================================================
-// 6. FILTER MENU
+// 6. SAAT HALAMAN SELESAI DIMUAT
 // ======================================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    renderMenus();
+    renderMenus("semua");
 
     renderReviews(sampleReviews);
 
@@ -693,34 +597,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ======================================================
-// 7. FIREBASE
+// 7. IMPORT FIREBASE
 // ======================================================
 
-import(
-    "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"
-)
+Promise.all([
 
-.then(async ({ initializeApp }) => {
+    import(
+        "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"
+    ),
 
+    import(
+        "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"
+    )
 
-    // Import Firestore
+])
+
+.then(async ([firebaseApp, firestore]) => {
 
     const {
+        initializeApp
+    } = firebaseApp;
 
+
+    const {
         getFirestore,
         collection,
         getDocs,
         addDoc,
         serverTimestamp
-
-    } = await import(
-
-        "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"
-
-    );
+    } = firestore;
 
 
-    // Jalankan Firebase
+    // ==================================================
+    // INISIALISASI FIREBASE
+    // ==================================================
 
     const app =
         initializeApp(firebaseConfig);
@@ -730,13 +640,14 @@ import(
         getFirestore(app);
 
 
-    console.log("Firebase berhasil terhubung.");
-
+    console.log(
+        "Firebase berhasil terhubung."
+    );
 
 
     // ==================================================
     // DATABASE SECTION 1
-    // MENU
+    // MENGAMBIL MENU DARI FIRESTORE
     // ==================================================
 
     try {
@@ -756,8 +667,9 @@ import(
 
                     return {
 
-                        name: data.name || "Menu",
-                        
+                        name:
+                            data.name || "Menu",
+
                         price:
                             "Rp" +
                             Number(data.price || 0)
@@ -773,42 +685,37 @@ import(
                 });
 
 
-            // Gunakan menu dari database
-
             menuData = databaseMenus;
-
 
             renderMenus("semua");
 
 
             console.log(
-                "Menu berhasil diambil dari Firestore:",
+                "Menu berhasil diambil dari Firestore.",
                 databaseMenus
             );
 
         } else {
 
             console.log(
-                "Collection menus masih kosong. Menggunakan data lokal."
+                "Collection menus kosong. Menggunakan data cadangan."
             );
 
         }
 
-
     } catch (error) {
 
         console.error(
-            "Gagal mengambil data menu:",
+            "Gagal mengambil menu:",
             error
         );
 
     }
 
 
-
     // ==================================================
     // DATABASE SECTION 2
-    // REVIEW
+    // MENGAMBIL REVIEW DARI FIRESTORE
     // ==================================================
 
     try {
@@ -821,22 +728,16 @@ import(
 
         if (!reviewSnapshot.empty) {
 
-            let databaseReviews =
+            const databaseReviews =
                 reviewSnapshot.docs.map(doc => {
 
                     return {
-
                         id: doc.id,
-
                         ...doc.data()
-
                     };
 
                 });
 
-
-            // Urutkan berdasarkan createdAt
-            // Review terbaru ditampilkan lebih dulu
 
             databaseReviews.sort((a, b) => {
 
@@ -855,18 +756,17 @@ import(
 
 
             console.log(
-                "Review berhasil diambil dari Firestore:",
+                "Review berhasil diambil dari Firestore.",
                 databaseReviews
             );
 
         } else {
 
             console.log(
-                "Belum ada review di Firestore."
+                "Collection reviews masih kosong."
             );
 
         }
-
 
     } catch (error) {
 
@@ -878,7 +778,6 @@ import(
     }
 
 
-
     // ==================================================
     // 8. FORM REVIEW
     // ==================================================
@@ -887,156 +786,165 @@ import(
         document.getElementById("reviewForm");
 
 
-    if (reviewForm) {
+    if (!reviewForm) {
 
-        reviewForm.addEventListener(
-            "submit",
-            async function (event) {
-
-                event.preventDefault();
-
-
-                const name =
-                    document
-                        .getElementById("reviewName")
-                        .value
-                        .trim();
-
-
-                const rating =
-                    Number(
-                        document
-                            .getElementById("reviewRating")
-                            .value
-                    );
-
-
-                const message =
-                    document
-                        .getElementById("reviewMessage")
-                        .value
-                        .trim();
-
-
-                const status =
-                    document.getElementById(
-                        "reviewStatus"
-                    );
-
-
-                // Validasi
-
-                if (!name || !message) {
-
-                    status.className =
-                        "small mt-3 text-danger";
-
-                    status.textContent =
-                        "Nama dan pesan wajib diisi.";
-
-                    return;
-
-                }
-
-
-                // Loading
-
-                status.className =
-                    "small mt-3 text-primary";
-
-                status.textContent =
-                    "Mengirim review...";
-
-
-                try {
-
-                    // Simpan ke Firestore
-
-                    await addDoc(
-
-                        collection(db, "reviews"),
-
-                        {
-
-                            name: name,
-
-                            rating: rating,
-
-                            message: message,
-
-                            createdAt:
-                                serverTimestamp()
-
-                        }
-
-                    );
-
-
-                    // Berhasil
-
-                    status.className =
-                        "small mt-3 text-success";
-
-                    status.textContent =
-                        "Review berhasil dikirim!";
-
-
-                    // Kosongkan form
-
-                    reviewForm.reset();
-
-
-                    // Tambahkan review langsung
-                    // ke tampilan
-
-                    const currentReviews = [
-
-                        {
-
-                            name: name,
-
-                            rating: rating,
-
-                            message: message
-
-                        }
-
-                    ];
-
-
-                    renderReviews(
-                        currentReviews.concat(sampleReviews)
-                    );
-
-
-                    console.log(
-                        "Review berhasil disimpan ke Firestore."
-                    );
-
-
-                } catch (error) {
-
-                    console.error(
-                        "Gagal menyimpan review:",
-                        error
-                    );
-
-
-                    status.className =
-                        "small mt-3 text-danger";
-
-
-                    status.textContent =
-                        "Review gagal dikirim. Cek Firestore Rules.";
-
-                }
-
-            }
-
+        console.warn(
+            "Form review tidak ditemukan."
         );
+
+        return;
 
     }
 
+
+    reviewForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+
+            const nameInput =
+                document.getElementById("reviewName");
+
+
+            const ratingInput =
+                document.getElementById("reviewRating");
+
+
+            const messageInput =
+                document.getElementById("reviewMessage");
+
+
+            const status =
+                document.getElementById("reviewStatus");
+
+
+            const name =
+                nameInput.value.trim();
+
+
+            const rating =
+                Number(ratingInput.value);
+
+
+            const message =
+                messageInput.value.trim();
+
+
+            // ==================================================
+            // VALIDASI
+            // ==================================================
+
+            if (!name || !message) {
+
+                status.className =
+                    "small mt-3 text-danger";
+
+                status.textContent =
+                    "Nama dan pesan wajib diisi.";
+
+                return;
+
+            }
+
+
+            // ==================================================
+            // STATUS MENGIRIM
+            // ==================================================
+
+            status.className =
+                "small mt-3 text-primary";
+
+            status.textContent =
+                "Mengirim review...";
+
+
+            try {
+
+                // ==================================================
+                // SIMPAN REVIEW KE FIRESTORE
+                // ==================================================
+
+                await addDoc(
+
+                    collection(db, "reviews"),
+
+                    {
+
+                        name: name,
+
+                        rating: rating,
+
+                        message: message,
+
+                        createdAt:
+                            serverTimestamp()
+
+                    }
+
+                );
+
+
+                // ==================================================
+                // BERHASIL
+                // ==================================================
+
+                status.className =
+                    "small mt-3 text-success";
+
+                status.textContent =
+                    "Review berhasil dikirim!";
+
+
+                // Kosongkan form
+
+                reviewForm.reset();
+
+
+                console.log(
+                    "Review berhasil disimpan ke Firestore."
+                );
+
+
+                // Tampilkan review baru
+
+                const newReview = {
+
+                    name: name,
+
+                    rating: rating,
+
+                    message: message
+
+                };
+
+
+                renderReviews([
+                    newReview,
+                    ...sampleReviews
+                ]);
+
+
+            } catch (error) {
+
+                console.error(
+                    "Gagal menyimpan review:",
+                    error
+                );
+
+
+                status.className =
+                    "small mt-3 text-danger";
+
+
+                status.textContent =
+                    "Review gagal dikirim. Cek Firestore Rules.";
+
+            }
+
+        }
+    );
 
 })
 
@@ -1050,17 +958,14 @@ import(
 });
 
 
-
 // ======================================================
-// 9. NORMALISASI KATEGORI MENU
+// 9. NORMALISASI KATEGORI
 // ======================================================
 
 function normalisasiKategori(category) {
 
     if (!category) {
-
         return "lain";
-
     }
 
 
@@ -1071,16 +976,12 @@ function normalisasiKategori(category) {
 
 
     if (kategori.includes("bebek")) {
-
         return "bebek";
-
     }
 
 
     if (kategori.includes("ayam")) {
-
         return "ayam";
-
     }
 
 
@@ -1088,9 +989,7 @@ function normalisasiKategori(category) {
         kategori.includes("coffee") ||
         kategori.includes("kopi")
     ) {
-
         return "coffee";
-
     }
 
 
@@ -1098,9 +997,7 @@ function normalisasiKategori(category) {
         kategori.includes("camilan") ||
         kategori.includes("snack")
     ) {
-
         return "camilan";
-
     }
 
 
@@ -1109,9 +1006,7 @@ function normalisasiKategori(category) {
         kategori.includes("drink") ||
         kategori.includes("jus")
     ) {
-
         return "minuman";
-
     }
 
 
