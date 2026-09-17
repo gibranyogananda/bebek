@@ -9,12 +9,12 @@
 // ======================================================
 
 const firebaseConfig = {
-    apiKey: "ISI_API_KEY_FIREBASE_KAMU",
+   appId: "ISI_APP_ID_FIREBASE_KAMU",
     authDomain: "bebek-gongso-kinanthi.firebaseapp.com",
     projectId: "bebek-gongso-kinanthi",
     storageBucket: "bebek-gongso-kinanthi.firebasestorage.app",
     messagingSenderId: "856389419837",
-    appId: "ISI_APP_ID_FIREBASE_KAMU"
+ appId: "ISI_APP_ID_FIREBASE_KAMU"
 };
 
 
