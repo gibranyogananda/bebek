@@ -1,5 +1,6 @@
 URL Repository GitHub:
-ISI_DENGAN_URL_REPOSITORY_GITHUB_ANDA
+https://github.com/gibranyogananda/bebek
+
 
 Branch utama:
 main
