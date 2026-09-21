@@ -1,127 +1,620 @@
 // ======================================================
 // DATA MENU
-// Data lokal digunakan sebagai tampilan awal.
-// Nantinya dapat dihubungkan ke Firestore.
+// Data masih statis sesuai instruksi tugas.
+// Nantinya data ini dapat dihubungkan ke database.
 // ======================================================
 
 const menuData = [
-    // =========================
+
+    // ==================================================
     // BEBEK
-    // =========================
-    { name: "Bebek Goreng", price: "Rp27.000", category: "bebek" },
-    { name: "Bebek Kremes", price: "Rp30.000", category: "bebek" },
-    { name: "Bebek Gongso", price: "Rp30.000", category: "bebek" },
-    { name: "Bebek Lombok Ijo", price: "Rp32.000", category: "bebek" },
-    { name: "Bebek Bacem", price: "Rp32.000", category: "bebek" },
-    { name: "Kepala Bebek Goreng", price: "Rp15.000", category: "bebek" },
-    { name: "Kepala Bebek Gongso", price: "Rp18.000", category: "bebek" },
+    // ==================================================
 
-    // =========================
+    {
+        name: "Bebek Goreng",
+        price: "Rp27.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Kremes",
+        price: "Rp30.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Gongso",
+        price: "Rp30.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Lombok Ijo",
+        price: "Rp32.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Bacem",
+        price: "Rp32.000",
+        category: "bebek"
+    },
+    {
+        name: "Kepala Bebek Goreng",
+        price: "Rp15.000",
+        category: "bebek"
+    },
+    {
+        name: "Kepala Bebek Gongso",
+        price: "Rp18.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Utuh Goreng",
+        price: "Rp130.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Utuh Kremes",
+        price: "Rp135.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Utuh Gongso",
+        price: "Rp135.000",
+        category: "bebek"
+    },
+    {
+        name: "Bebek Utuh Lombok Ijo",
+        price: "Rp135.000",
+        category: "bebek"
+    },
+
+
+    // ==================================================
     // AYAM
-    // =========================
-    { name: "Ayam Kampung Goreng", price: "Rp27.000", category: "ayam" },
-    { name: "Ayam Kampung Kremes", price: "Rp30.000", category: "ayam" },
-    { name: "Ayam Kampung Gongso", price: "Rp30.000", category: "ayam" },
-    { name: "Ayam Kampung Lombok Ijo", price: "Rp32.000", category: "ayam" },
-    { name: "Ayam Negri Goreng", price: "Rp16.000", category: "ayam" },
-    { name: "Ayam Negri Kremes", price: "Rp20.000", category: "ayam" },
-    { name: "Ayam Negri Gongso", price: "Rp22.000", category: "ayam" },
-    { name: "Ayam Negri Lombok Ijo", price: "Rp22.000", category: "ayam" },
+    // ==================================================
 
-    // =========================
+    {
+        name: "Ayam Kampung Goreng",
+        price: "Rp27.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Kremes",
+        price: "Rp30.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Gongso",
+        price: "Rp30.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Lombok Ijo",
+        price: "Rp32.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Negri Goreng",
+        price: "Rp16.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Negri Kremes",
+        price: "Rp20.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Negri Gongso",
+        price: "Rp22.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Negri Lombok Ijo",
+        price: "Rp22.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Utuh Goreng",
+        price: "Rp135.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Utuh Kremes",
+        price: "Rp140.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Utuh Gongso",
+        price: "Rp140.000",
+        category: "ayam"
+    },
+    {
+        name: "Ayam Kampung Utuh Lombok Ijo",
+        price: "Rp140.000",
+        category: "ayam"
+    },
+
+
+    // ==================================================
     // MENU LAINNYA
-    // =========================
-    { name: "Pepes Nila", price: "Rp30.000", category: "lain" },
-    { name: "Nila Telur Asin", price: "Rp35.000", category: "lain" },
-    { name: "Nila Crispy", price: "Rp30.000", category: "lain" },
-    { name: "Nila Goreng", price: "Rp16.000", category: "lain" },
-    { name: "Lele Goreng", price: "Rp12.000", category: "lain" },
-    { name: "Sup Iga", price: "Rp38.000", category: "lain" },
-    { name: "Kangkung Tumis/Ca", price: "Rp10.000", category: "lain" },
-    { name: "Tauge Tumis/Ca", price: "Rp10.000", category: "lain" },
-    { name: "Terong Goreng", price: "Rp7.000", category: "lain" },
-    { name: "Pete", price: "Rp7.000", category: "lain" },
-    { name: "Kol Goreng", price: "Rp5.000", category: "lain" },
-    { name: "Tahu Goreng", price: "Rp2.000", category: "lain" },
-    { name: "Tempe Goreng", price: "Rp2.000", category: "lain" },
+    // ==================================================
 
-    // =========================
+    {
+        name: "Pepes Nila",
+        price: "Rp30.000",
+        category: "lain"
+    },
+    {
+        name: "Nila Telur Asin",
+        price: "Rp35.000",
+        category: "lain"
+    },
+    {
+        name: "Nila Crispy",
+        price: "Rp30.000",
+        category: "lain"
+    },
+    {
+        name: "Nila Goreng",
+        price: "Rp16.000",
+        category: "lain"
+    },
+    {
+        name: "Lele Goreng",
+        price: "Rp12.000",
+        category: "lain"
+    },
+    {
+        name: "Sup Iga",
+        price: "Rp38.000",
+        category: "lain"
+    },
+    {
+        name: "Kangkung Tumis/Ca",
+        price: "Rp10.000",
+        category: "lain"
+    },
+    {
+        name: "Tauge Tumis/Ca",
+        price: "Rp10.000",
+        category: "lain"
+    },
+    {
+        name: "Terong Goreng",
+        price: "Rp7.000",
+        category: "lain"
+    },
+    {
+        name: "Pete",
+        price: "Rp7.000",
+        category: "lain"
+    },
+    {
+        name: "Kol Goreng",
+        price: "Rp5.000",
+        category: "lain"
+    },
+    {
+        name: "Tahu Goreng",
+        price: "Rp2.000",
+        category: "lain"
+    },
+    {
+        name: "Tempe Goreng",
+        price: "Rp2.000",
+        category: "lain"
+    },
+    {
+        name: "Mix Tahu Tempe",
+        price: "Rp4.000",
+        category: "lain"
+    },
+    {
+        name: "Nasi Sambal Lalap",
+        price: "Rp6.000",
+        category: "lain"
+    },
+
+
+    // ==================================================
     // COFFEE
-    // =========================
-    { name: "Kopi Susu Kinanthi Hot", price: "Rp22.000", category: "coffee" },
-    { name: "Lime Coffee Hot", price: "Rp20.000", category: "coffee" },
+    // ==================================================
+
     {
-        name: "Kopi Susu Blueberry Hot/Ice",
+        name: "Kopi Susu Kinanthi Hot",
+        price: "Rp22.000",
+        category: "coffee"
+    },
+    {
+        name: "Lime Coffee Hot",
+        price: "Rp20.000",
+        category: "coffee"
+    },
+    {
+        name: "Kopi Susu Blueberry Hot / Ice",
         price: "Rp20.000 / Rp22.000",
         category: "coffee"
     },
     {
-        name: "Kopi Susu Caramel Hot/Ice",
+        name: "Kopi Susu Caramel Hot / Ice",
         price: "Rp20.000 / Rp22.000",
         category: "coffee"
     },
     {
-        name: "Coffee Latte Hot/Ice",
+        name: "Coffee Latte Hot / Ice",
         price: "Rp18.000 / Rp20.000",
         category: "coffee"
     },
     {
-        name: "Americano Hot/Ice",
+        name: "Americano Hot / Ice",
         price: "Rp15.000 / Rp17.000",
         category: "coffee"
     },
+    {
+        name: "Kopi Tubruk Hot",
+        price: "Rp15.000",
+        category: "coffee"
+    },
 
-    // =========================
+
+    // ==================================================
     // CAMILAN
-    // =========================
-    { name: "Mix Platter", price: "Rp25.000", category: "camilan" },
-    { name: "Onion Ring", price: "Rp15.000", category: "camilan" },
-    { name: "Tahu Cabai Garam", price: "Rp15.000", category: "camilan" },
-    { name: "Tahu Tuna", price: "Rp15.000", category: "camilan" },
-    { name: "Pisang Lumer", price: "Rp15.000", category: "camilan" },
-    { name: "Kentang Goreng", price: "Rp15.000", category: "camilan" },
-    { name: "Singkong Goreng", price: "Rp12.000", category: "camilan" },
-    { name: "Mendoan", price: "Rp12.000", category: "camilan" },
-    { name: "Cireng Goreng", price: "Rp10.000", category: "camilan" },
-    { name: "Lumpia Goreng", price: "Rp15.000", category: "camilan" },
+    // ==================================================
 
-    // =========================
+    {
+        name: "Mix Platter",
+        price: "Rp25.000",
+        category: "camilan"
+    },
+    {
+        name: "Onion Ring",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Tahu Cabai Garam",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Tahu Tuna",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Pisang Lumer",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Kentang Goreng",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Singkong Goreng",
+        price: "Rp12.000",
+        category: "camilan"
+    },
+    {
+        name: "Singkong Keju",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Singkong Coklat",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Mendoan",
+        price: "Rp12.000",
+        category: "camilan"
+    },
+    {
+        name: "Jamur Tepung",
+        price: "Rp12.000",
+        category: "camilan"
+    },
+    {
+        name: "Sosis Goreng",
+        price: "Rp12.000",
+        category: "camilan"
+    },
+    {
+        name: "Cireng Goreng",
+        price: "Rp10.000",
+        category: "camilan"
+    },
+    {
+        name: "Lumpia Goreng",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Pastel Goreng",
+        price: "Rp15.000",
+        category: "camilan"
+    },
+    {
+        name: "Jenang",
+        price: "Rp10.000",
+        category: "camilan"
+    },
+    {
+        name: "Krasikan",
+        price: "Rp10.000",
+        category: "camilan"
+    },
+
+
+    // ==================================================
     // MINUMAN
-    // =========================
-    { name: "Jahe Geprek", price: "Rp10.000", category: "minuman" },
-    { name: "Jahe Serai", price: "Rp12.000", category: "minuman" },
-    { name: "Jahe Susu", price: "Rp12.000", category: "minuman" },
-    { name: "Hot Coklat", price: "Rp15.000", category: "minuman" },
-    { name: "Hot Matcha", price: "Rp20.000", category: "minuman" },
-    { name: "Soda Gembira", price: "Rp12.000", category: "minuman" },
-    { name: "Lemon Squash", price: "Rp12.000", category: "minuman" },
-    { name: "Alpukat", price: "Rp14.000", category: "minuman" },
-    { name: "Mangga", price: "Rp14.000", category: "minuman" },
-    { name: "Es Teh Manis", price: "Rp6.000", category: "minuman" },
-    { name: "Air Mineral", price: "Rp6.000", category: "minuman" }
+    // ==================================================
+
+    {
+        name: "Jahe Geprek",
+        price: "Rp10.000",
+        category: "minuman"
+    },
+    {
+        name: "Jahe Serai",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Jahe Susu",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Kopi Jahe",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Hot Coklat",
+        price: "Rp15.000",
+        category: "minuman"
+    },
+    {
+        name: "Hot Matcha",
+        price: "Rp20.000",
+        category: "minuman"
+    },
+    {
+        name: "Hot Taro",
+        price: "Rp18.000",
+        category: "minuman"
+    },
+    {
+        name: "Soda Gembira",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Lemon Squash",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Orange Squash",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Jeruk Kelapa Muda",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Kelapa Muda Gelas",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Kelapa Muda Utuh Murni",
+        price: "Rp14.000",
+        category: "minuman"
+    },
+    {
+        name: "Kelapa Muda Utuh + Gula",
+        price: "Rp15.000",
+        category: "minuman"
+    },
+    {
+        name: "Alpukat",
+        price: "Rp14.000",
+        category: "minuman"
+    },
+    {
+        name: "Mangga",
+        price: "Rp14.000",
+        category: "minuman"
+    },
+    {
+        name: "Jambu",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Sirsak",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Melon",
+        price: "Rp12.000",
+        category: "minuman"
+    },
+    {
+        name: "Semangka",
+        price: "Rp10.000",
+        category: "minuman"
+    },
+    {
+        name: "Teh Tawar",
+        price: "Rp3.000",
+        category: "minuman"
+    },
+    {
+        name: "Teh Manis Panas",
+        price: "Rp5.000",
+        category: "minuman"
+    },
+    {
+        name: "Es Teh Manis",
+        price: "Rp6.000",
+        category: "minuman"
+    },
+    {
+        name: "Teh Leci",
+        price: "Rp15.000",
+        category: "minuman"
+    },
+    {
+        name: "Jeruk Panas",
+        price: "Rp6.000",
+        category: "minuman"
+    },
+    {
+        name: "Es Jeruk",
+        price: "Rp7.000",
+        category: "minuman"
+    },
+    {
+        name: "Lemon Tea Panas",
+        price: "Rp6.000",
+        category: "minuman"
+    },
+    {
+        name: "Es Lemon Tea",
+        price: "Rp7.000",
+        category: "minuman"
+    },
+    {
+        name: "Milo Hot / Es",
+        price: "Rp8.000 / Rp10.000",
+        category: "minuman"
+    },
+    {
+        name: "Air Mineral",
+        price: "Rp6.000",
+        category: "minuman"
+    },
+    {
+        name: "Air Putih / Air Es",
+        price: "Rp2.000",
+        category: "minuman"
+    },
+    {
+        name: "Es Batu",
+        price: "Rp2.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkshake Coklat",
+        price: "Rp18.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkshake Strawberry",
+        price: "Rp18.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkshake Vanila",
+        price: "Rp18.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkblend Coklat",
+        price: "Rp18.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkblend Strawberry",
+        price: "Rp18.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkblend Taro",
+        price: "Rp20.000",
+        category: "minuman"
+    },
+    {
+        name: "Milkblend Matcha",
+        price: "Rp22.000",
+        category: "minuman"
+    }
 ];
 
 
 // ======================================================
+// FOTO UNTUK SETIAP KATEGORI
+// Simpan foto sesuai nama file berikut:
+// assets/menu/bebek.png
+// assets/menu/ayam.png
+// assets/menu/lainnya.png
+// assets/menu/coffee.png
+// assets/menu/camilan.png
+// assets/menu/minuman-1.png
+// assets/menu/minuman-2.png
+// ======================================================
+
+const categoryImages = {
+
+    bebek: [
+        "assets/menu/bebek.png"
+    ],
+
+    ayam: [
+        "assets/menu/ayam.png"
+    ],
+
+    lain: [
+        "assets/menu/lainnya.png"
+    ],
+
+    coffee: [
+        "assets/menu/coffee.png"
+    ],
+
+    camilan: [
+        "assets/menu/camilan.png"
+    ],
+
+    minuman: [
+        "assets/menu/minuman-1.png",
+        "assets/menu/minuman-2.png"
+    ]
+
+};
+
+
+// ======================================================
 // DATA REVIEW
+// Masih menggunakan data statis.
 // ======================================================
 
 const sampleReviews = [
+
     {
         name: "Pelanggan",
         rating: 5,
         message: "Tempatnya nyaman dan menunya banyak."
     },
+
     {
         name: "Pelanggan",
         rating: 5,
         message: "Bebek gongsonya enak, cocok untuk makan bersama."
     },
+
     {
         name: "Pelanggan",
         rating: 4,
         message: "Parkir luas dan ada banyak pilihan minuman."
     }
+
 ];
 
 
@@ -129,8 +622,28 @@ const sampleReviews = [
 // ELEMENT HTML
 // ======================================================
 
-const menuContainer = document.getElementById("menuContainer");
-const reviewContainer = document.getElementById("reviewContainer");
+const menuContainer =
+    document.getElementById("menuContainer");
+
+const reviewContainer =
+    document.getElementById("reviewContainer");
+
+
+// ======================================================
+// NAMA KATEGORI
+// ======================================================
+
+const categoryNames = {
+
+    semua: "Semua Menu",
+    bebek: "Menu Bebek",
+    ayam: "Menu Ayam",
+    lain: "Menu Lainnya",
+    coffee: "Coffee Series",
+    camilan: "Camilan",
+    minuman: "Minuman"
+
+};
 
 
 // ======================================================
@@ -139,37 +652,176 @@ const reviewContainer = document.getElementById("reviewContainer");
 
 function renderMenus(category = "semua") {
 
-    const filtered = category === "semua"
-        ? menuData
-        : menuData.filter(item => item.category === category);
+    if (!menuContainer) {
+        return;
+    }
 
-    menuContainer.innerHTML = filtered.map(item => `
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card menu-card shadow-sm">
 
-                <div class="card-body p-4">
+    // --------------------------------------------------
+    // FILTER DATA
+    // --------------------------------------------------
 
-                    <div class="d-flex justify-content-between align-items-start gap-3">
+    const filtered =
+        category === "semua"
+            ? menuData
+            : menuData.filter(
+                item => item.category === category
+            );
 
-                        <h5 class="fw-bold mb-2">
-                            ${item.name}
-                        </h5>
 
-                        <span class="menu-price text-nowrap">
-                            ${item.price}
-                        </span>
+    // --------------------------------------------------
+    // JUDUL KATEGORI
+    // --------------------------------------------------
+
+    let html = `
+
+        <div class="col-12 mb-4">
+
+            <div class="text-center">
+
+                <h3 class="fw-bold">
+                    ${categoryNames[category]}
+                </h3>
+
+                <p class="text-muted mb-0">
+                    ${filtered.length} pilihan menu
+                </p>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    // --------------------------------------------------
+    // FOTO KATEGORI
+    // --------------------------------------------------
+
+    if (category !== "semua" && categoryImages[category]) {
+
+        html += `
+
+            <div class="col-12 mb-4">
+
+                <div class="row g-4 justify-content-center">
+
+        `;
+
+
+        categoryImages[category].forEach(image => {
+
+            html += `
+
+                <div class="col-12 col-md-8 col-lg-6">
+
+                    <div class="card border-0 shadow-sm overflow-hidden">
+
+                        <img
+                            src="${image}"
+                            class="img-fluid w-100"
+                            alt="${categoryNames[category]}"
+                            style="
+                                max-height: 700px;
+                                object-fit: contain;
+                                background: #f8f9fa;
+                            "
+                        >
 
                     </div>
 
-                    <small class="text-muted">
-                        Bebek Gongso Kinanthi
-                    </small>
+                </div>
+
+            `;
+
+        });
+
+
+        html += `
 
                 </div>
 
             </div>
+
+        `;
+
+    }
+
+
+    // --------------------------------------------------
+    // DAFTAR MENU
+    // --------------------------------------------------
+
+    html += `
+
+        <div class="col-12">
+
+            <div class="row g-4">
+
+    `;
+
+
+    filtered.forEach(item => {
+
+        html += `
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card menu-card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="
+                            d-flex
+                            justify-content-between
+                            align-items-start
+                            gap-3
+                        ">
+
+                            <h5 class="fw-bold mb-2">
+                                ${item.name}
+                            </h5>
+
+                            <span class="
+                                menu-price
+                                text-nowrap
+                                fw-bold
+                            ">
+                                ${item.price}
+                            </span>
+
+                        </div>
+
+                        <small class="text-muted">
+                            Bebek Gongso Kinanthi
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+
+    html += `
+
+            </div>
+
         </div>
-    `).join("");
+
+    `;
+
+
+    // --------------------------------------------------
+    // MASUKKAN KE HTML
+    // --------------------------------------------------
+
+    menuContainer.innerHTML = html;
+
 }
 
 
@@ -179,26 +831,41 @@ function renderMenus(category = "semua") {
 
 function renderReviews(data) {
 
+    if (!reviewContainer) {
+        return;
+    }
+
+
     reviewContainer.innerHTML = data.map(item => {
 
-        const rating = Number(item.rating) || 5;
+        const rating =
+            Number(item.rating) || 5;
+
 
         return `
+
             <div class="col-12">
 
                 <div class="card border-0 shadow-sm">
 
                     <div class="card-body">
 
-                        <div class="d-flex justify-content-between gap-3">
+                        <div class="
+                            d-flex
+                            justify-content-between
+                            gap-3
+                        ">
 
                             <h5 class="fw-bold mb-1">
                                 ${item.name}
                             </h5>
 
                             <span class="text-warning">
+
                                 ${"★".repeat(rating)}
+
                                 ${"☆".repeat(5 - rating)}
+
                             </span>
 
                         </div>
@@ -212,118 +879,203 @@ function renderReviews(data) {
                 </div>
 
             </div>
+
         `;
+
     }).join("");
+
 }
 
 
 // ======================================================
 // JAVASCRIPT FEATURE 1
 // MENU ACTIVE
-// Mengubah tombol kategori yang sedang dipilih
 // ======================================================
 
-document.querySelectorAll(".menu-filter").forEach(button => {
+document
+    .querySelectorAll(".menu-filter")
+    .forEach(button => {
 
-    button.addEventListener("click", function () {
+        button.addEventListener("click", function () {
 
-        // Menghapus status active dari semua tombol
-        document.querySelectorAll(".menu-filter").forEach(btn => {
 
-            btn.classList.remove("active");
+            // ------------------------------------------
+            // HAPUS ACTIVE DARI SEMUA TOMBOL
+            // ------------------------------------------
 
-            btn.classList.remove("btn-hijau");
+            document
+                .querySelectorAll(".menu-filter")
+                .forEach(btn => {
 
-            btn.classList.add("btn-outline-success");
+                    btn.classList.remove("active");
+
+                    btn.classList.remove("btn-hijau");
+
+                    btn.classList.add(
+                        "btn-outline-success"
+                    );
+
+                });
+
+
+            // ------------------------------------------
+            // AKTIFKAN TOMBOL YANG DIPILIH
+            // ------------------------------------------
+
+            this.classList.add("active");
+
+            this.classList.remove(
+                "btn-outline-success"
+            );
+
+            this.classList.add("btn-hijau");
+
+
+            // ------------------------------------------
+            // AMBIL KATEGORI
+            // ------------------------------------------
+
+            const category =
+                this.dataset.category;
+
+
+            // ------------------------------------------
+            // TAMPILKAN MENU
+            // ------------------------------------------
+
+            renderMenus(category);
+
+
+            // ------------------------------------------
+            // SCROLL KE BAGIAN MENU
+            // ------------------------------------------
+
+            const menuSection =
+                document.getElementById("menu");
+
+
+            if (menuSection) {
+
+                menuSection.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+            }
 
         });
 
-
-        // Memberikan status active pada tombol yang dipilih
-        this.classList.add("active");
-
-        this.classList.remove("btn-outline-success");
-
-        this.classList.add("btn-hijau");
-
-
-        // Menampilkan menu berdasarkan kategori
-        renderMenus(this.dataset.category);
-
     });
-
-});
 
 
 // ======================================================
 // JAVASCRIPT FEATURE 2
 // AUTOSCROLL SECTION
-// Perpindahan section menggunakan JavaScript
 // ======================================================
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(link => {
 
-    link.addEventListener("click", function (event) {
+        link.addEventListener("click", function (event) {
 
-        const targetId = this.getAttribute("href");
-
-        const target = document.querySelector(targetId);
-
-        // Jika section tidak ditemukan
-        if (!target) {
-            return;
-        }
-
-        event.preventDefault();
+            const targetId =
+                this.getAttribute("href");
 
 
-        // Mengambil tinggi navbar
-        const navbar = document.querySelector(".navbar");
-
-        const navbarHeight = navbar
-            ? navbar.offsetHeight
-            : 0;
-
-
-        // Menghitung posisi section
-        const targetPosition =
-            target.getBoundingClientRect().top +
-            window.pageYOffset -
-            navbarHeight;
+            // Jika href hanya "#"
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
 
 
-        // Scroll dengan animasi
-        window.scrollTo({
+            const target =
+                document.querySelector(targetId);
 
-            top: targetPosition,
 
-            behavior: "smooth"
+            // Jika section tidak ditemukan
+            if (!target) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            // ------------------------------------------
+            // TINGGI NAVBAR
+            // ------------------------------------------
+
+            const navbar =
+                document.querySelector(".navbar");
+
+
+            const navbarHeight =
+                navbar
+                    ? navbar.offsetHeight
+                    : 0;
+
+
+            // ------------------------------------------
+            // POSISI TARGET
+            // ------------------------------------------
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                navbarHeight;
+
+
+            // ------------------------------------------
+            // AUTOSCROLL
+            // ------------------------------------------
+
+            window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+            });
+
+
+            // ------------------------------------------
+            // TUTUP NAVBAR MOBILE
+            // ------------------------------------------
+
+            const navbarCollapse =
+                document.querySelector(
+                    ".navbar-collapse"
+                );
+
+
+            if (
+                navbarCollapse &&
+                navbarCollapse.classList.contains(
+                    "show"
+                )
+            ) {
+
+                const collapse =
+                    bootstrap.Collapse
+                        .getOrCreateInstance(
+                            navbarCollapse
+                        );
+
+
+                collapse.hide();
+
+            }
 
         });
 
-
-        // Menutup menu navbar pada perangkat mobile
-        const navbarCollapse =
-            document.querySelector(".navbar-collapse");
-
-
-        if (
-            navbarCollapse &&
-            navbarCollapse.classList.contains("show")
-        ) {
-
-            const collapse =
-                bootstrap.Collapse.getOrCreateInstance(
-                    navbarCollapse
-                );
-
-            collapse.hide();
-
-        }
-
     });
-
-});
 
 
 // ======================================================
@@ -332,11 +1084,50 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // Grafik jumlah menu berdasarkan kategori
 // ======================================================
 
-const chartElement = document.getElementById("menuChart");
+const chartElement =
+    document.getElementById("menuChart");
 
-if (chartElement) {
 
-    const menuChart = new Chart(chartElement, {
+if (
+    chartElement &&
+    typeof Chart !== "undefined"
+) {
+
+
+    // ------------------------------------------
+    // KATEGORI
+    // ------------------------------------------
+
+    const chartCategories = [
+        "bebek",
+        "ayam",
+        "lain",
+        "coffee",
+        "camilan",
+        "minuman"
+    ];
+
+
+    // ------------------------------------------
+    // JUMLAH MENU OTOMATIS
+    // ------------------------------------------
+
+    const chartData =
+        chartCategories.map(category => {
+
+            return menuData.filter(
+                item =>
+                    item.category === category
+            ).length;
+
+        });
+
+
+    // ------------------------------------------
+    // BUAT GRAFIK
+    // ------------------------------------------
+
+    new Chart(chartElement, {
 
         type: "bar",
 
@@ -354,16 +1145,13 @@ if (chartElement) {
             datasets: [
 
                 {
+
                     label: "Jumlah Menu",
 
-                    data: [
-                        7,
-                        8,
-                        13,
-                        6,
-                        10,
-                        11
-                    ]
+                    data: chartData,
+
+                    borderWidth: 1
+
                 }
 
             ]
@@ -379,7 +1167,17 @@ if (chartElement) {
             plugins: {
 
                 legend: {
+
                     display: false
+
+                },
+
+                title: {
+
+                    display: true,
+
+                    text: "Jumlah Menu Berdasarkan Kategori"
+
                 }
 
             },
@@ -391,7 +1189,9 @@ if (chartElement) {
                     beginAtZero: true,
 
                     ticks: {
+
                         stepSize: 1
+
                     }
 
                 }
@@ -409,265 +1209,9 @@ if (chartElement) {
 // TAMPILAN AWAL
 // ======================================================
 
+// Menampilkan semua menu saat website pertama dibuka
 renderMenus();
 
+
+// Menampilkan review statis
 renderReviews(sampleReviews);
-
-
-// ======================================================
-// FIREBASE / FIRESTORE
-// Bagian database.
-// Untuk Latihan 4 masih boleh menggunakan data statis.
-// ======================================================
-
-const firebaseConfig = {
-
-    apiKey: "ISI_API_KEY",
-
-    authDomain: "ISI_PROJECT_ID.firebaseapp.com",
-
-    projectId: "ISI_PROJECT_ID",
-
-    storageBucket: "ISI_PROJECT_ID.appspot.com",
-
-    messagingSenderId: "ISI_SENDER_ID",
-
-    appId: "ISI_APP_ID"
-
-};
-
-
-const firebaseSudahDiisi =
-    !firebaseConfig.apiKey.startsWith("ISI_");
-
-
-if (firebaseSudahDiisi) {
-
-    import(
-        "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"
-    )
-
-    .then(async ({ initializeApp }) => {
-
-        const {
-            getFirestore,
-            collection,
-            getDocs,
-            addDoc,
-            serverTimestamp,
-            query,
-            orderBy
-        } = await import(
-            "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"
-        );
-
-
-        const app = initializeApp(firebaseConfig);
-
-        const db = getFirestore(app);
-
-
-        // ==================================================
-        // DATABASE SECTION 1
-        // MENU
-        // ==================================================
-
-        try {
-
-            const snapshot =
-                await getDocs(
-                    collection(db, "menus")
-                );
-
-
-            if (!snapshot.empty) {
-
-                const databaseMenus =
-                    snapshot.docs.map(doc => ({
-                        id: doc.id,
-                        ...doc.data()
-                    }));
-
-
-                menuData.length = 0;
-
-
-                databaseMenus.forEach(item => {
-
-                    menuData.push(item);
-
-                });
-
-
-                renderMenus();
-
-            }
-
-        } catch (error) {
-
-            console.log(
-                "Menu Firestore belum tersedia:",
-                error
-            );
-
-        }
-
-
-        // ==================================================
-        // DATABASE SECTION 2
-        // REVIEW
-        // ==================================================
-
-        try {
-
-            const reviewQuery =
-                query(
-                    collection(db, "reviews"),
-                    orderBy("createdAt", "desc")
-                );
-
-
-            const snapshot =
-                await getDocs(reviewQuery);
-
-
-            if (!snapshot.empty) {
-
-                renderReviews(
-                    snapshot.docs.map(
-                        doc => doc.data()
-                    )
-                );
-
-            }
-
-        } catch (error) {
-
-            console.log(
-                "Review Firestore belum tersedia:",
-                error
-            );
-
-        }
-
-
-        // ==================================================
-        // FORM REVIEW
-        // ==================================================
-
-        const reviewForm =
-            document.getElementById("reviewForm");
-
-
-        if (reviewForm) {
-
-            reviewForm.addEventListener(
-                "submit",
-                async function (event) {
-
-                    event.preventDefault();
-
-
-                    const name =
-                        document
-                            .getElementById("reviewName")
-                            .value
-                            .trim();
-
-
-                    const rating =
-                        Number(
-                            document
-                                .getElementById("reviewRating")
-                                .value
-                        );
-
-
-                    const message =
-                        document
-                            .getElementById("reviewMessage")
-                            .value
-                            .trim();
-
-
-                    const status =
-                        document.getElementById(
-                            "reviewStatus"
-                        );
-
-
-                    try {
-
-                        await addDoc(
-                            collection(db, "reviews"),
-                            {
-
-                                name: name,
-
-                                rating: rating,
-
-                                message: message,
-
-                                createdAt:
-                                    serverTimestamp()
-
-                            }
-                        );
-
-
-                        status.className =
-                            "small mt-3 text-success";
-
-
-                        status.textContent =
-                            "Review berhasil dikirim.";
-
-
-                        event.target.reset();
-
-
-                    } catch (error) {
-
-                        status.className =
-                            "small mt-3 text-danger";
-
-
-                        status.textContent =
-                            "Review gagal dikirim. Cek konfigurasi Firestore.";
-
-                    }
-
-                }
-            );
-
-        }
-
-    })
-
-    .catch(error => {
-
-        console.log(
-            "Firebase belum aktif:",
-            error
-        );
-
-    });
-
-} else {
-
-    const reviewStatus =
-        document.getElementById("reviewStatus");
-
-
-    if (reviewStatus) {
-
-        reviewStatus.className =
-            "small mt-3 text-muted";
-
-
-        reviewStatus.textContent =
-            "Mode demo aktif. Isi konfigurasi Firebase pada script.js agar review tersimpan ke database.";
-
-    }
-
-}
