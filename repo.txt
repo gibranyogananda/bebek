@@ -1,5 +1,5 @@
 URL Repository GitHub:
-ISI_DENGAN_URL_REPOSITORY_GITHUB_ANDA
+https://github.com/gibranyogananda/bebek
 
 Branch utama:
 main
@@ -7,5 +7,8 @@ main
 Branch pengembangan:
 Web-Bootstrap
 
+Branch JavaScript:
+Web-JS
+
 Nama proyek:
-Bebek Gongso Kinanthi - Website Portofolio Bootstrap
+Bebek Gongso Kinanthi - Website Portofolio Bootstrap dan JavaScript
