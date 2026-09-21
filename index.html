@@ -1,249 +1,338 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bebek Gongso Kinanthi</title>
 
-
-    <!-- ==================================================
-         BOOTSTRAP 5
-         ================================================== -->
-
+    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
-
-    <!-- ==================================================
-         BOOTSTRAP ICONS
-         ================================================== -->
-
+    <!-- Bootstrap Icons -->
     <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
-
-    <!-- ==================================================
-         CSS SENDIRI
-         ================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="style.css">
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-<!-- ======================================================
-     NAVBAR
-     ====================================================== -->
-
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-hijau sticky-top">
-
     <div class="container">
 
-        <a
-            class="navbar-brand fw-bold d-flex align-items-center"
-            href="#home">
-
+        <a class="navbar-brand d-flex align-items-center" href="#home">
             <img
                 src="assets/logo.png"
                 alt="Logo Bebek Gongso Kinanthi"
                 width="45"
                 height="45"
-                class="me-2">
-
-            Bebek Gongso Kinanthi
-
+                class="rounded-circle me-2"
+            >
+            <strong>Bebek Gongso Kinanthi</strong>
         </a>
-
 
         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
-
+            data-bs-target="#navbarNav"
+        >
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
-
-        <div
-            class="collapse navbar-collapse"
-            id="navbarNav">
-
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#home">
-
-                        Home
-
-                    </a>
-
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#services">
-
-                        Services
-
-                    </a>
-
+                    <a class="nav-link" href="#services">Layanan</a>
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#menu">
-
-                        Menu
-
-                    </a>
-
+                    <a class="nav-link" href="#menu">Menu</a>
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#about">
-
-                        About
-
-                    </a>
-
+                    <a class="nav-link" href="#about">Tentang</a>
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#review">
-
-                        Review
-
-                    </a>
-
+                    <a class="nav-link" href="#review">Review</a>
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#contact">
-
-                        Contact
-
-                    </a>
-
+                    <a class="nav-link" href="#contact">Kontak</a>
                 </li>
 
             </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- ================= HOME ================= -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-6">
+
+                <h1 class="display-4 fw-bold">
+                    Bebek Gongso Kinanthi
+                </h1>
+
+                <p class="lead mt-3">
+                    Nikmati berbagai hidangan bebek, ayam, makanan,
+                    coffee, camilan, dan minuman dengan cita rasa
+                    khas yang menggugah selera.
+                </p>
+
+                <a href="#menu" class="btn btn-hijau btn-lg mt-3">
+                    Lihat Menu
+                </a>
+
+            </div>
+
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+
+                <img
+                    src="assets/menu-bebek.png"
+                    alt="Menu Bebek"
+                    class="img-fluid rounded shadow"
+                >
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Layanan Kami
+            </h2>
+
+            <p class="text-muted">
+                Berbagai layanan yang tersedia di Bebek Gongso Kinanthi
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+
+                    <i class="bi bi-cup-hot display-4 text-success"></i>
+
+                    <h4 class="mt-3">
+                        Makanan & Minuman
+                    </h4>
+
+                    <p>
+                        Menyediakan berbagai pilihan makanan dan minuman
+                        untuk menemani waktu makan Anda.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+
+                    <i class="bi bi-box-seam display-4 text-success"></i>
+
+                    <h4 class="mt-3">
+                        Nasi Box
+                    </h4>
+
+                    <p>
+                        Tersedia paket nasi box untuk berbagai kebutuhan
+                        acara dan kegiatan.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+
+                    <i class="bi bi-people display-4 text-success"></i>
+
+                    <h4 class="mt-3">
+                        Prasmanan
+                    </h4>
+
+                    <p>
+                        Menyediakan pilihan paket prasmanan untuk acara
+                        keluarga maupun kegiatan lainnya.
+                    </p>
+
+                </div>
+            </div>
 
         </div>
 
     </div>
 
-</nav>
+</section>
 
 
-
-<!-- ======================================================
-     HOME
-     ====================================================== -->
-
-<section
-    id="home"
-    class="py-5">
+<!-- ================= MENU ================= -->
+<section id="menu" class="py-5">
 
     <div class="container">
 
-        <div class="row align-items-center g-5">
+        <div class="text-center mb-4">
 
+            <h2 class="fw-bold">
+                Daftar Menu
+            </h2>
+
+            <p class="text-muted">
+                Pilih kategori menu yang ingin Anda lihat
+            </p>
+
+        </div>
+
+
+        <!-- FILTER MENU -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+
+            <button
+                type="button"
+                class="btn btn-hijau menu-filter active"
+                data-category="semua"
+            >
+                Semua
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-outline-success menu-filter"
+                data-category="bebek"
+            >
+                Bebek
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-outline-success menu-filter"
+                data-category="ayam"
+            >
+                Ayam
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-outline-success menu-filter"
+                data-category="lain"
+            >
+                Lainnya
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-outline-success menu-filter"
+                data-category="coffee"
+            >
+                Coffee
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-outline-success menu-filter"
+                data-category="camilan"
+            >
+                Camilan
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-outline-success menu-filter"
+                data-category="minuman"
+            >
+                Minuman
+            </button>
+
+        </div>
+
+
+        <!-- FOTO KATEGORI -->
+        <div id="categoryImageContainer" class="mb-5"></div>
+
+
+        <!-- DAFTAR MENU -->
+        <div id="menuContainer" class="row g-4"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row align-items-center">
 
             <div class="col-lg-6">
 
-                <span class="badge bg-success mb-3">
+                <h2 class="fw-bold mb-3">
+                    Tentang Bebek Gongso Kinanthi
+                </h2>
 
-                    Kuliner Khas Klaten
-
-                </span>
-
-
-                <h1 class="display-4 fw-bold">
-
-                    Bebek Gongso
-                    <span class="text-success">
-                        Kinanthi
-                    </span>
-
-                </h1>
-
-
-                <p class="lead text-muted">
-
-                    Nikmati berbagai pilihan menu
-                    bebek, ayam, makanan, coffee,
-                    camilan, dan minuman dengan
-                    cita rasa khas Kinanthi.
-
+                <p>
+                    Bebek Gongso Kinanthi merupakan usaha kuliner
+                    yang menyediakan berbagai pilihan makanan dan
+                    minuman dengan menu yang beragam.
                 </p>
 
+                <p>
+                    Mulai dari menu bebek, ayam, makanan lainnya,
+                    coffee, camilan hingga minuman.
+                </p>
 
-                <div class="d-flex flex-wrap gap-2">
-
-                    <a
-                        href="#menu"
-                        class="btn btn-hijau btn-lg">
-
-                        Lihat Menu
-
-                    </a>
-
-
-                    <a
-                        href="#contact"
-                        class="btn btn-outline-success btn-lg">
-
-                        Hubungi Kami
-
-                    </a>
-
-                </div>
+                <p>
+                    Website ini dibuat sebagai media informasi
+                    portofolio usaha dan menampilkan daftar menu
+                    secara interaktif menggunakan JavaScript.
+                </p>
 
             </div>
 
 
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6 mt-4 mt-lg-0">
 
-                <img
-                    src="assets/logo.png"
-                    alt="Bebek Gongso Kinanthi"
-                    class="img-fluid"
-                    style="max-height:350px;">
+                <h4 class="text-center mb-3">
+                    Jumlah Menu Berdasarkan Kategori
+                </h4>
+
+                <div class="chart-wrapper">
+                    <canvas id="menuChart"></canvas>
+                </div>
 
             </div>
 
@@ -254,30 +343,98 @@
 </section>
 
 
-
-<!-- ======================================================
-     SERVICES
-     ====================================================== -->
-
-<section
-    id="services"
-    class="py-5 bg-light">
+<!-- ================= PAKET ================= -->
+<section class="py-5">
 
     <div class="container">
 
         <div class="text-center mb-5">
 
-            <span class="text-success fw-bold">
-                SERVICES
-            </span>
-
             <h2 class="fw-bold">
-                Layanan Kami
+                Paket Acara
             </h2>
 
             <p class="text-muted">
-                Nikmati pengalaman makan bersama
-                keluarga dan teman.
+                Pilihan paket untuk kebutuhan acara
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img
+                        src="assets/nasi-box.png"
+                        class="card-img-top package-image"
+                        alt="Nasi Box"
+                    >
+
+                    <div class="card-body text-center">
+
+                        <h4>
+                            Nasi Box
+                        </h4>
+
+                        <p>
+                            Pilihan nasi box untuk berbagai acara.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img
+                        src="assets/prasmanan.png"
+                        class="card-img-top package-image"
+                        alt="Prasmanan"
+                    >
+
+                    <div class="card-body text-center">
+
+                        <h4>
+                            Prasmanan
+                        </h4>
+
+                        <p>
+                            Paket prasmanan untuk acara bersama.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEW ================= -->
+<section id="review" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Review Pelanggan
+            </h2>
+
+            <p class="text-muted">
+                Bagikan pengalaman Anda
             </p>
 
         </div>
@@ -285,483 +442,75 @@
 
         <div class="row g-4">
 
-
-            <div class="col-md-4">
-
-                <div class="card border-0 shadow-sm h-100">
-
-                    <div class="card-body text-center p-4">
-
-                        <i
-                            class="bi bi-cup-hot fs-1 text-success">
-                        </i>
-
-                        <h4 class="fw-bold mt-3">
-                            Makanan & Minuman
-                        </h4>
-
-                        <p class="text-muted">
-
-                            Berbagai pilihan makanan,
-                            coffee, camilan dan minuman.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-4">
-
-                <div class="card border-0 shadow-sm h-100">
-
-                    <div class="card-body text-center p-4">
-
-                        <i
-                            class="bi bi-people fs-1 text-success">
-                        </i>
-
-                        <h4 class="fw-bold mt-3">
-                            Tempat Nyaman
-                        </h4>
-
-                        <p class="text-muted">
-
-                            Tempat yang cocok untuk
-                            keluarga, teman dan acara bersama.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-4">
-
-                <div class="card border-0 shadow-sm h-100">
-
-                    <div class="card-body text-center p-4">
-
-                        <i
-                            class="bi bi-shop fs-1 text-success">
-                        </i>
-
-                        <h4 class="fw-bold mt-3">
-                            Siap Melayani
-                        </h4>
-
-                        <p class="text-muted">
-
-                            Kami siap memberikan
-                            pelayanan terbaik kepada pelanggan.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     MENU
-     ====================================================== -->
-
-<section
-    id="menu"
-    class="py-5">
-
-    <div class="container">
-
-
-        <div class="text-center mb-4">
-
-            <span class="text-success fw-bold">
-                MENU
-            </span>
-
-            <h2 class="fw-bold">
-                Pilihan Menu
-            </h2>
-
-            <p class="text-muted">
-
-                Pilih kategori menu untuk
-                melihat daftar makanan dan minuman.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             TOMBOL FILTER MENU
-             ================================================== -->
-
-        <div
-            class="d-flex flex-wrap justify-content-center gap-2 mb-5">
-
-
-            <button
-                type="button"
-                class="btn btn-hijau menu-filter active"
-                data-category="semua">
-
-                Semua
-
-            </button>
-
-
-            <button
-                type="button"
-                class="btn btn-outline-success menu-filter"
-                data-category="bebek">
-
-                Bebek
-
-            </button>
-
-
-            <button
-                type="button"
-                class="btn btn-outline-success menu-filter"
-                data-category="ayam">
-
-                Ayam
-
-            </button>
-
-
-            <button
-                type="button"
-                class="btn btn-outline-success menu-filter"
-                data-category="lain">
-
-                Lainnya
-
-            </button>
-
-
-            <button
-                type="button"
-                class="btn btn-outline-success menu-filter"
-                data-category="coffee">
-
-                Coffee
-
-            </button>
-
-
-            <button
-                type="button"
-                class="btn btn-outline-success menu-filter"
-                data-category="camilan">
-
-                Camilan
-
-            </button>
-
-
-            <button
-                type="button"
-                class="btn btn-outline-success menu-filter"
-                data-category="minuman">
-
-                Minuman
-
-            </button>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             TEMPAT MENU DARI JAVASCRIPT
-             ================================================== -->
-
-        <div
-            id="menuContainer"
-            class="row g-4">
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     ABOUT
-     ====================================================== -->
-
-<section
-    id="about"
-    class="py-5 bg-light">
-
-    <div class="container">
-
-
-        <div class="row align-items-center g-5">
-
-
-            <div class="col-lg-6">
-
-                <span class="text-success fw-bold">
-                    ABOUT US
-                </span>
-
-                <h2 class="fw-bold mb-3">
-
-                    Tentang Bebek Gongso Kinanthi
-
-                </h2>
-
-
-                <p class="text-muted">
-
-                    Bebek Gongso Kinanthi merupakan
-                    tempat kuliner yang menyediakan
-                    berbagai pilihan makanan dan minuman.
-
-                </p>
-
-
-                <p class="text-muted">
-
-                    Menu yang tersedia antara lain
-                    olahan bebek, ayam, ikan,
-                    makanan pendamping, coffee,
-                    camilan dan berbagai jenis minuman.
-
-                </p>
-
-
-                <div class="row mt-4">
-
-
-                    <div class="col-6">
-
-                        <h3 class="fw-bold text-success">
-                            50+
-                        </h3>
-
-                        <p class="text-muted">
-                            Pilihan Menu
-                        </p>
-
-                    </div>
-
-
-                    <div class="col-6">
-
-                        <h3 class="fw-bold text-success">
-                            Klaten
-                        </h3>
-
-                        <p class="text-muted">
-                            Lokasi
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-lg-6 text-center">
-
-                <img
-                    src="assets/logo.png"
-                    alt="Bebek Gongso Kinanthi"
-                    class="img-fluid"
-                    style="max-height:300px;">
-
-            </div>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             CHART JS
-             ================================================== -->
-
-        <div class="row mt-5">
-
-            <div class="col-12">
+            <!-- FORM -->
+            <div class="col-lg-5">
 
                 <div class="card border-0 shadow-sm">
 
                     <div class="card-body p-4">
 
-                        <h3 class="fw-bold text-center">
-
-                            Statistik Menu
-
-                        </h3>
-
-
-                        <p class="text-center text-muted">
-
-                            Jumlah menu berdasarkan kategori
-
-                        </p>
-
-
-                        <div
-                            style="
-                                position:relative;
-                                height:400px;
-                            ">
-
-                            <canvas
-                                id="menuChart">
-                            </canvas>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     REVIEW
-     ====================================================== -->
-
-<section
-    id="review"
-    class="py-5">
-
-    <div class="container">
-
-
-        <div class="text-center mb-5">
-
-            <span class="text-success fw-bold">
-                REVIEW
-            </span>
-
-            <h2 class="fw-bold">
-                Review Pelanggan
-            </h2>
-
-            <p class="text-muted">
-                Pendapat pelanggan tentang pengalaman
-                mereka di Bebek Gongso Kinanthi.
-            </p>
-
-        </div>
-
-
-
-        <!-- REVIEW DARI JAVASCRIPT -->
-
-        <div
-            id="reviewContainer"
-            class="row g-4">
-
-        </div>
-
-
-        <!-- FORM REVIEW -->
-
-        <div class="row justify-content-center mt-5">
-
-            <div class="col-lg-8">
-
-                <div class="card border-0 shadow-sm">
-
-                    <div class="card-body p-4">
-
-                        <h4 class="fw-bold mb-4">
-                            Berikan Review
+                        <h4 class="mb-4">
+                            Tulis Review
                         </h4>
-
 
                         <form id="reviewForm">
-
 
                             <div class="mb-3">
 
                                 <label
                                     for="reviewName"
-                                    class="form-label">
-
+                                    class="form-label"
+                                >
                                     Nama
-
                                 </label>
 
                                 <input
                                     type="text"
-                                    id="reviewName"
                                     class="form-control"
+                                    id="reviewName"
                                     placeholder="Masukkan nama"
-                                    required>
+                                    required
+                                >
 
                             </div>
-
 
 
                             <div class="mb-3">
 
                                 <label
                                     for="reviewRating"
-                                    class="form-label">
-
+                                    class="form-label"
+                                >
                                     Rating
-
                                 </label>
 
                                 <select
-                                    id="reviewRating"
                                     class="form-select"
-                                    required>
+                                    id="reviewRating"
+                                    required
+                                >
+                                    <option value="">
+                                        Pilih rating
+                                    </option>
 
                                     <option value="5">
-                                        5 - Sangat Baik
+                                        ⭐⭐⭐⭐⭐
                                     </option>
 
                                     <option value="4">
-                                        4 - Baik
+                                        ⭐⭐⭐⭐
                                     </option>
 
                                     <option value="3">
-                                        3 - Cukup
+                                        ⭐⭐⭐
                                     </option>
 
                                     <option value="2">
-                                        2 - Kurang
+                                        ⭐⭐
                                     </option>
 
                                     <option value="1">
-                                        1 - Sangat Kurang
+                                        ⭐
                                     </option>
 
                                 </select>
@@ -769,43 +518,37 @@
                             </div>
 
 
-
                             <div class="mb-3">
 
                                 <label
                                     for="reviewMessage"
-                                    class="form-label">
-
+                                    class="form-label"
+                                >
                                     Review
-
                                 </label>
 
                                 <textarea
-                                    id="reviewMessage"
                                     class="form-control"
+                                    id="reviewMessage"
                                     rows="4"
-                                    placeholder="Tulis review kamu..."
-                                    required>
-                                </textarea>
+                                    placeholder="Tulis pengalaman Anda"
+                                    required
+                                ></textarea>
 
                             </div>
-
 
 
                             <button
                                 type="submit"
-                                class="btn btn-hijau">
-
+                                class="btn btn-hijau w-100"
+                            >
                                 Kirim Review
-
                             </button>
-
 
                             <div
                                 id="reviewStatus"
-                                class="small mt-3">
-                            </div>
-
+                                class="mt-3"
+                            ></div>
 
                         </form>
 
@@ -815,6 +558,14 @@
 
             </div>
 
+
+            <!-- LIST REVIEW -->
+            <div class="col-lg-7">
+
+                <div id="reviewContainer"></div>
+
+            </div>
+
         </div>
 
     </div>
@@ -822,107 +573,33 @@
 </section>
 
 
-
-<!-- ======================================================
-     CONTACT
-     ====================================================== -->
-
-<section
-    id="contact"
-    class="py-5 bg-light">
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-5">
 
     <div class="container">
 
-
-        <div class="text-center mb-5">
-
-            <span class="text-success fw-bold">
-                CONTACT
-            </span>
+        <div class="text-center">
 
             <h2 class="fw-bold">
                 Hubungi Kami
             </h2>
 
-        </div>
+            <p class="mt-3">
+                Untuk informasi menu, pemesanan, atau kebutuhan acara,
+                silakan hubungi Bebek Gongso Kinanthi.
+            </p>
 
+            <div class="mt-4">
 
-        <div class="row g-4">
+                <p>
+                    <i class="bi bi-geo-alt-fill text-success"></i>
+                    Klaten, Jawa Tengah
+                </p>
 
-
-            <div class="col-md-4">
-
-                <div class="card border-0 shadow-sm h-100">
-
-                    <div class="card-body text-center p-4">
-
-                        <i
-                            class="bi bi-geo-alt fs-1 text-success">
-                        </i>
-
-                        <h5 class="fw-bold mt-3">
-                            Lokasi
-                        </h5>
-
-                        <p class="text-muted">
-                            Klaten, Jawa Tengah
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-4">
-
-                <div class="card border-0 shadow-sm h-100">
-
-                    <div class="card-body text-center p-4">
-
-                        <i
-                            class="bi bi-telephone fs-1 text-success">
-                        </i>
-
-                        <h5 class="fw-bold mt-3">
-                            Telepon
-                        </h5>
-
-                        <p class="text-muted">
-                            Hubungi kami untuk informasi
-                            lebih lanjut.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-4">
-
-                <div class="card border-0 shadow-sm h-100">
-
-                    <div class="card-body text-center p-4">
-
-                        <i
-                            class="bi bi-clock fs-1 text-success">
-                        </i>
-
-                        <h5 class="fw-bold mt-3">
-                            Jam Operasional
-                        </h5>
-
-                        <p class="text-muted">
-                            Silakan hubungi kami untuk
-                            informasi jam operasional.
-                        </p>
-
-                    </div>
-
-                </div>
+                <p>
+                    <i class="bi bi-telephone-fill text-success"></i>
+                    Hubungi kami untuk informasi lebih lanjut
+                </p>
 
             </div>
 
@@ -933,25 +610,17 @@
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+<footer class="bg-hijau text-white text-center py-4">
 
-<!-- ======================================================
-     FOOTER
-     ====================================================== -->
+    <div class="container">
 
-<footer
-    class="bg-dark text-white py-4">
-
-    <div class="container text-center">
-
-        <p class="mb-1 fw-bold">
-            Bebek Gongso Kinanthi
+        <p class="mb-1">
+            &copy; 2026 Bebek Gongso Kinanthi
         </p>
 
-        <small class="text-secondary">
-
-            Website Portofolio —
-            Web-JS
-
+        <small>
+            Website Portofolio Usaha
         </small>
 
     </div>
@@ -959,34 +628,20 @@
 </footer>
 
 
-
-<!-- ======================================================
-     BOOTSTRAP JAVASCRIPT
-     ====================================================== -->
-
+<!-- ================= BOOTSTRAP JS ================= -->
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
 </script>
 
 
-
-<!-- ======================================================
-     CHART.JS
-     ====================================================== -->
-
+<!-- ================= CHART JS ================= -->
 <script
     src="https://cdn.jsdelivr.net/npm/chart.js">
 </script>
 
 
-
-<!-- ======================================================
-     JAVASCRIPT SENDIRI
-     ====================================================== -->
-
+<!-- ================= CUSTOM JS ================= -->
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
