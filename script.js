@@ -1,17 +1,17 @@
 /* =========================================================
    BEBEK GONGSO KINANTHI
-   JavaScript - Web-JS
-   Tanpa Database / Firebase
+   WEB-JS FINAL
+   TANPA FIREBASE / DATABASE
    ========================================================= */
 
 
-/* =========================================================
-   1. DATA MENU
-   ========================================================= */
+/* =========================
+   DATA MENU
+   ========================= */
 
 const menuData = [
 
-    // ================= BEBEK =================
+    // BEBEK
     {
         name: "Bebek Goreng",
         price: "Rp27.000",
@@ -49,7 +49,7 @@ const menuData = [
     },
 
 
-    // ================= AYAM =================
+    // AYAM
     {
         name: "Ayam Kampung Goreng",
         price: "Rp27.000",
@@ -92,7 +92,7 @@ const menuData = [
     },
 
 
-    // ================= LAINNYA =================
+    // LAINNYA
     {
         name: "Pepes Nila",
         price: "Rp30.000",
@@ -160,7 +160,7 @@ const menuData = [
     },
 
 
-    // ================= COFFEE =================
+    // COFFEE
     {
         name: "Kopi Susu Kinanthi Hot",
         price: "Rp22.000",
@@ -193,7 +193,7 @@ const menuData = [
     },
 
 
-    // ================= CAMILAN =================
+    // CAMILAN
     {
         name: "Mix Platter",
         price: "Rp25.000",
@@ -246,7 +246,7 @@ const menuData = [
     },
 
 
-    // ================= MINUMAN =================
+    // MINUMAN
     {
         name: "Jahe Geprek",
         price: "Rp10.000",
@@ -306,10 +306,10 @@ const menuData = [
 ];
 
 
-/* =========================================================
-   2. FOTO SETIAP KATEGORI
-   SESUAI STRUKTUR FOLDER GITHUB
-   ========================================================= */
+/* =========================
+   FOTO KATEGORI
+   SESUAI FILE GITHUB KAMU
+   ========================= */
 
 const categoryImages = {
 
@@ -341,146 +341,58 @@ const categoryImages = {
 };
 
 
-/* =========================================================
-   3. NAMA KATEGORI
-   ========================================================= */
+/* =========================
+   NAMA KATEGORI
+   ========================= */
 
 const categoryNames = {
 
-    bebek: "Menu Bebek",
-
-    ayam: "Menu Ayam",
-
-    lain: "Menu Lainnya",
-
-    coffee: "Menu Coffee",
-
-    camilan: "Menu Camilan",
-
-    minuman: "Menu Minuman"
+    semua: "Semua Menu",
+    bebek: "Bebek",
+    ayam: "Ayam",
+    lain: "Lainnya",
+    coffee: "Coffee",
+    camilan: "Camilan",
+    minuman: "Minuman"
 
 };
 
 
-/* =========================================================
-   4. CONTOH REVIEW
-   Disimpan sementara di browser menggunakan localStorage.
-   Tidak menggunakan database.
-   ========================================================= */
+/* =========================
+   ELEMENT HTML
+   ========================= */
 
-const defaultReviews = [
+const menuContainer =
+    document.getElementById("menuContainer");
 
-    {
-        name: "Pelanggan",
-        rating: 5,
-        message: "Makanannya enak dan menunya banyak."
-    },
+const menuInfo =
+    document.getElementById("menuInfo");
 
-    {
-        name: "Pelanggan",
-        rating: 5,
-        message: "Bebek gongsonya enak dan cocok untuk makan bersama."
-    }
-
-];
+const menuImageContainer =
+    document.getElementById("menuImageContainer");
 
 
-/* =========================================================
-   5. RENDER FOTO KATEGORI
-   ========================================================= */
+/* =========================
+   TAMPILKAN MENU
+   ========================= */
 
-function renderCategoryImages(category) {
+function tampilkanMenu(category) {
 
-    const container =
-        document.getElementById("categoryImageContainer");
-
-    if (!container) {
-        return;
-    }
-
-    // Kalau pilih semua, tampilkan tidak ada foto khusus
-    if (category === "semua") {
-
-        container.innerHTML = "";
-
+    if (!menuContainer) {
         return;
     }
 
 
-    const images = categoryImages[category];
-
-    if (!images) {
-
-        container.innerHTML = "";
-
-        return;
-    }
-
-
-    let html = "";
-
-    html += `
-        <div class="text-center mb-3">
-            <h3 class="fw-bold">
-                ${categoryNames[category]}
-            </h3>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-    `;
-
-
-    images.forEach(function(image) {
-
-        html += `
-            <div class="col-md-8 col-lg-6">
-                <div class="card border-0 shadow-sm overflow-hidden">
-                    <img
-                        src="${image}"
-                        alt="${categoryNames[category]}"
-                        class="img-fluid menu-category-image"
-                        onerror="this.style.display='none'"
-                    >
-                </div>
-            </div>
-        `;
-
-    });
-
-
-    html += `
-        </div>
-    `;
-
-
-    container.innerHTML = html;
-}
-
-
-/* =========================================================
-   6. RENDER DAFTAR MENU
-   ========================================================= */
-
-function renderMenus(category = "semua") {
-
-    const container =
-        document.getElementById("menuContainer");
-
-    if (!container) {
-        return;
-    }
-
-
-    let filteredMenus;
+    let dataMenu;
 
 
     if (category === "semua") {
 
-        filteredMenus = menuData;
+        dataMenu = menuData;
 
     } else {
 
-        filteredMenus = menuData.filter(function(menu) {
+        dataMenu = menuData.filter(function(menu) {
 
             return menu.category === category;
 
@@ -489,109 +401,144 @@ function renderMenus(category = "semua") {
     }
 
 
-    container.innerHTML = "";
+    /* INFORMASI JUMLAH MENU */
 
+    if (menuInfo) {
 
-    filteredMenus.forEach(function(menu) {
+        menuInfo.innerHTML = `
+            <h4 class="fw-bold mb-1">
+                ${categoryNames[category]}
+            </h4>
 
-        const card = document.createElement("div");
-
-        card.className = "col-sm-6 col-lg-4";
-
-
-        card.innerHTML = `
-            <div class="card menu-card h-100 border-0 shadow-sm">
-
-                <div class="card-body">
-
-                    <span class="badge bg-success mb-2">
-                        ${categoryNames[menu.category]}
-                    </span>
-
-                    <h5 class="card-title fw-bold">
-                        ${menu.name}
-                    </h5>
-
-                    <p class="menu-price mb-0">
-                        ${menu.price}
-                    </p>
-
-                </div>
-
-            </div>
+            <p class="text-muted mb-0">
+                ${dataMenu.length} pilihan menu
+            </p>
         `;
 
-
-        container.appendChild(card);
-
-    });
+    }
 
 
-    renderCategoryImages(category);
+    /* FOTO KATEGORI */
+
+    if (menuImageContainer) {
+
+        if (category === "semua") {
+
+            menuImageContainer.innerHTML = "";
+
+        } else {
+
+            const images =
+                categoryImages[category] || [];
+
+            menuImageContainer.innerHTML =
+                images.map(function(image) {
+
+                    return `
+                        <div class="text-center mb-3">
+
+                            <img
+                                src="${image}"
+                                alt="${categoryNames[category]}"
+                                class="img-fluid rounded shadow-sm menu-category-image">
+
+                        </div>
+                    `;
+
+                }).join("");
+
+        }
+
+    }
+
+
+    /* DAFTAR MENU */
+
+    menuContainer.innerHTML =
+        dataMenu.map(function(menu) {
+
+            return `
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 border-0 shadow-sm menu-card">
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between align-items-start gap-2">
+
+                                <h5 class="fw-bold mb-2">
+                                    ${menu.name}
+                                </h5>
+
+                                <span class="fw-bold text-warning text-nowrap">
+                                    ${menu.price}
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted small mb-0">
+                                Bebek Gongso Kinanthi
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            `;
+
+        }).join("");
 
 }
 
 
-/* =========================================================
-   7. FILTER / TOMBOL KATEGORI
-   ========================================================= */
+/* =========================
+   FILTER KATEGORI
+   ========================= */
 
-const menuButtons =
+const filterButtons =
     document.querySelectorAll(".menu-filter");
 
 
-menuButtons.forEach(function(button) {
+filterButtons.forEach(function(button) {
 
     button.addEventListener("click", function() {
+
+        /* hapus active */
+
+        filterButtons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        /* aktifkan tombol yang diklik */
+
+        this.classList.add("active");
+
+
+        /* ambil kategori */
 
         const category =
             this.getAttribute("data-category");
 
 
-        // Mengubah tombol aktif
-        menuButtons.forEach(function(btn) {
+        /* tampilkan menu */
 
-            btn.classList.remove("active");
-
-            btn.classList.remove("btn-hijau");
-
-            btn.classList.add("btn-outline-success");
-
-        });
+        tampilkanMenu(category);
 
 
-        this.classList.add("active");
+        /* scroll ke bagian menu */
 
-        this.classList.remove("btn-outline-success");
-
-        this.classList.add("btn-hijau");
-
-
-        // Menampilkan menu
-        renderMenus(category);
-
-
-        // Scroll ke bagian menu
         const menuSection =
             document.getElementById("menu");
 
-
         if (menuSection) {
 
-            const navbarHeight = 70;
-
-            const position =
-                menuSection.getBoundingClientRect().top
-                + window.scrollY
-                - navbarHeight;
-
-
-            window.scrollTo({
-
-                top: position,
-
-                behavior: "smooth"
-
+            menuSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
             });
 
         }
@@ -601,359 +548,49 @@ menuButtons.forEach(function(button) {
 });
 
 
-/* =========================================================
-   8. AUTOSCROLL NAVBAR
-   ========================================================= */
-
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-
-    link.addEventListener("click", function(event) {
-
-        const targetId =
-            this.getAttribute("href");
-
-
-        if (targetId === "#") {
-            return;
-        }
-
-
-        const target =
-            document.querySelector(targetId);
-
-
-        if (!target) {
-            return;
-        }
-
-
-        event.preventDefault();
-
-
-        const navbarHeight = 70;
-
-
-        const position =
-            target.getBoundingClientRect().top
-            + window.scrollY
-            - navbarHeight;
-
-
-        window.scrollTo({
-
-            top: position,
-
-            behavior: "smooth"
-
-        });
-
-
-        // Menutup navbar pada tampilan mobile
-        const navbar =
-            document.getElementById("navbarNav");
-
-
-        if (
-            navbar &&
-            navbar.classList.contains("show")
-        ) {
-
-            const bsCollapse =
-                bootstrap.Collapse.getInstance(navbar);
-
-
-            if (bsCollapse) {
-
-                bsCollapse.hide();
-
-            }
-
-        }
-
-    });
-
-});
-
-
-/* =========================================================
-   9. DATA REVIEW LOCAL STORAGE
-   ========================================================= */
-
-function getReviews() {
-
-    const saved =
-        localStorage.getItem("bebekGongsoReviews");
-
-
-    if (!saved) {
-
-        return defaultReviews;
-
-    }
-
-
-    try {
-
-        return JSON.parse(saved);
-
-    } catch (error) {
-
-        return defaultReviews;
-
-    }
-
-}
-
-
-/* =========================================================
-   10. SIMPAN REVIEW
-   ========================================================= */
-
-function saveReviews(reviews) {
-
-    localStorage.setItem(
-        "bebekGongsoReviews",
-        JSON.stringify(reviews)
-    );
-
-}
-
-
-/* =========================================================
-   11. MEMBUAT BINTANG RATING
-   ========================================================= */
-
-function createStars(rating) {
-
-    let stars = "";
-
-
-    for (let i = 1; i <= 5; i++) {
-
-        if (i <= rating) {
-
-            stars += "★";
-
-        } else {
-
-            stars += "☆";
-
-        }
-
-    }
-
-
-    return stars;
-
-}
-
-
-/* =========================================================
-   12. RENDER REVIEW
-   ========================================================= */
-
-function renderReviews() {
-
-    const container =
-        document.getElementById("reviewContainer");
-
-
-    if (!container) {
-        return;
-    }
-
-
-    const reviews = getReviews();
-
-
-    container.innerHTML = "";
-
-
-    reviews.forEach(function(review) {
-
-        const item =
-            document.createElement("div");
-
-
-        item.className =
-            "card border-0 shadow-sm mb-3";
-
-
-        item.innerHTML = `
-
-            <div class="card-body">
-
-                <div class="d-flex justify-content-between align-items-start">
-
-                    <div>
-
-                        <h5 class="fw-bold mb-1">
-                            ${review.name}
-                        </h5>
-
-                        <div class="text-warning">
-                            ${createStars(Number(review.rating))}
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p class="mb-0 mt-3">
-                    ${review.message}
-                </p>
-
-            </div>
-
-        `;
-
-
-        container.appendChild(item);
-
-    });
-
-}
-
-
-/* =========================================================
-   13. FORM REVIEW
-   ========================================================= */
-
-const reviewForm =
-    document.getElementById("reviewForm");
-
-
-if (reviewForm) {
-
-    reviewForm.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-
-        const name =
-            document.getElementById("reviewName")
-                .value
-                .trim();
-
-
-        const rating =
-            document.getElementById("reviewRating")
-                .value;
-
-
-        const message =
-            document.getElementById("reviewMessage")
-                .value
-                .trim();
-
-
-        const status =
-            document.getElementById("reviewStatus");
-
-
-        // Validasi
-        if (
-            name === "" ||
-            rating === "" ||
-            message === ""
-        ) {
-
-            status.innerHTML = `
-                <div class="alert alert-danger">
-                    Semua data review harus diisi.
-                </div>
-            `;
-
-            return;
-
-        }
-
-
-        // Ambil review lama
-        const reviews = getReviews();
-
-
-        // Tambahkan review baru
-        reviews.unshift({
-
-            name: name,
-
-            rating: Number(rating),
-
-            message: message
-
-        });
-
-
-        // Simpan ke browser
-        saveReviews(reviews);
-
-
-        // Render ulang
-        renderReviews();
-
-
-        // Pesan berhasil
-        status.innerHTML = `
-            <div class="alert alert-success">
-                Review berhasil ditambahkan!
-            </div>
-        `;
-
-
-        // Reset form
-        reviewForm.reset();
-
-    });
-
-}
-
-
-/* =========================================================
-   14. CHART JS
-   ========================================================= */
-
-function createMenuChart() {
+/* =========================
+   CHART JS
+   ========================= */
+
+function buatChart() {
 
     const canvas =
         document.getElementById("menuChart");
 
-
-    if (!canvas) {
+    if (!canvas || typeof Chart === "undefined") {
         return;
     }
 
 
-    // Menghitung jumlah menu setiap kategori
-    const categories = [
-        "bebek",
-        "ayam",
-        "lain",
-        "coffee",
-        "camilan",
-        "minuman"
-    ];
+    const jumlahBebek =
+        menuData.filter(menu =>
+            menu.category === "bebek"
+        ).length;
 
+    const jumlahAyam =
+        menuData.filter(menu =>
+            menu.category === "ayam"
+        ).length;
 
-    const labels = [
-        "Bebek",
-        "Ayam",
-        "Lainnya",
-        "Coffee",
-        "Camilan",
-        "Minuman"
-    ];
+    const jumlahLain =
+        menuData.filter(menu =>
+            menu.category === "lain"
+        ).length;
 
+    const jumlahCoffee =
+        menuData.filter(menu =>
+            menu.category === "coffee"
+        ).length;
 
-    const data = categories.map(function(category) {
+    const jumlahCamilan =
+        menuData.filter(menu =>
+            menu.category === "camilan"
+        ).length;
 
-        return menuData.filter(function(menu) {
-
-            return menu.category === category;
-
-        }).length;
-
-    });
+    const jumlahMinuman =
+        menuData.filter(menu =>
+            menu.category === "minuman"
+        ).length;
 
 
     new Chart(canvas, {
@@ -962,18 +599,30 @@ function createMenuChart() {
 
         data: {
 
-            labels: labels,
+            labels: [
+                "Bebek",
+                "Ayam",
+                "Lainnya",
+                "Coffee",
+                "Camilan",
+                "Minuman"
+            ],
 
             datasets: [
 
                 {
-
                     label: "Jumlah Menu",
 
-                    data: data,
+                    data: [
+                        jumlahBebek,
+                        jumlahAyam,
+                        jumlahLain,
+                        jumlahCoffee,
+                        jumlahCamilan,
+                        jumlahMinuman
+                    ],
 
                     borderWidth: 1
-
                 }
 
             ]
@@ -993,20 +642,8 @@ function createMenuChart() {
                     beginAtZero: true,
 
                     ticks: {
-
                         stepSize: 1
-
                     }
-
-                }
-
-            },
-
-            plugins: {
-
-                legend: {
-
-                    display: true
 
                 }
 
@@ -1019,21 +656,251 @@ function createMenuChart() {
 }
 
 
-/* =========================================================
-   15. JALANKAN PROGRAM
-   ========================================================= */
+/* =========================
+   REVIEW
+   TANPA DATABASE
+   MENGGUNAKAN LOCAL STORAGE
+   ========================= */
 
-document.addEventListener("DOMContentLoaded", function() {
+const reviewDefault = [
 
-    // Tampilkan semua menu saat pertama dibuka
-    renderMenus("semua");
+    {
+        name: "Pelanggan",
+        rating: 5,
+        message: "Makanannya enak dan tempatnya nyaman."
+    },
+
+    {
+        name: "Pelanggan",
+        rating: 5,
+        message: "Bebek gongsonya enak dan cocok untuk makan bersama."
+    }
+
+];
 
 
-    // Tampilkan review
-    renderReviews();
+function ambilReview() {
+
+    const data =
+        localStorage.getItem("reviewBebekGongso");
+
+    if (!data) {
+
+        return reviewDefault;
+
+    }
+
+    try {
+
+        return JSON.parse(data);
+
+    } catch (error) {
+
+        return reviewDefault;
+
+    }
+
+}
 
 
-    // Buat chart
-    createMenuChart();
+function simpanReview(data) {
+
+    localStorage.setItem(
+        "reviewBebekGongso",
+        JSON.stringify(data)
+    );
+
+}
+
+
+function tampilkanReview() {
+
+    const container =
+        document.getElementById("reviewContainer");
+
+    if (!container) {
+        return;
+    }
+
+
+    const reviews =
+        ambilReview();
+
+
+    container.innerHTML =
+        reviews.map(function(review) {
+
+            const stars =
+                "★".repeat(review.rating) +
+                "☆".repeat(5 - review.rating);
+
+
+            return `
+                <div class="col-md-6">
+
+                    <div class="card border-0 shadow-sm h-100">
+
+                        <div class="card-body p-4">
+
+                            <h5 class="fw-bold">
+                                ${review.name}
+                            </h5>
+
+                            <div class="text-warning mb-2">
+                                ${stars}
+                            </div>
+
+                            <p class="text-muted mb-0">
+                                ${review.message}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            `;
+
+        }).join("");
+
+}
+
+
+/* =========================
+   FORM REVIEW
+   ========================= */
+
+const reviewForm =
+    document.getElementById("reviewForm");
+
+
+if (reviewForm) {
+
+    reviewForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("reviewName").value.trim();
+
+        const rating =
+            Number(
+                document.getElementById("reviewRating").value
+            );
+
+        const message =
+            document.getElementById("reviewMessage").value.trim();
+
+        const status =
+            document.getElementById("reviewStatus");
+
+
+        if (!name || !message) {
+
+            status.innerHTML = `
+                <span class="text-danger">
+                    Nama dan pesan harus diisi.
+                </span>
+            `;
+
+            return;
+
+        }
+
+
+        const reviews =
+            ambilReview();
+
+
+        reviews.unshift({
+
+            name: name,
+
+            rating: rating,
+
+            message: message
+
+        });
+
+
+        simpanReview(reviews);
+
+        tampilkanReview();
+
+
+        reviewForm.reset();
+
+
+        status.innerHTML = `
+            <span class="text-success">
+                Review berhasil ditambahkan!
+            </span>
+        `;
+
+
+        setTimeout(function() {
+
+            status.innerHTML = "";
+
+        }, 3000);
+
+    });
+
+}
+
+
+/* =========================
+   AUTOSCROLL NAVBAR
+   ========================= */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(function(link) {
+
+    link.addEventListener("click", function(event) {
+
+        const targetId =
+            this.getAttribute("href");
+
+        const target =
+            document.querySelector(targetId);
+
+
+        if (!target) {
+            return;
+        }
+
+
+        event.preventDefault();
+
+
+        target.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+    });
 
 });
+
+
+/* =========================
+   JALANKAN SAAT HALAMAN SIAP
+   ========================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        tampilkanMenu("semua");
+
+        tampilkanReview();
+
+        buatChart();
+
+    }
+);
