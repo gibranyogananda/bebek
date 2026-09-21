@@ -1,173 +1,173 @@
-* {
-    box-sizing: border-box;
-}
+/* =====================================================
+   BEBEK GONGSO KINANTHI
+   STYLE CSS - WEB JS
+   ===================================================== */
+
+
+/* ================= GLOBAL ================= */
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #17351f;
-    background: #fffdf7;
+    color: #333;
+    background-color: #ffffff;
 }
 
+section {
+    scroll-margin-top: 75px;
+}
+
+
+/* ================= WARNA ================= */
+
 .bg-hijau {
-    background: #175c35;
+    background-color: #198754 !important;
 }
 
 .btn-hijau {
-    background: #175c35;
+    background-color: #198754;
     color: white;
-    border: 1px solid #175c35;
+    border: 1px solid #198754;
 }
 
-.btn-hijau:hover,
-.btn-hijau.active {
-    background: #0e4326;
+.btn-hijau:hover {
+    background-color: #157347;
+    border-color: #157347;
     color: white;
 }
+
+
+/* ================= NAVBAR ================= */
+
+.navbar-brand img {
+    object-fit: cover;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 8px;
+}
+
+.navbar .nav-link:hover {
+    color: white;
+}
+
+
+/* ================= HERO ================= */
 
 .hero-section {
-    min-height: 620px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    background: linear-gradient(
+        135deg,
+        #f4fff8,
+        #ffffff
+    );
+}
+
+.hero-section img {
+    max-height: 500px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* ================= MENU ================= */
+
+.menu-filter {
+    min-width: 90px;
+}
+
+.menu-filter.active {
     color: white;
-    background:
-        radial-gradient(circle at 80% 20%, rgba(255,193,7,.25), transparent 25%),
-        linear-gradient(135deg, #12472a, #1d7042);
-    padding: 80px 0;
-}
-
-.hero-card {
-    background: rgba(255,255,255,.96);
-    color: #17351f;
-    border-radius: 30px;
-    padding: 35px 25px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.2);
-}
-
-.hero-logo {
-    width: 230px;
-    max-width: 75%;
-}
-
-.section-padding {
-    padding: 80px 0;
-}
-
-.bg-cream {
-    background: #fff4dc;
-}
-
-.section-kicker {
-    color: #b47700;
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: .8rem;
-}
-
-.section-kicker.light {
-    color: #ffd35a;
-}
-
-.service-card {
-    border-radius: 20px;
-    transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.12) !important;
-}
-
-.service-icon {
-    font-size: 2.2rem;
-    color: #175c35;
 }
 
 .menu-card {
-    border: 0;
-    border-radius: 18px;
-    overflow: hidden;
-    height: 100%;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
 }
 
 .menu-price {
-    color: #a96900;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: bold;
+    color: #198754;
 }
 
-.about-logo {
-    width: 280px;
-    max-width: 80%;
+
+/* ================= FOTO MENU ================= */
+
+.menu-category-image {
+    width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+    display: block;
+    background-color: white;
 }
 
-.about-info {
-    background: white;
-    padding: 15px;
-    border-radius: 14px;
-    border-left: 5px solid #175c35;
+
+/* ================= PACKAGE ================= */
+
+.package-image {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 10px;
 }
 
-.package-img {
-    height: 280px;
-    object-fit: cover;
-    object-position: top;
+
+/* ================= CHART ================= */
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
 }
 
-.contact-section {
-    background: #164d2f;
+
+/* ================= CARD ================= */
+
+.card {
+    border-radius: 12px;
 }
 
-.contact-box {
-    text-decoration: none;
-    color: white;
-    background: rgba(255,255,255,.1);
-    border: 1px solid rgba(255,255,255,.2);
-    border-radius: 18px;
-    padding: 25px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 6px;
-    transition: .2s;
+.card img {
+    border-radius: 12px 12px 0 0;
 }
 
-.contact-box:hover {
-    color: white;
-    background: rgba(255,255,255,.18);
-    transform: translateY(-3px);
+
+/* ================= FOOTER ================= */
+
+footer {
+    margin-top: 0;
 }
 
-.contact-box i {
-    font-size: 2rem;
-    color: #ffd35a;
-}
 
-#menuContainer .card {
-    background: white;
-}
+/* ================= MOBILE ================= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+
     .hero-section {
-        min-height: auto;
-        padding: 60px 0;
+        text-align: center;
     }
 
-    .display-4 {
-        font-size: 2.5rem;
+    .hero-section img {
+        max-height: 350px;
     }
 
-    .section-padding {
-        padding: 60px 0;
+    .menu-category-image {
+        max-height: 500px;
     }
 
-    .package-img {
-        height: 230px;
+    .package-image {
+        height: 280px;
     }
+
 }
