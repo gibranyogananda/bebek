@@ -1,20 +1,21 @@
-/* ================================
+/* =====================================================
    GLOBAL
-================================ */
+===================================================== */
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
+    scroll-padding-top: 80px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     color: #333;
+    background: #fff;
 }
 
 section {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 75px;
 }
 
 .section-padding {
@@ -22,18 +23,18 @@ section {
 }
 
 
-/* ================================
+/* =====================================================
    WARNA
-================================ */
+===================================================== */
 
 .bg-hijau {
     background-color: #14532d !important;
 }
 
 
-/* ================================
+/* =====================================================
    NAVBAR
-================================ */
+===================================================== */
 
 .logo-navbar {
     width: 45px;
@@ -42,9 +43,8 @@ section {
 }
 
 .navbar .nav-link {
-    color: rgba(255, 255, 255, 0.8);
-    margin-left: 5px;
-    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 4px;
     transition: 0.3s;
 }
 
@@ -59,45 +59,62 @@ section {
 }
 
 
-/* ================================
+/* =====================================================
    HERO
-================================ */
+===================================================== */
 
 .hero-section {
     min-height: 90vh;
+
     display: flex;
     align-items: center;
+
+    padding: 80px 0;
+
+    color: white;
+
     background: linear-gradient(
         135deg,
         #14532d,
         #198754
     );
-    color: white;
-    padding: 80px 0;
 }
 
 .hero-section h1 {
     line-height: 1.15;
 }
 
+.hero-info p {
+    margin-bottom: 8px;
+}
+
+.hero-info i {
+    margin-right: 8px;
+}
+
 .hero-card {
     background: white;
     color: #333;
+
     padding: 40px 30px;
+
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .hero-logo {
-    max-width: 220px;
-    max-height: 220px;
+    width: 220px;
+    height: 220px;
+
     object-fit: contain;
 }
 
 
-/* ================================
+/* =====================================================
    SECTION TITLE
-================================ */
+===================================================== */
 
 .section-title {
     text-align: center;
@@ -106,8 +123,11 @@ section {
 
 .section-title span {
     color: #198754;
+
     font-weight: bold;
+
     text-transform: uppercase;
+
     letter-spacing: 2px;
 }
 
@@ -118,33 +138,48 @@ section {
 
 .section-title p {
     max-width: 650px;
+
     margin: 10px auto 0;
+
     color: #666;
 }
 
 
-/* ================================
-   FEATURE CARD
-================================ */
+/* =====================================================
+   FEATURE
+===================================================== */
 
 .feature-card {
     height: 100%;
+
     padding: 30px;
-    border-radius: 18px;
-    background: white;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
     text-align: center;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
     transition: 0.3s;
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .feature-card i {
+    display: block;
+
     font-size: 45px;
+
     color: #198754;
+
     margin-bottom: 15px;
 }
 
@@ -153,16 +188,31 @@ section {
 }
 
 
-/* ================================
+/* =====================================================
    MENU BUTTON
-================================ */
+===================================================== */
+
+.menu-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 5px;
+}
 
 .btn-menu {
     border: 2px solid #198754;
+
     color: #198754;
+
     margin: 5px;
+
+    padding: 10px 20px;
+
     border-radius: 30px;
-    padding: 10px 22px;
+
     transition: 0.3s;
 }
 
@@ -173,53 +223,175 @@ section {
 }
 
 
-/* ================================
-   MENU CARD
-================================ */
+/* =====================================================
+   MENU LIST CARD
+===================================================== */
 
-.menu-card {
+.menu-list-card {
     background: white;
-    border-radius: 18px;
-    padding: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.menu-list-header {
+    margin-bottom: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 2px solid #198754;
+}
+
+.menu-list-header span {
+    color: #198754;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.menu-list-card h3 {
+    color: #14532d;
+
+    font-weight: 700;
+
+    margin: 5px 0 0;
+}
+
+
+/* =====================================================
+   MENU ROW
+===================================================== */
+
+.menu-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px dashed #ccc;
+
+    font-size: 15px;
+}
+
+.menu-name {
+    font-weight: 500;
+}
+
+.menu-dots {
+    flex: 1;
+
+    min-width: 15px;
+
+    border-bottom: 2px dotted #aaa;
+
+    margin-top: 5px;
+}
+
+.menu-price {
+    color: #198754;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MENU IMAGES
+===================================================== */
+
+.menu-images {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.menu-images img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
     transition: 0.3s;
 }
 
-.menu-card:hover {
-    transform: translateY(-5px);
-}
+.menu-images img:hover {
+    transform: translateY(-4px);
 
-.menu-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.16);
 }
 
 
-/* ================================
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-list p {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+}
+
+.about-list i {
+    color: #198754;
+
+    margin-right: 8px;
+}
+
+
+/* =====================================================
    CHART
-================================ */
+===================================================== */
 
 .chart-card {
     background: white;
+
     padding: 30px;
+
     border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 
-/* ================================
+/* =====================================================
    PACKAGE
-================================ */
+===================================================== */
 
 .package-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     height: 100%;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
     transition: 0.3s;
 }
 
@@ -229,43 +401,62 @@ section {
 
 .package-card img {
     width: 100%;
+
     height: auto;
+
     display: block;
 }
 
 
-/* ================================
+/* =====================================================
    PROMO
-================================ */
+===================================================== */
 
 .promo-card {
-    background: white;
     padding: 35px;
+
+    background: white;
+
     border-radius: 25px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
-.promo-card img {
+.promo-image {
     max-height: 500px;
+
+    width: auto;
+
+    max-width: 100%;
+
     object-fit: contain;
 }
 
 
-/* ================================
+/* =====================================================
    CONTACT
-================================ */
+===================================================== */
 
 .contact-card {
     height: 100%;
+
     padding: 30px;
+
     text-align: center;
+
     border: 1px solid rgba(255, 255, 255, 0.2);
+
     border-radius: 20px;
+
     background: rgba(255, 255, 255, 0.08);
 }
 
 .contact-card i {
+    display: block;
+
     font-size: 45px;
+
     margin-bottom: 15px;
 }
 
@@ -274,61 +465,81 @@ section {
 }
 
 
-/* ================================
+/* =====================================================
    FOOTER
-================================ */
+===================================================== */
 
 .footer {
-    background-color: #0b3820;
-    color: white;
     padding: 45px 0;
+
+    color: white;
+
+    background-color: #0b3820;
 }
 
 .footer-logo {
     width: 80px;
     height: 80px;
+
     object-fit: contain;
+
     margin-bottom: 15px;
 }
 
 
-/* ================================
+/* =====================================================
    FLOATING WHATSAPP
-================================ */
+===================================================== */
 
 .floating-wa {
     position: fixed;
+
     right: 25px;
+
     bottom: 25px;
+
+    z-index: 999;
+
     width: 58px;
     height: 58px;
-    border-radius: 50%;
-    background-color: #25d366;
-    color: white;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #25d366;
+
+    color: white;
+
     font-size: 30px;
+
     text-decoration: none;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-    z-index: 999;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.25);
+
     transition: 0.3s;
 }
 
 .floating-wa:hover {
     transform: scale(1.1);
+
     color: white;
 }
 
 
-/* ================================
+/* =====================================================
    RESPONSIVE
-================================ */
+===================================================== */
 
 @media (max-width: 991px) {
 
     .navbar .nav-link {
         margin: 5px 0;
+
         border-bottom: none !important;
     }
 
@@ -341,6 +552,7 @@ section {
     }
 
 }
+
 
 @media (max-width: 576px) {
 
@@ -360,9 +572,40 @@ section {
         padding: 25px 20px;
     }
 
+    .hero-logo {
+        width: 180px;
+        height: 180px;
+    }
+
     .btn-menu {
-        padding: 8px 15px;
-        font-size: 14px;
+        padding: 8px 14px;
+
+        font-size: 13px;
+    }
+
+    .menu-list-card {
+        padding: 20px;
+    }
+
+    .menu-row {
+        font-size: 13px;
+
+        gap: 5px;
+    }
+
+    .menu-price {
+        font-size: 13px;
+    }
+
+    .floating-wa {
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 26px;
     }
 
 }
