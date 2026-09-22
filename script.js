@@ -146,17 +146,30 @@ function showMenu(category, clickedButton) {
     const content = document.getElementById("menuContent");
     const menu = menus[category];
 
-    if (!menu) return;
+    if (!content || !menu) {
+        return;
+    }
 
 
-    document.querySelectorAll(".menu-btn").forEach(button => {
-        button.classList.remove("active");
-    });
+    /* -----------------------------
+       ACTIVE BUTTON
+    ----------------------------- */
+
+    document
+        .querySelectorAll(".menu-btn")
+        .forEach(button => {
+            button.classList.remove("active");
+        });
+
 
     if (clickedButton) {
         clickedButton.classList.add("active");
     }
 
+
+    /* -----------------------------
+       DAFTAR MENU
+    ----------------------------- */
 
     let list = "";
 
@@ -164,50 +177,87 @@ function showMenu(category, clickedButton) {
 
         list += `
             <li>
-                <span class="menu-name">${item[0]}</span>
-                <span class="menu-price">${item[1]}</span>
+                <span class="menu-name">
+                    ${item[0]}
+                </span>
+
+                <span class="menu-price">
+                    ${item[1]}
+                </span>
             </li>
         `;
 
     });
 
 
+    /* -----------------------------
+       POSTER
+    ----------------------------- */
+
     let posters = "";
 
-    if (menu.images) {
+
+    /*
+       Kategori Minuman memiliki
+       dua poster.
+    */
+
+    if (menu.images && Array.isArray(menu.images)) {
 
         posters = `
             <div class="row g-3">
 
                 ${menu.images.map(image => `
+
                     <div class="col-12">
 
                         <img
                             src="${image}"
                             alt="${menu.title}"
                             class="menu-poster"
-                            onclick="openImage('${image}', '${menu.title}')"
+                            onclick="openImage(
+                                '${image}',
+                                '${menu.title}'
+                            )"
                         >
 
                     </div>
+
                 `).join("")}
 
             </div>
         `;
 
-    } else {
+    }
+
+
+    /*
+       Kategori lain memiliki
+       satu poster.
+    */
+
+    else if (menu.image) {
 
         posters = `
+
             <img
                 src="${menu.image}"
                 alt="${menu.title}"
                 class="menu-poster"
-                onclick="openImage('${menu.image}', '${menu.title}')"
+                onclick="openImage(
+                    '${menu.image}',
+                    '${menu.title}'
+                )"
             >
+
         `;
 
     }
 
+
+    /* -----------------------------
+       TAMPILKAN KONTEN
+    ----------------------------- */
 
     content.innerHTML = `
 
@@ -215,18 +265,29 @@ function showMenu(category, clickedButton) {
 
             <div class="row g-4">
 
+                <!-- DAFTAR NAMA + HARGA -->
+
                 <div class="col-lg-6">
 
-                    <h3>${menu.title}</h3>
+                    <h3>
+                        ${menu.title}
+                    </h3>
 
                     <ul class="menu-list">
+
                         ${list}
+
                     </ul>
 
                 </div>
 
+
+                <!-- POSTER -->
+
                 <div class="col-lg-6">
+
                     ${posters}
+
                 </div>
 
             </div>
@@ -238,16 +299,44 @@ function showMenu(category, clickedButton) {
 
 
 /* =====================================================
-   FOTO BESAR
+   MODAL FOTO
 ===================================================== */
 
 function openImage(src, alt) {
 
-    const modal = document.getElementById("imageModal");
-    const image = document.getElementById("modalImage");
+    const modal =
+        document.getElementById("imageModal");
+
+    const image =
+        document.getElementById("modalImage");
+
+
+    if (!modal || !image) {
+        return;
+    }
+
 
     image.src = src;
-    image.alt = alt;
+    image.alt = alt || "Preview";
+
+
+    /*
+       Jika gambar gagal dimuat,
+       modal tidak dibiarkan kosong.
+    */
+
+    image.onerror = function() {
+
+        console.error(
+            "Gambar tidak ditemukan:",
+            src
+        );
+
+        image.alt =
+            "Gambar tidak ditemukan: " + src;
+
+    };
+
 
     modal.classList.add("show");
 
@@ -255,84 +344,212 @@ function openImage(src, alt) {
 }
 
 
+/* =====================================================
+   TUTUP MODAL
+===================================================== */
+
 function closeImage(event) {
 
     if (event) {
         event.stopPropagation();
     }
 
-    document.getElementById("imageModal")
-        .classList.remove("show");
+
+    const modal =
+        document.getElementById("imageModal");
+
+
+    if (!modal) {
+        return;
+    }
+
+
+    modal.classList.remove("show");
 
     document.body.style.overflow = "";
+
 }
 
 
-document.addEventListener("keydown", function(event) {
+/* =====================================================
+   TUTUP MODAL DENGAN ESC
+===================================================== */
 
-    if (event.key === "Escape") {
-        closeImage();
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+            closeImage();
+        }
+
     }
+);
+
+
+/* =====================================================
+   NAVBAR
+   ACTIVE + SMOOTH SCROLL
+===================================================== */
+
+const navLinks =
+    document.querySelectorAll(
+        ".navbar .nav-link"
+    );
+
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+/* -----------------------------
+   KLIK NAVBAR
+----------------------------- */
+
+navLinks.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        function(event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            /*
+               Hanya jalankan smooth scroll
+               untuk link menuju section.
+            */
+
+            if (
+                !targetId ||
+                !targetId.startsWith("#")
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            const navbar =
+                document.querySelector(".navbar");
+
+
+            const navbarHeight =
+                navbar
+                    ? navbar.offsetHeight
+                    : 70;
+
+
+            const position =
+                target.offsetTop -
+                navbarHeight;
+
+
+            window.scrollTo({
+
+                top: position,
+
+                behavior: "smooth"
+
+            });
+
+
+            /*
+               Update active menu
+               langsung ketika diklik.
+            */
+
+            navLinks.forEach(item => {
+
+                item.classList.remove(
+                    "active"
+                );
+
+            });
+
+
+            this.classList.add("active");
+
+
+            /*
+               Tutup navbar Bootstrap
+               ketika dibuka di HP.
+            */
+
+            const navbarMenu =
+                document.getElementById(
+                    "navbarMenu"
+                );
+
+
+            if (
+                navbarMenu &&
+                navbarMenu.classList.contains("show")
+            ) {
+
+                const collapse =
+                    bootstrap.Collapse
+                        .getInstance(
+                            navbarMenu
+                        );
+
+
+                if (collapse) {
+                    collapse.hide();
+                }
+
+            }
+
+        }
+    );
 
 });
 
 
 /* =====================================================
-   NAVBAR ACTIVE + SMOOTH SCROLL
+   UPDATE ACTIVE NAVBAR SAAT SCROLL
 ===================================================== */
-
-const navLinks =
-    document.querySelectorAll(".navbar .nav-link");
-
-const sections =
-    document.querySelectorAll("section[id]");
-
-
-navLinks.forEach(link => {
-
-    link.addEventListener("click", function(event) {
-
-        const targetId =
-            this.getAttribute("href");
-
-        const target =
-            document.querySelector(targetId);
-
-        if (!target) return;
-
-        event.preventDefault();
-
-        const position =
-            target.offsetTop - 70;
-
-        window.scrollTo({
-            top: position,
-            behavior: "smooth"
-        });
-
-
-        navLinks.forEach(item => {
-            item.classList.remove("active");
-        });
-
-        this.classList.add("active");
-
-    });
-
-});
-
 
 function updateActiveNav() {
 
     let current = "home";
 
+
+    const scrollPosition =
+        window.scrollY + 150;
+
+
     sections.forEach(section => {
 
-        const top =
-            section.offsetTop - 130;
+        const sectionTop =
+            section.offsetTop;
 
-        if (window.scrollY >= top) {
+
+        const sectionHeight =
+            section.offsetHeight;
+
+
+        if (
+            scrollPosition >= sectionTop &&
+            scrollPosition <
+                sectionTop + sectionHeight
+        ) {
+
             current = section.id;
+
         }
 
     });
@@ -342,10 +559,14 @@ function updateActiveNav() {
 
         link.classList.remove("active");
 
+
         if (
-            link.getAttribute("href") === "#" + current
+            link.getAttribute("href") ===
+            "#" + current
         ) {
+
             link.classList.add("active");
+
         }
 
     });
@@ -353,26 +574,45 @@ function updateActiveNav() {
 }
 
 
-window.addEventListener("scroll", updateActiveNav);
+window.addEventListener(
+    "scroll",
+    updateActiveNav
+);
 
 
 /* =====================================================
    CHART JS
-   DATA SESUAI DATA STATIS TUGAS
 ===================================================== */
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    showMenu(
-        "bebek",
-        document.querySelector(".menu-btn")
-    );
-
+function createMenuChart() {
 
     const canvas =
-        document.getElementById("menuChart");
+        document.getElementById(
+            "menuChart"
+        );
 
-    if (!canvas) return;
+
+    if (!canvas) {
+        return;
+    }
+
+
+    /*
+       Jika chart sudah dibuat,
+       jangan dibuat ulang.
+    */
+
+    if (
+        typeof Chart === "undefined"
+    ) {
+
+        console.error(
+            "Chart.js belum berhasil dimuat."
+        );
+
+        return;
+
+    }
 
 
     new Chart(canvas, {
@@ -390,9 +630,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Minuman"
             ],
 
+
             datasets: [
 
                 {
+
                     label: "Jumlah Menu",
 
                     data: [
@@ -405,17 +647,20 @@ document.addEventListener("DOMContentLoaded", function() {
                     ],
 
                     borderWidth: 1
+
                 }
 
             ]
 
         },
 
+
         options: {
 
             responsive: true,
 
             maintainAspectRatio: false,
+
 
             plugins: {
 
@@ -424,6 +669,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
             },
+
 
             scales: {
 
@@ -443,4 +689,47 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
-});
+}
+
+
+/* =====================================================
+   INITIALIZATION
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        /*
+           Tampilkan menu Bebek
+           ketika website pertama dibuka.
+        */
+
+        const firstMenuButton =
+            document.querySelector(
+                ".menu-btn"
+            );
+
+
+        showMenu(
+            "bebek",
+            firstMenuButton
+        );
+
+
+        /*
+           Buat grafik.
+        */
+
+        createMenuChart();
+
+
+        /*
+           Set navbar active
+           sesuai posisi awal.
+        */
+
+        updateActiveNav();
+
+    }
+);
