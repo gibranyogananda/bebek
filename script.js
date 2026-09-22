@@ -4,8 +4,6 @@
 
 const menus = {
 
-    /* ================= BEBEK ================= */
-
     bebek: {
         title: "Menu Bebek",
         image: "assets/menu-bebek.png",
@@ -25,8 +23,6 @@ const menus = {
         ]
     },
 
-
-    /* ================= AYAM ================= */
 
     ayam: {
         title: "Menu Ayam",
@@ -48,8 +44,6 @@ const menus = {
         ]
     },
 
-
-    /* ================= MENU LAIN ================= */
 
     lain: {
         title: "Menu Lain",
@@ -75,8 +69,6 @@ const menus = {
     },
 
 
-    /* ================= COFFEE ================= */
-
     coffee: {
         title: "Coffee",
         image: "assets/menu-coffee.png",
@@ -84,16 +76,14 @@ const menus = {
         items: [
             ["Kopi Susu Kinanthi Hot", "Rp22.000"],
             ["Lime Coffee Hot", "Rp20.000"],
-            ["Kopi Susu Blueberry — Hot / Ice", "Rp20.000 / Rp22.000"],
-            ["Kopi Susu Caramel — Hot / Ice", "Rp20.000 / Rp22.000"],
-            ["Coffee Latte — Hot / Ice", "Rp18.000 / Rp20.000"],
-            ["Americano — Hot / Ice", "Rp15.000 / Rp17.000"],
+            ["Kopi Susu Blueberry", "Hot / Ice — Rp20.000 / Rp22.000"],
+            ["Kopi Susu Caramel", "Hot / Ice — Rp20.000 / Rp22.000"],
+            ["Coffee Latte", "Hot / Ice — Rp18.000 / Rp20.000"],
+            ["Americano", "Hot / Ice — Rp15.000 / Rp17.000"],
             ["Kopi Tubruk Hot", "Rp15.000"]
         ]
     },
 
-
-    /* ================= CAMILAN ================= */
 
     camilan: {
         title: "Camilan",
@@ -121,9 +111,8 @@ const menus = {
     },
 
 
-    /* ================= MINUMAN ================= */
-
     minuman: {
+
         title: "Minuman",
 
         images: [
@@ -221,118 +210,101 @@ const menus = {
 
 
 /* =====================================================
-   TAMPILKAN DAFTAR ITEM
+   BUAT DAFTAR MENU
 ===================================================== */
 
 function createMenuList(items) {
 
-    let list = "";
-
-    items.forEach(item => {
-
-        list += `
-            <li>
-                <span class="menu-name">
-                    ${item[0]}
-                </span>
-
-                <span class="menu-price">
-                    ${item[1]}
-                </span>
-            </li>
-        `;
-
-    });
-
-    return list;
-}
-
-
-/* =====================================================
-   TAMPILKAN GROUP MINUMAN
-===================================================== */
-
-function createMenuGroups(groups) {
-
-    let result = "";
-
-    groups.forEach(group => {
-
-        result += `
-            <div class="menu-group">
-
-                <h4 class="menu-group-title">
-                    ${group.title}
-                </h4>
-
-                <ul class="menu-list">
-                    ${createMenuList(group.items)}
-                </ul>
-
-            </div>
-        `;
-
-    });
-
-    return result;
-}
-
-
-/* =====================================================
-   TAMPILKAN POSTER
-===================================================== */
-
-function createPosters(menu) {
-
-    if (menu.images) {
-
-        return `
-            <div class="menu-posters">
-
-                ${menu.images.map(image => `
-                    <img
-                        src="${image}"
-                        alt="${menu.title}"
-                        class="menu-poster"
-                        onclick="openImage('${image}', '${menu.title}')"
-                    >
-                `).join("")}
-
-            </div>
-        `;
-
-    }
-
-
     return `
-        <img
-            src="${menu.image}"
-            alt="${menu.title}"
-            class="menu-poster"
-            onclick="openImage('${menu.image}', '${menu.title}')"
-        >
+        <ul class="menu-list">
+
+            ${items.map(item => `
+                <li>
+
+                    <span class="menu-name">
+                        ${item[0]}
+                    </span>
+
+                    <span class="menu-price">
+                        ${item[1]}
+                    </span>
+
+                </li>
+            `).join("")}
+
+        </ul>
     `;
 }
 
 
 /* =====================================================
-   SHOW MENU
+   BUAT GROUP MINUMAN
+===================================================== */
+
+function createMenuGroups(groups) {
+
+    return groups.map(group => `
+
+        <div class="menu-group">
+
+            <h4 class="menu-group-title">
+                ${group.title}
+            </h4>
+
+            ${createMenuList(group.items)}
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* =====================================================
+   POSTER
+===================================================== */
+
+function createPosters(menu) {
+
+    const images = menu.images
+        ? menu.images
+        : [menu.image];
+
+    return `
+
+        <div class="menu-posters">
+
+            ${images.map(image => `
+
+                <img
+                    src="${image}"
+                    alt="${menu.title}"
+                    class="menu-poster"
+                    onclick="openImage('${image}')"
+                >
+
+            `).join("")}
+
+        </div>
+
+    `;
+}
+
+
+/* =====================================================
+   TAMPILKAN MENU
 ===================================================== */
 
 function showMenu(category, clickedButton) {
 
-    const content =
-        document.getElementById("menuContent");
+    const menu = menus[category];
 
-    const menu =
-        menus[category];
-
-    if (!content || !menu) {
+    if (!menu) {
         return;
     }
 
 
-    /* Tombol aktif */
+    /* ACTIVE BUTTON */
 
     document
         .querySelectorAll(".menu-btn")
@@ -348,46 +320,47 @@ function showMenu(category, clickedButton) {
     }
 
 
-    /* Daftar menu */
+    const menuContent =
+        document.getElementById("menuContent");
 
-    let menuHTML = "";
+
+    if (!menuContent) {
+        return;
+    }
+
+
+    let menuListHTML = "";
 
 
     if (menu.groups) {
 
-        menuHTML = createMenuGroups(menu.groups);
+        menuListHTML =
+            createMenuGroups(menu.groups);
 
     } else {
 
-        menuHTML = `
-            <h3>${menu.title}</h3>
-
-            <ul class="menu-list">
-                ${createMenuList(menu.items)}
-            </ul>
-        `;
+        menuListHTML =
+            createMenuList(menu.items);
 
     }
 
 
-    /* Tampilkan */
-
-    content.innerHTML = `
+    menuContent.innerHTML = `
 
         <div class="menu-display">
 
             <div class="row g-4 align-items-start">
 
-                <!-- DAFTAR MENU -->
-
                 <div class="col-lg-6">
 
-                    ${menuHTML}
+                    <h3>
+                        ${menu.title}
+                    </h3>
+
+                    ${menuListHTML}
 
                 </div>
 
-
-                <!-- POSTER -->
 
                 <div class="col-lg-6">
 
@@ -404,10 +377,10 @@ function showMenu(category, clickedButton) {
 
 
 /* =====================================================
-   FOTO BESAR / MODAL
+   IMAGE MODAL
 ===================================================== */
 
-function openImage(src, alt) {
+function openImage(src) {
 
     const modal =
         document.getElementById("imageModal");
@@ -415,12 +388,13 @@ function openImage(src, alt) {
     const image =
         document.getElementById("modalImage");
 
+
     if (!modal || !image) {
         return;
     }
 
+
     image.src = src;
-    image.alt = alt;
 
     modal.classList.add("show");
 
@@ -428,24 +402,26 @@ function openImage(src, alt) {
 }
 
 
-function closeImage(event) {
-
-    if (event) {
-        event.stopPropagation();
-    }
+function closeImage() {
 
     const modal =
         document.getElementById("imageModal");
 
-    if (modal) {
-        modal.classList.remove("show");
+
+    if (!modal) {
+        return;
     }
+
+
+    modal.classList.remove("show");
 
     document.body.style.overflow = "";
 }
 
 
-/* Klik Escape untuk menutup modal */
+/* =====================================================
+   ESC UNTUK MODAL
+===================================================== */
 
 document.addEventListener("keydown", function(event) {
 
@@ -457,64 +433,67 @@ document.addEventListener("keydown", function(event) {
 
 
 /* =====================================================
-   NAVBAR ACTIVE + SMOOTH SCROLL
+   WHATSAPP
+===================================================== */
+
+const WA1 = "6281226956567";
+const WA2 = "628139869925";
+
+
+function chatWA1() {
+
+    window.open(
+        `https://wa.me/${WA1}`,
+        "_blank"
+    );
+
+}
+
+
+function chatWA2() {
+
+    window.open(
+        `https://wa.me/${WA2}`,
+        "_blank"
+    );
+
+}
+
+
+function pilihWhatsApp() {
+
+    const pilihan = confirm(
+        "Pilih nomor WhatsApp:\n\n" +
+        "OK = WA 1 (081226956567)\n" +
+        "Cancel = WA 2 (08139869925)"
+    );
+
+
+    if (pilihan) {
+
+        chatWA1();
+
+    } else {
+
+        chatWA2();
+
+    }
+
+}
+
+
+/* =====================================================
+   NAVBAR + SMOOTH SCROLL
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const navLinks =
-        document.querySelectorAll(".navbar .nav-link");
 
-    const sections =
-        document.querySelectorAll("section[id]");
-
-
-    /* Smooth scroll */
-
-    navLinks.forEach(link => {
-
-        link.addEventListener("click", function(event) {
-
-            const targetId =
-                this.getAttribute("href");
-
-            if (!targetId || !targetId.startsWith("#")) {
-                return;
-            }
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) {
-                return;
-            }
-
-            event.preventDefault();
-
-            const position =
-                target.offsetTop - 70;
-
-            window.scrollTo({
-                top: position,
-                behavior: "smooth"
-            });
-
-
-            navLinks.forEach(item => {
-                item.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-        });
-
-    });
-
-
-    /* Menu pertama otomatis tampil */
+    /* MENU PERTAMA */
 
     const firstMenuButton =
         document.querySelector(".menu-btn");
+
 
     if (firstMenuButton) {
 
@@ -526,19 +505,127 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    /* Update navbar ketika scroll */
+    /* NAVBAR */
+
+    const navLinks =
+        document.querySelectorAll(".navbar .nav-link");
+
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", function(event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                targetId &&
+                targetId.startsWith("#")
+            ) {
+
+                event.preventDefault();
+
+
+                const target =
+                    document.querySelector(targetId);
+
+
+                if (target) {
+
+                    const navbar =
+                        document.querySelector(".navbar");
+
+                    const navbarHeight =
+                        navbar
+                            ? navbar.offsetHeight
+                            : 80;
+
+
+                    const targetPosition =
+                        target.getBoundingClientRect().top +
+                        window.scrollY -
+                        navbarHeight;
+
+
+                    window.scrollTo({
+
+                        top: targetPosition,
+
+                        behavior: "smooth"
+
+                    });
+
+                }
+
+
+                /* CLOSE MOBILE NAVBAR */
+
+                const navbarCollapse =
+                    document.getElementById("navbarNav");
+
+
+                if (
+                    navbarCollapse &&
+                    navbarCollapse.classList.contains("show")
+                ) {
+
+                    const bsCollapse =
+                        bootstrap.Collapse.getInstance(
+                            navbarCollapse
+                        );
+
+
+                    if (bsCollapse) {
+
+                        bsCollapse.hide();
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* =================================================
+       ACTIVE NAVBAR SAAT SCROLL
+    ================================================= */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
 
     function updateActiveNav() {
 
-        let current = "home";
+        const scrollPosition =
+            window.scrollY + 120;
+
+
+        let currentSection = "";
+
 
         sections.forEach(section => {
 
-            const top =
-                section.offsetTop - 130;
+            const sectionTop =
+                section.offsetTop;
 
-            if (window.scrollY >= top) {
-                current = section.id;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionTop + sectionHeight
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
             }
 
         });
@@ -548,9 +635,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             link.classList.remove("active");
 
+
             if (
                 link.getAttribute("href") ===
-                "#" + current
+                `#${currentSection}`
             ) {
 
                 link.classList.add("active");
@@ -578,7 +666,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const canvas =
         document.getElementById("menuChart");
 
-    if (canvas && typeof Chart !== "undefined") {
+
+    if (
+        canvas &&
+        typeof Chart !== "undefined"
+    ) {
 
         new Chart(canvas, {
 
@@ -615,6 +707,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 ]
 
             },
+
 
             options: {
 
