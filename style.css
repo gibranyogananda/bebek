@@ -63,6 +63,7 @@ section {
     color: white !important;
     font-weight: 600;
     margin-left: 8px;
+    transition: .25s;
 }
 
 .navbar .nav-link:hover,
@@ -126,6 +127,7 @@ section {
     border-radius: 8px;
     padding: 12px 22px;
     font-weight: bold;
+    border: none;
 }
 
 .btn-main:hover {
@@ -139,6 +141,7 @@ section {
     border-radius: 8px;
     padding: 12px 22px;
     font-weight: bold;
+    border: none;
 }
 
 .btn-wa:hover {
@@ -291,6 +294,9 @@ section {
     margin-bottom: 20px;
 }
 
+
+/* ================= DAFTAR MENU ================= */
+
 .menu-list {
     padding: 0;
     margin: 0;
@@ -306,16 +312,49 @@ section {
     border-bottom: 1px dashed #d6ded9;
 }
 
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
 .menu-name {
     color: #34433b;
     font-weight: 600;
+    line-height: 1.5;
 }
 
 .menu-price {
     color: #08733d;
     font-weight: 800;
     white-space: nowrap;
+    text-align: right;
 }
+
+
+/* ================= GROUP MINUMAN ================= */
+
+.menu-group {
+    margin-bottom: 30px;
+}
+
+.menu-group:last-child {
+    margin-bottom: 0;
+}
+
+.menu-group-title {
+    color: #d39a18;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 20px 0 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5eadf;
+}
+
+.menu-group:first-child .menu-group-title {
+    margin-top: 0;
+}
+
+
+/* ================= POSTER MENU ================= */
 
 .menu-poster {
     display: block;
@@ -330,6 +369,12 @@ section {
 
 .menu-poster:hover {
     transform: scale(1.01);
+}
+
+.menu-posters {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 
@@ -453,7 +498,6 @@ section {
     border-radius: 25px;
     font-size: 13px;
     white-space: nowrap;
-    pointer-events: none;
 }
 
 .package-content {
@@ -565,6 +609,11 @@ section {
     color: #78837d;
     font-size: 11px;
 }
+
+
+/* =====================================================
+   CHART
+===================================================== */
 
 .about-chart-card {
     display: flex;
@@ -730,6 +779,7 @@ footer small {
     text-decoration: none;
     box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
     z-index: 999;
+    transition: .25s;
 }
 
 .floating-wa:hover {
@@ -761,6 +811,7 @@ footer small {
     max-width: 96%;
     max-height: 94vh;
     object-fit: contain;
+    border-radius: 8px;
 }
 
 .image-close {
@@ -776,11 +827,16 @@ footer small {
     font-size: 32px;
     line-height: 1;
     cursor: pointer;
+    z-index: 2;
+}
+
+.image-close:hover {
+    background: #f3cb48;
 }
 
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE - TABLET
 ===================================================== */
 
 @media (max-width: 991px) {
@@ -793,8 +849,16 @@ footer small {
         height: 450px;
     }
 
+    .menu-display {
+        padding: 25px;
+    }
+
 }
 
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
 
 @media (max-width: 576px) {
 
@@ -830,12 +894,34 @@ footer small {
         padding: 20px;
     }
 
+    .menu-buttons {
+        gap: 8px;
+    }
+
+    .menu-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
     .menu-list li {
         font-size: 13px;
+        gap: 10px;
+    }
+
+    .menu-name {
+        max-width: 65%;
     }
 
     .menu-price {
         font-size: 12px;
+    }
+
+    .menu-group-title {
+        font-size: 16px;
+    }
+
+    .menu-poster {
+        max-height: 600px;
     }
 
     .poster-box {
@@ -853,6 +939,14 @@ footer small {
 
     .chart-wrapper {
         height: 300px;
+    }
+
+    .floating-wa {
+        width: 52px;
+        height: 52px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 25px;
     }
 
 }
