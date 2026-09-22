@@ -1,5 +1,5 @@
 URL Repository GitHub:
-https://github.com/gibranyogananda/bebek
+https://github.com/gibranyogananda/bebek.git
 
 
 Branch utama:
