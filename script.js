@@ -1,6 +1,6 @@
-/* =========================================================
+/* =====================================================
    DATA MENU
-========================================================= */
+===================================================== */
 
 const menus = {
 
@@ -147,6 +147,7 @@ const menus = {
 
         ],
 
+
         groups: [
 
             {
@@ -267,81 +268,67 @@ const menus = {
 
 
 
-/* =========================================================
-   MEMBUAT LIST MENU
-========================================================= */
+/* =====================================================
+   BUAT DAFTAR MENU
+===================================================== */
 
 function createMenuList(items) {
 
-    let html = '<ul class="menu-list">';
+    return `
 
+        <ul class="menu-list">
 
-    items.forEach(function(item) {
+            ${items.map(item => `
 
-        html += `
+                <li>
 
-            <li>
+                    <span class="menu-name">
+                        ${item[0]}
+                    </span>
 
-                <span class="menu-name">
-                    ${item[0]}
-                </span>
+                    <span class="menu-price">
+                        ${item[1]}
+                    </span>
 
-                <span class="menu-price">
-                    ${item[1]}
-                </span>
+                </li>
 
-            </li>
+            `).join("")}
 
-        `;
+        </ul>
 
-    });
-
-
-    html += "</ul>";
-
-
-    return html;
+    `;
 
 }
 
 
 
-/* =========================================================
-   MEMBUAT GROUP MENU
-========================================================= */
+/* =====================================================
+   BUAT GROUP MENU
+===================================================== */
 
 function createMenuGroups(groups) {
 
-    let html = "";
+    return groups.map(group => `
 
-
-    groups.forEach(function(group) {
-
-        html += `
+        <div class="menu-group">
 
             <h4 class="menu-group-title">
                 ${group.title}
             </h4>
 
-        `;
+            ${createMenuList(group.items)}
 
+        </div>
 
-        html += createMenuList(
-            group.items
-        );
-
-    });
-
-
-    return html;
+    `).join("");
 
 }
 
 
 
-/* =========================================================
-   MEMBUAT POSTER
-========================================================= */
+/* =====================================================
+   BUAT POSTER MENU
+===================================================== */
 
 function createPosters(menu) {
 
@@ -350,76 +337,59 @@ function createPosters(menu) {
         : [menu.image];
 
 
-    let html = `
+    return `
 
-        <div class="menu-posters-wrapper">
+        <div class="menu-posters">
 
-    `;
+            ${images.map(image => `
 
+                <img
 
-    images.forEach(function(image) {
+                    src="${image}"
 
-        html += `
+                    alt="${menu.title}"
 
-            <img
+                    class="menu-poster"
 
-                src="${image}"
+                    onclick="openImage('${image}')"
 
-                alt="${menu.title}"
+                >
 
-                class="menu-poster"
-
-                onclick="openImage('${image}')"
-
-            >
-
-        `;
-
-    });
-
-
-    html += `
+            `).join("")}
 
         </div>
 
     `;
 
-
-    return html;
-
 }
 
 
 
-/* =========================================================
-   MENAMPILKAN MENU
-========================================================= */
+/* =====================================================
+   TAMPILKAN MENU
+===================================================== */
 
-function showMenu(
-    category,
-    clickedButton
-) {
+function showMenu(category, clickedButton) {
 
     const menu = menus[category];
 
-
     if (!menu) {
-
         return;
-
     }
 
 
-    /* Active button */
+    /* Hapus active dari semua tombol */
 
     document
         .querySelectorAll(".menu-btn")
-        .forEach(function(button) {
+        .forEach(button => {
 
             button.classList.remove("active");
 
         });
 
+
+    /* Tambahkan active ke tombol yang diklik */
 
     if (clickedButton) {
 
@@ -428,62 +398,57 @@ function showMenu(
     }
 
 
-    /* Isi menu */
+    const menuContent =
+        document.getElementById("menuContent");
 
-    let menuHTML = "";
+
+    if (!menuContent) {
+        return;
+    }
+
+
+    let menuListHTML;
 
 
     if (menu.groups) {
 
-        menuHTML =
-            createMenuGroups(
-                menu.groups
-            );
+        menuListHTML =
+            createMenuGroups(menu.groups);
 
     } else {
 
-        menuHTML =
-            createMenuList(
-                menu.items
-            );
+        menuListHTML =
+            createMenuList(menu.items);
 
     }
 
 
-    const content =
-        document.getElementById(
-            "menuContent"
-        );
+    menuContent.innerHTML = `
+
+        <div class="menu-display">
+
+            <div class="row g-4 align-items-start">
 
 
-    if (!content) {
+                <div class="col-lg-6">
 
-        return;
+                    <h3>
+                        ${menu.title}
+                    </h3>
 
-    }
+                    ${menuListHTML}
 
-
-    content.innerHTML = `
-
-        <div class="menu-content-row">
-
-
-            <div class="menu-list-wrapper">
+                </div>
 
 
-                <h3>
-                    ${menu.title}
-                </h3>
+                <div class="col-lg-6">
 
+                    ${createPosters(menu)}
 
-                ${menuHTML}
+                </div>
 
 
             </div>
-
-
-            ${createPosters(menu)}
-
 
         </div>
 
@@ -493,291 +458,216 @@ function showMenu(
 
 
 
-/* =========================================================
-   IMAGE MODAL
-========================================================= */
+/* =====================================================
+   MODAL GAMBAR
+===================================================== */
 
 function openImage(src) {
 
     const modal =
-        document.getElementById(
-            "imageModal"
-        );
-
+        document.getElementById("imageModal");
 
     const image =
-        document.getElementById(
-            "modalImage"
-        );
+        document.getElementById("modalImage");
 
 
     if (!modal || !image) {
-
         return;
-
     }
 
 
     image.src = src;
 
+    modal.classList.add("show");
 
-    modal.classList.add(
-        "show"
-    );
-
-
-    document.body.style.overflow =
-        "hidden";
+    document.body.style.overflow = "hidden";
 
 }
 
 
 
+/* =====================================================
+   TUTUP MODAL
+===================================================== */
+
 function closeImage(event) {
 
-    if (
+    if (event) {
 
-        event &&
-
-        event.target &&
-
-        event.target.id !==
-            "imageModal" &&
-
-        !event.target.classList.contains(
-            "modal-close"
-        )
-
-    ) {
-
-        return;
+        event.stopPropagation();
 
     }
 
 
     const modal =
-        document.getElementById(
-            "imageModal"
-        );
+        document.getElementById("imageModal");
 
 
     if (!modal) {
-
         return;
-
     }
 
 
-    modal.classList.remove(
-        "show"
-    );
+    modal.classList.remove("show");
 
-
-    document.body.style.overflow =
-        "";
+    document.body.style.overflow = "";
 
 }
 
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-/*
-    NOMOR WHATSAPP:
-
-    1. 081226956567
-    2. 08139869925
-*/
 
 
 function pilihWhatsApp() {
-
     const pilihan = prompt(
-
         "Pilih nomor WhatsApp:\n\n" +
-
         "1. 081226956567\n" +
-
         "2. 08139869925\n\n" +
-
         "Ketik 1 atau 2:"
-
     );
-
 
     if (pilihan === "1") {
-
-        chatWA1();
-
-    }
-
-
-    else if (pilihan === "2") {
-
-        chatWA2();
-
-    }
-
-
-    else if (pilihan !== null) {
-
-        alert(
-
-            "Pilihan tidak valid.\n" +
-
-            "Silakan pilih nomor 1 atau 2."
-
+        window.open(
+            "https://wa.me/6281226956567",
+            "_blank"
         );
-
+    } else if (pilihan === "2") {
+        window.open(
+            "https://wa.me/628139869925",
+            "_blank"
+        );
+    } else if (pilihan !== null) {
+        alert("Pilihan tidak valid. Silakan pilih 1 atau 2.");
     }
-
 }
 
+/* =====================================================
+   DOM READY
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-/* WhatsApp nomor 1 */
+        /* =============================================
+           TAMPILKAN MENU BEBEK PERTAMA
+        ============================================= */
 
-function chatWA1() {
-
-    window.open(
-
-        "https://wa.me/6281226956567",
-
-        "_blank"
-
-    );
-
-}
+        const firstMenuButton =
+            document.querySelector(".menu-btn");
 
 
+        if (firstMenuButton) {
 
-/* WhatsApp nomor 2 */
+            showMenu(
+                "bebek",
+                firstMenuButton
+            );
 
-function chatWA2() {
-
-    window.open(
-
-        "https://wa.me/628139869925",
-
-        "_blank"
-
-    );
-
-}
+        }
 
 
 
-/* =========================================================
-   NAVBAR SMOOTH SCROLL
-========================================================= */
+        /* =============================================
+           NAVBAR SMOOTH SCROLL
+        ============================================= */
 
-document
-    .querySelectorAll(".nav-link")
-    .forEach(function(link) {
-
-
-        link.addEventListener(
-            "click",
-            function(event) {
+        const navLinks =
+            document.querySelectorAll(
+                ".navbar .nav-link"
+            );
 
 
-                const href =
-                    this.getAttribute(
-                        "href"
-                    );
+        navLinks.forEach(link => {
 
+            link.addEventListener(
+                "click",
+                function (event) {
 
-                const target =
-                    document.querySelector(
-                        href
-                    );
-
-
-                if (target) {
-
-                    event.preventDefault();
-
-
-                    target.scrollIntoView({
-
-                        behavior: "smooth"
-
-                    });
-
-
-                    /*
-                       Tutup navbar mobile
-                       setelah menu diklik.
-                    */
-
-                    const navbarCollapse =
-                        document.getElementById(
-                            "navbarNav"
-                        );
+                    const targetId =
+                        this.getAttribute("href");
 
 
                     if (
-
-                        navbarCollapse &&
-
-                        navbarCollapse.classList.contains(
-                            "show"
-                        )
-
+                        targetId &&
+                        targetId.startsWith("#")
                     ) {
 
-                        const bsCollapse =
-                            bootstrap.Collapse
-                                .getInstance(
-                                    navbarCollapse
+                        const target =
+                            document.querySelector(
+                                targetId
+                            );
+
+
+                        if (target) {
+
+                            event.preventDefault();
+
+
+                            const navbar =
+                                document.querySelector(
+                                    ".navbar"
                                 );
 
 
-                        if (bsCollapse) {
+                            const navbarHeight =
+                                navbar
+                                    ? navbar.offsetHeight
+                                    : 80;
 
-                            bsCollapse.hide();
+
+                            const targetPosition =
+
+                                target
+                                    .getBoundingClientRect()
+                                    .top +
+
+                                window.scrollY -
+
+                                navbarHeight;
+
+
+                            window.scrollTo({
+
+                                top: targetPosition,
+
+                                behavior: "smooth"
+
+                            });
 
                         }
 
                     }
 
                 }
+            );
 
-            }
-
-        );
-
-    });
+        });
 
 
 
-/* =========================================================
-   ACTIVE NAVBAR SAAT SCROLL
-========================================================= */
+        /* =============================================
+           ACTIVE NAVBAR SAAT SCROLL
+        ============================================= */
 
-const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
-
-
-window.addEventListener(
-    "scroll",
-    function() {
+        const sections =
+            document.querySelectorAll(
+                "section[id]"
+            );
 
 
-        let current = "";
+        function updateActiveNav() {
+
+            const scrollPosition =
+                window.scrollY + 120;
 
 
-        sections.forEach(
-            function(section) {
+            let currentSection = "";
 
+
+            sections.forEach(section => {
 
                 const sectionTop =
-                    section.offsetTop - 120;
-
+                    section.offsetTop;
 
                 const sectionHeight =
                     section.offsetHeight;
@@ -785,225 +675,130 @@ window.addEventListener(
 
                 if (
 
-                    window.scrollY >=
-                        sectionTop &&
+                    scrollPosition >= sectionTop &&
 
-                    window.scrollY <
-                        sectionTop +
-                        sectionHeight
+                    scrollPosition <
+                    sectionTop + sectionHeight
 
                 ) {
 
-                    current =
-                        section.getAttribute(
-                            "id"
-                        );
+                    currentSection =
+                        section.getAttribute("id");
 
                 }
 
-            }
-        );
+            });
 
 
-        document
-            .querySelectorAll(
-                ".nav-link"
-            )
-            .forEach(
-                function(link) {
+            navLinks.forEach(link => {
+
+                link.classList.remove("active");
 
 
-                    link.classList.remove(
-                        "active"
-                    );
+                if (
 
+                    link.getAttribute("href") ===
+                    `#${currentSection}`
 
-                    if (
+                ) {
 
-                        link.getAttribute(
-                            "href"
-                        ) ===
-                        "#" + current
-
-                    ) {
-
-                        link.classList.add(
-                            "active"
-                        );
-
-                    }
+                    link.classList.add("active");
 
                 }
-            );
 
-    }
-);
-
-
-
-/* =========================================================
-   DOM READY
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-
-
-        /* =================================================
-           TAMPILKAN MENU BEBEK PERTAMA
-        ================================================= */
-
-
-        const firstButton =
-            document.querySelector(
-                ".menu-btn"
-            );
-
-
-        if (firstButton) {
-
-            showMenu(
-                "bebek",
-                firstButton
-            );
+            });
 
         }
 
 
+        window.addEventListener(
+            "scroll",
+            updateActiveNav
+        );
 
-        /* =================================================
+
+        updateActiveNav();
+
+
+
+        /* =============================================
            CHART JS
-        ================================================= */
+        ============================================= */
 
-
-        const chartElement =
-            document.getElementById(
-                "menuChart"
-            );
+        const canvas =
+            document.getElementById("menuChart");
 
 
         if (
-
-            chartElement &&
-
-            typeof Chart !==
-                "undefined"
-
+            canvas &&
+            typeof Chart !== "undefined"
         ) {
 
+            new Chart(canvas, {
 
-            new Chart(
+                type: "bar",
 
-                chartElement,
+                data: {
 
-                {
+                    labels: [
 
+                        "Bebek",
+                        "Ayam",
+                        "Lainnya",
+                        "Coffee",
+                        "Camilan",
+                        "Minuman"
 
-                    type: "bar",
+                    ],
 
+                    datasets: [{
 
-                    data: {
+                        label: "Jumlah Menu",
 
+                        data: [
 
-                        labels: [
-
-                            "Bebek",
-
-                            "Ayam",
-
-                            "Lainnya",
-
-                            "Coffee",
-
-                            "Camilan",
-
-                            "Minuman"
+                            11,
+                            12,
+                            15,
+                            7,
+                            17,
+                            39
 
                         ],
 
+                        borderWidth: 1
 
-                        datasets: [
+                    }]
 
-
-                            {
-
-                                label:
-                                    "Jumlah Pilihan Menu",
+                },
 
 
-                                data: [
+                options: {
 
-                                    11,
+                    responsive: true,
 
-                                    12,
+                    maintainAspectRatio: false,
 
-                                    15,
+                    plugins: {
 
-                                    7,
+                        legend: {
 
-                                    17,
+                            display: false
 
-                                    39
-
-                                ],
-
-
-                                borderWidth: 1
-
-                            }
-
-
-                        ]
+                        }
 
                     },
 
 
-                    options: {
+                    scales: {
 
+                        y: {
 
-                        responsive: true,
+                            beginAtZero: true,
 
+                            ticks: {
 
-                        maintainAspectRatio:
-                            false,
-
-
-                        plugins: {
-
-
-                            legend: {
-
-                                display: true
-
-                            }
-
-                        },
-
-
-                        scales: {
-
-
-                            x: {
-
-                                ticks: {
-
-                                    autoSkip: false
-
-                                }
-
-                            },
-
-
-                            y: {
-
-                                beginAtZero: true,
-
-                                ticks: {
-
-                                    stepSize: 5
-
-                                }
+                                stepSize: 5
 
                             }
 
@@ -1013,56 +808,26 @@ document.addEventListener(
 
                 }
 
-            );
+            });
 
         }
 
     }
-
 );
 
 
 
-/* =========================================================
-   TOMBOL ESC UNTUK MENUTUP FOTO
-========================================================= */
+/* =====================================================
+   ESC UNTUK MENUTUP GAMBAR
+===================================================== */
 
 document.addEventListener(
     "keydown",
-    function(event) {
+    function (event) {
 
+        if (event.key === "Escape") {
 
-        if (
-            event.key === "Escape"
-        ) {
-
-
-            const modal =
-                document.getElementById(
-                    "imageModal"
-                );
-
-
-            if (
-
-                modal &&
-
-                modal.classList.contains(
-                    "show"
-                )
-
-            ) {
-
-
-                modal.classList.remove(
-                    "show"
-                );
-
-
-                document.body.style.overflow =
-                    "";
-
-            }
+            closeImage();
 
         }
 
