@@ -294,9 +294,6 @@ section {
     margin-bottom: 20px;
 }
 
-
-/* ================= DAFTAR MENU ================= */
-
 .menu-list {
     padding: 0;
     margin: 0;
@@ -329,9 +326,6 @@ section {
     text-align: right;
 }
 
-
-/* ================= GROUP MINUMAN ================= */
-
 .menu-group {
     margin-bottom: 30px;
 }
@@ -352,9 +346,6 @@ section {
 .menu-group:first-child .menu-group-title {
     margin-top: 0;
 }
-
-
-/* ================= POSTER MENU ================= */
 
 .menu-poster {
     display: block;
@@ -408,6 +399,42 @@ section {
 .promo-card p {
     color: #68746e;
     line-height: 1.7;
+}
+
+
+/* TOMBOL INSTAGRAM */
+
+.btn-instagram {
+    display: inline-block;
+    background: #e1306c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-weight: bold;
+}
+
+.btn-instagram:hover {
+    background: #c21f59;
+    color: white;
+}
+
+
+/* TOMBOL GOOGLE */
+
+.btn-google {
+    display: inline-block;
+    background: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-weight: bold;
+}
+
+.btn-google:hover {
+    background: #2f6fd6;
+    color: white;
 }
 
 
@@ -468,36 +495,19 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
 
-.poster-box {
-    height: 500px;
-    position: relative;
-    background: #eeeeee;
-    cursor: zoom-in;
-    overflow: hidden;
-}
-
-.poster-box img {
+.package-image {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: contain;
+    background: #eeeeee;
+    padding: 15px;
+    cursor: zoom-in;
     transition: .3s;
 }
 
-.poster-box:hover img {
-    transform: scale(1.03);
-}
-
-.poster-overlay {
-    position: absolute;
-    left: 50%;
-    bottom: 18px;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, .75);
-    color: white;
-    padding: 9px 15px;
-    border-radius: 25px;
-    font-size: 13px;
-    white-space: nowrap;
+.package-image:hover {
+    transform: scale(1.02);
 }
 
 .package-content {
@@ -620,6 +630,14 @@ section {
     flex-direction: column;
 }
 
+.chart-card {
+    background: #f7faf8;
+    border: 1px solid #e1e9e4;
+    border-radius: 24px;
+    padding: 30px;
+    height: 100%;
+}
+
 .chart-header {
     display: flex;
     justify-content: space-between;
@@ -662,6 +680,12 @@ section {
     position: relative;
     height: 360px;
     margin-top: 25px;
+}
+
+.chart-wrapper canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .chart-note {
@@ -721,11 +745,68 @@ section {
     gap: 8px;
 }
 
-.grabfood {
-    margin-top: 18px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, .15);
-    font-size: 13px;
+
+/* =====================================================
+   TOMBOL KONTAK - SOLID
+===================================================== */
+
+.btn-wa-contact {
+    width: 100%;
+    background: #20bf68;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-weight: bold;
+}
+
+.btn-wa-contact:hover {
+    background: #14984e;
+    color: white;
+}
+
+.btn-instagram-contact {
+    width: 100%;
+    background: #e1306c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-weight: bold;
+}
+
+.btn-instagram-contact:hover {
+    background: #c21f59;
+    color: white;
+}
+
+.btn-grab {
+    width: 100%;
+    background: #00b14f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-weight: bold;
+}
+
+.btn-grab:hover {
+    background: #008f40;
+    color: white;
+}
+
+.btn-address {
+    background: #f3cb48;
+    color: #173d29;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-weight: bold;
+}
+
+.btn-address:hover {
+    background: #ddb62f;
+    color: #173d29;
 }
 
 
@@ -774,17 +855,20 @@ footer small {
     justify-content: center;
     background: #20bf68;
     color: white;
+    border: none;
     border-radius: 50%;
     font-size: 28px;
     text-decoration: none;
     box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
     z-index: 999;
     transition: .25s;
+    cursor: pointer;
 }
 
 .floating-wa:hover {
     color: white;
     transform: scale(1.08);
+    background: #14984e;
 }
 
 
@@ -845,8 +929,8 @@ footer small {
         grid-template-columns: 1fr;
     }
 
-    .poster-box {
-        height: 450px;
+    .package-image {
+        height: 300px;
     }
 
     .menu-display {
@@ -924,8 +1008,8 @@ footer small {
         max-height: 600px;
     }
 
-    .poster-box {
-        height: 360px;
+    .package-image {
+        height: 250px;
     }
 
     .about-main-card,
@@ -947,69 +1031,6 @@ footer small {
         right: 15px;
         bottom: 15px;
         font-size: 25px;
-    }
-
-}
-/* =====================================================
-   FIX - PAKET & CHART
-   Jangan mengubah CSS yang lain
-===================================================== */
-
-/* ================= PAKET ================= */
-
-.package-image {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background: #f4f4f4;
-    padding: 15px;
-    cursor: zoom-in;
-}
-
-
-/* ================= CHART ================= */
-
-.chart-card {
-    background: #f7faf8;
-    border: 1px solid #e1e9e4;
-    border-radius: 24px;
-    padding: 30px;
-    height: 100%;
-}
-
-.chart-card h3 {
-    color: #173d29;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.chart-card p {
-    color: #6d7972;
-    margin-bottom: 20px;
-}
-
-.chart-card canvas {
-    display: block;
-    width: 100% !important;
-    height: 350px !important;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 576px) {
-
-    .package-image {
-        height: 250px;
-    }
-
-    .chart-card {
-        padding: 22px;
-    }
-
-    .chart-card canvas {
-        height: 300px !important;
     }
 
 }
