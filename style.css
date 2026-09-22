@@ -1,32 +1,35 @@
-/* ===============================
+/* =====================================================
    GLOBAL
-================================ */
+===================================================== */
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff9e9;
-    color: #173b28;
+    background: #f7f3e8;
+    color: #183c2a;
 }
 
 section {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 75px;
+}
+
+.section {
+    padding: 90px 0;
 }
 
 
-/* ===============================
+/* =====================================================
    NAVBAR
-================================ */
+===================================================== */
 
 .navbar {
-    background: #07502c;
-    padding: 8px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    background: #0d4d2c;
+    min-height: 65px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
 .navbar-brand img {
@@ -34,7 +37,6 @@ section {
     height: 48px;
     object-fit: contain;
     background: white;
-    border-radius: 6px;
     margin-right: 10px;
 }
 
@@ -46,190 +48,234 @@ section {
 
 .navbar-brand small {
     display: block;
-    color: #ffd95a;
+    color: #ffd84d;
     font-size: 12px;
-    font-weight: bold;
 }
 
 .nav-link {
     color: white !important;
     font-weight: 600;
-    margin-left: 15px;
+    margin-left: 10px;
+    transition: 0.3s;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #ffd34d !important;
+    color: #ffd84d !important;
 }
 
 
-/* ===============================
+/* =====================================================
    HERO
-================================ */
+===================================================== */
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 70px;
+.hero-section {
+    padding: 110px 0;
     background:
-        linear-gradient(rgba(255,249,233,0.92), rgba(255,249,233,0.92)),
-        url("assets/logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
+        linear-gradient(
+            rgba(247,243,232,0.96),
+            rgba(247,243,232,0.96)
+        );
 }
 
-.badge-kuliner {
+.badge-custom {
     display: inline-block;
-    background: #e8f3df;
-    color: #08733e;
-    padding: 8px 15px;
+    background: #e5f3e8;
+    color: #0d6b3b;
+    padding: 8px 14px;
     border-radius: 30px;
+    font-size: 13px;
     font-weight: bold;
-    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-.hero h1 {
+.hero-section h1 {
     font-size: 55px;
     font-weight: 800;
-    color: #07502c;
-    line-height: 1.1;
+    margin-top: 20px;
+    color: #183c2a;
 }
 
-.hero p {
+.hero-section h1 span {
+    color: #16864b;
+}
+
+.hero-text {
     font-size: 18px;
     line-height: 1.7;
-    color: #555;
-    max-width: 600px;
+    color: #606060;
+    max-width: 650px;
 }
 
 .hero-buttons {
-    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    margin: 30px 0;
+    flex-wrap: wrap;
 }
 
-.hero-buttons .btn {
-    margin-right: 10px;
+.btn-green {
+    background: #16864b;
+    border: none;
+    color: white;
+    font-weight: bold;
     padding: 12px 20px;
 }
 
-.info-hero {
-    margin-top: 25px;
+.btn-green:hover {
+    background: #0d6637;
+    color: white;
 }
 
-.info-hero div {
-    margin-bottom: 8px;
+.btn-wa {
+    background: #25d366;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+}
+
+.btn-wa:hover {
+    background: #1ebc59;
+    color: white;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     color: #555;
 }
 
-.info-hero i {
-    color: #08733e;
-    margin-right: 7px;
+.hero-info i {
+    color: #16864b;
+    margin-right: 8px;
 }
 
 .hero-card {
     background: white;
+    padding: 40px;
     border-radius: 25px;
-    padding: 45px 30px;
+    text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
 .hero-card img {
-    width: 250px;
-    max-width: 80%;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
 }
 
 .hero-card h3 {
-    color: #07502c;
-    margin-top: 20px;
+    font-weight: 800;
+}
+
+.hero-card p {
+    color: #666;
+}
+
+.hero-open {
+    background: #e8f7ed;
+    padding: 10px;
+    border-radius: 10px;
+    color: #16864b;
+    font-weight: bold;
 }
 
 
-/* ===============================
-   SECTION
-================================ */
-
-.section {
-    padding: 100px 0;
-}
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .section-title span {
-    color: #0a8150;
-    font-weight: 800;
-    letter-spacing: 3px;
+    color: #16864b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .section-title h2 {
     font-size: 38px;
     font-weight: 800;
-    margin-top: 10px;
+    margin: 10px 0;
+    color: #20332b;
 }
 
 .section-title p {
-    color: #666;
+    color: #707070;
 }
 
 
-/* ===============================
+/* =====================================================
    MENU
-================================ */
+===================================================== */
 
 .menu-section {
-    background: white;
+    background: #f0f4f1;
 }
 
-.menu-category {
+.menu-tabs {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 
-.menu-btn {
-    border: 2px solid #08733e;
+.menu-tab {
+    border: 1px solid #d0d0d0;
     background: white;
-    color: #08733e;
+    color: #333;
     border-radius: 30px;
-    padding: 12px 22px;
-    font-weight: bold;
+    padding: 11px 20px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
-.menu-btn:hover,
-.menu-btn.active {
-    background: #08733e;
+.menu-tab:hover {
+    border-color: #16864b;
+    color: #16864b;
+}
+
+.menu-tab.active {
+    background: #16864b;
     color: white;
+    border-color: #16864b;
 }
 
 
-/* hasil menu */
+/* HASIL MENU */
 
-.menu-result {
-    max-width: 1100px;
-    margin: auto;
+.menu-content {
+    background: white;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
 
-.menu-result-box {
-    background: #fffdf7;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.menu-result-title {
+.menu-header {
     text-align: center;
-    color: #07502c;
+    margin-bottom: 30px;
+}
+
+.menu-header h3 {
     font-size: 30px;
     font-weight: 800;
-    margin-bottom: 25px;
+    color: #174c31;
 }
+
+.menu-header p {
+    color: #777;
+}
+
+
+/* LIST */
 
 .menu-list {
     list-style: none;
@@ -241,92 +287,123 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    padding: 10px 0;
-    border-bottom: 1px dashed #c7c7c7;
-    font-size: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #cfcfcf;
+    font-size: 15px;
 }
 
 .menu-list li:last-child {
     border-bottom: none;
 }
 
+.menu-name {
+    color: #333;
+}
+
 .menu-price {
-    font-weight: bold;
-    color: #08733e;
+    color: #16864b;
+    font-weight: 800;
     white-space: nowrap;
 }
 
+
+/* SUB CATEGORY */
+
 .menu-subtitle {
-    font-size: 20px;
+    color: #16864b;
+    font-size: 18px;
     font-weight: 800;
-    color: #07502c;
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.menu-poster {
+
+/* POSTER */
+
+.menu-poster-box {
+    text-align: center;
+}
+
+.menu-poster-box img {
     width: 100%;
+    max-height: 800px;
+    object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-poster-box img:hover {
+    transform: scale(1.02);
+}
+
+.poster-note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 10px;
 }
 
 
-/* ===============================
+/* =====================================================
    PROMO
-================================ */
+===================================================== */
 
 .promo-section {
-    background: #fff;
+    background: white;
 }
 
 .promo-card {
-    background: white;
-    max-width: 850px;
-    margin: auto;
-    padding: 35px;
+    background: #f7f3e8;
+    border: 1px solid #eadfc6;
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    border-radius: 25px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+    height: 100%;
+    transition: 0.3s;
 }
 
-.promo-card img {
-    width: 100%;
-    max-width: 550px;
-    border-radius: 15px;
-    margin-bottom: 25px;
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.promo-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 
 .promo-card h3 {
-    color: #07502c;
+    font-size: 21px;
+    font-weight: 800;
 }
 
-.promo-list {
-    text-align: left;
-    max-width: 650px;
-    margin: 25px auto;
+.promo-card p {
+    color: #666;
+    line-height: 1.6;
 }
 
-.promo-list p {
-    padding: 10px 0;
+.refill-promo {
+    background: #e9f7ee;
 }
 
 
-/* ===============================
+/* =====================================================
    FASILITAS
-================================ */
+===================================================== */
 
 .fasilitas-section {
-    background: #fff9e9;
+    background: #fff8e9;
 }
 
 .facility-card {
     background: white;
-    border: 1px solid #eadfbe;
+    border: 1px solid #eadfc6;
     border-radius: 18px;
     padding: 30px 20px;
-    height: 100%;
     text-align: center;
-    transition: 0.2s;
+    height: 100%;
+    transition: 0.3s;
 }
 
 .facility-card:hover {
@@ -335,35 +412,35 @@ section {
 }
 
 .facility-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: 38px;
+    margin-bottom: 12px;
 }
 
-.facility-card h4 {
+.facility-card h3 {
+    font-size: 18px;
     font-weight: 800;
-    color: #073e25;
 }
 
 .facility-card p {
-    color: #666;
+    color: #777;
+    margin: 0;
     line-height: 1.6;
 }
 
 
-/* ===============================
+/* =====================================================
    PAKET
-================================ */
+===================================================== */
 
 .paket-section {
-    background: white;
+    background: #f5f5f5;
 }
 
 .paket-card {
-    background: #fff;
+    background: white;
     border-radius: 20px;
     overflow: hidden;
-    padding-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.09);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     height: 100%;
 }
 
@@ -373,51 +450,99 @@ section {
     object-fit: cover;
 }
 
-.paket-card h3,
-.paket-card p,
-.paket-card a {
-    margin-left: 25px;
-    margin-right: 25px;
+.paket-body {
+    padding: 25px;
 }
 
-.paket-card h3 {
+.paket-body h3 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.paket-body p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   TENTANG
+===================================================== */
+
+.tentang-section {
+    background: white;
+}
+
+.about-card,
+.chart-card {
+    background: #f7f3e8;
+    padding: 35px;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.about-card h3,
+.chart-card h3 {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about-card p,
+.chart-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.about-info {
     margin-top: 25px;
-    color: #07502c;
+}
+
+.about-info div {
+    margin-bottom: 12px;
+}
+
+.about-info i {
+    color: #16864b;
+    margin-right: 8px;
 }
 
 
-/* ===============================
-   CONTACT
-================================ */
+/* =====================================================
+   KONTAK
+===================================================== */
 
-.contact-section {
-    background: #075b32;
+.kontak-section {
+    background: #0d4d2c;
     color: white;
 }
 
-.contact-section .section-title span {
-    color: #ffd23f;
+.section-title.light h2 {
+    color: white;
 }
 
-.contact-section .section-title h2 {
-    color: white;
+.section-title.light p {
+    color: #ddd;
+}
+
+.section-title.light span {
+    color: #ffd33d;
 }
 
 .contact-card {
-    height: 100%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 18px;
-    padding: 30px 20px;
-    background: rgba(255,255,255,0.06);
+    height: 100%;
 }
 
 .contact-icon {
-    font-size: 42px;
+    font-size: 45px;
     margin-bottom: 15px;
 }
 
-.contact-card h4 {
+.contact-card h3 {
     font-weight: 800;
 }
 
@@ -426,61 +551,73 @@ section {
 }
 
 .contact-card .btn {
-    color: #111;
+    margin-top: 10px;
 }
 
-.opening-info {
+.wa-number {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 45px;
-    padding: 25px;
-    border-top: 1px solid rgba(255,255,255,0.25);
+    flex-direction: column;
+    gap: 10px;
 }
 
-.opening-info i {
-    color: #ffd23f;
-    margin-right: 7px;
+.wa-number a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background: rgba(37,211,102,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.wa-number a:hover {
+    background: #25d366;
+}
+
+.small-text {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #ccc;
 }
 
 
-/* ===============================
+/* =====================================================
    FOOTER
-================================ */
+===================================================== */
 
 footer {
-    background: #043c23;
+    background: #07361f;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 0;
 }
 
 footer img {
-    width: 70px;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
     background: white;
-    border-radius: 5px;
     margin-bottom: 15px;
 }
 
-footer h4 {
-    margin-bottom: 5px;
+footer h3 {
+    font-weight: 800;
 }
 
 footer p {
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
-.copyright {
+footer .copyright {
     margin-top: 20px;
-    color: #ccc;
-    font-size: 14px;
+    color: #aaa;
+    font-size: 13px;
 }
 
 
-/* ===============================
-   FLOATING WHATSAPP
-================================ */
+/* =====================================================
+   FLOATING WA
+===================================================== */
 
 .floating-wa {
     position: fixed;
@@ -488,9 +625,9 @@ footer p {
     bottom: 25px;
     width: 58px;
     height: 58px;
-    border-radius: 50%;
     background: #25d366;
     color: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -502,37 +639,55 @@ footer p {
 
 .floating-wa:hover {
     color: white;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 
-/* ===============================
+/* =====================================================
    RESPONSIVE
-================================ */
+===================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
-    .hero {
-        padding-top: 130px;
+    .hero-section {
+        padding: 80px 0;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .hero-section h1 {
+        font-size: 42px;
     }
 
     .hero-card {
         margin-top: 40px;
     }
 
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0 !important;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
     .section {
-        padding: 70px 0;
+        padding: 65px 0;
     }
 
     .section-title h2 {
         font-size: 30px;
     }
 
-    .menu-result-box {
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .menu-content {
         padding: 20px;
     }
 
@@ -540,10 +695,12 @@ footer p {
         font-size: 14px;
     }
 
-    .opening-info {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    .menu-price {
+        font-size: 13px;
+    }
+
+    .contact-card {
+        padding: 25px 15px;
     }
 
 }
