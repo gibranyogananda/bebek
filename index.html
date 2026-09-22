@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bebek Gongso Kinanthi | Klaten</title>
+    <title>Bebek Gongso Kinanthi</title>
 
     <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -24,34 +18,22 @@
 
 <body>
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
-
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
 
-        <a class="navbar-brand d-flex align-items-center" href="#beranda">
-
-            <img
-                src="assets/logo.png"
-                alt="Logo Bebek Gongso Kinanthi"
-                class="logo-navbar"
-            >
-
-            <div class="brand-text">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+            <img src="assets/logo.png" alt="Logo Bebek Gongso Kinanthi">
+            <div>
                 <strong>Bebek Gongso Kinanthi</strong>
                 <small>Makan Enak, Kumpul Makin Asik</small>
             </div>
-
         </a>
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-        >
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -60,134 +42,100 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#beranda">
-                        Beranda
-                    </a>
+                    <a class="nav-link active" href="#home">Beranda</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#menu">
-                        Menu
-                    </a>
+                    <a class="nav-link" href="#menu">Menu</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#promo">
-                        Promo
-                    </a>
+                    <a class="nav-link" href="#promo">Promo</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#fasilitas">
-                        Fasilitas
-                    </a>
+                    <a class="nav-link" href="#fasilitas">Fasilitas</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#paket">
-                        Paket
-                    </a>
+                    <a class="nav-link" href="#paket">Paket</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#tentang">
-                        Tentang
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#kontak">
-                        Kontak
-                    </a>
+                    <a class="nav-link" href="#kontak">Kontak</a>
                 </li>
 
             </ul>
 
         </div>
-
     </div>
 </nav>
 
 
-<!-- =====================================================
-     BERANDA
-===================================================== -->
-
-<section id="beranda" class="hero-section">
+<!-- ================= HOME ================= -->
+<section id="home" class="hero">
 
     <div class="container">
 
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center">
 
             <div class="col-lg-6">
 
-                <span class="hero-badge">
+                <span class="badge-kuliner">
                     KULINER KELUARGA • KLATEN
                 </span>
 
                 <h1>
-                    Makan Enak,
-                    <span>Kumpul Makin Asik</span>
+                    Makan Enak,<br>
+                    Kumpul Makin Asik
                 </h1>
 
-                <p class="hero-description">
+                <p>
                     Nikmati berbagai pilihan menu Bebek, Ayam,
                     Menu Lain, Coffee, Camilan, dan Minuman
-                    untuk makan bersama keluarga maupun teman.
+                    di Bebek Gongso Kinanthi.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#menu" class="btn btn-primary-custom">
-                        <i class="bi bi-journal-text"></i>
+                    <a href="#menu" class="btn btn-success">
+                        <i class="bi bi-book"></i>
                         Lihat Menu
                     </a>
 
-                    <a
-                        href="https://wa.me/6281226956567"
-                        target="_blank"
-                        class="btn btn-whatsapp"
-                    >
+                    <a href="https://wa.me/6281226956567"
+                       target="_blank"
+                       class="btn btn-outline-success">
                         <i class="bi bi-whatsapp"></i>
                         Pesan Sekarang
                     </a>
 
                 </div>
 
-                <div class="hero-info">
+                <div class="info-hero">
 
                     <div>
                         <i class="bi bi-clock"></i>
-                        <span>Setiap hari 11.00–21.00 WIB</span>
+                        Setiap hari 11.00–21.00 WIB
                     </div>
 
                     <div>
                         <i class="bi bi-geo-alt"></i>
-                        <span>Jomboran, Klaten</span>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-bag-check"></i>
-                        <span>tersedia di GrabFood</span>
+                        Jomboran, Klaten
                     </div>
 
                 </div>
 
             </div>
 
-
             <div class="col-lg-6 text-center">
 
-                <div class="hero-logo-card">
+                <div class="hero-card">
 
-                    <img
-                        src="assets/logo.png"
-                        alt="Bebek Gongso Kinanthi"
-                    >
+                    <img src="assets/logo.png"
+                         alt="Bebek Gongso Kinanthi">
 
-                    <h3>
-                        Bebek Gongso Kinanthi
-                    </h3>
+                    <h3>Bebek Gongso Kinanthi</h3>
 
                     <p>
                         Tempat makan, nongkrong,
@@ -205,904 +153,65 @@
 </section>
 
 
-<!-- =====================================================
-     MENU
-===================================================== -->
-
-<section id="menu" class="section-padding menu-section">
+<!-- ================= MENU ================= -->
+<section id="menu" class="section menu-section">
 
     <div class="container">
 
-        <div class="section-title text-center">
+        <div class="section-title">
 
-            <span>MENU KAMI</span>
+            <span>DAFTAR MENU</span>
 
-            <h2>
-                Pilihan Menu
-            </h2>
+            <h2>Pilih Menu Favoritmu</h2>
 
             <p>
-                Pilih kategori menu untuk melihat daftar
-                makanan, harga, dan foto menunya.
+                Pilih kategori untuk melihat daftar makanan,
+                harga, dan poster menu.
             </p>
 
         </div>
 
 
-        <!-- CATEGORY BUTTON -->
+        <!-- KATEGORI -->
+        <div class="menu-category">
 
-        <div class="menu-tabs">
-
-            <button
-                class="menu-tab active"
-                data-menu="bebek"
-            >
+            <button class="menu-btn active"
+                    onclick="showMenu('bebek', this)">
                 🦆 Bebek
             </button>
 
-            <button
-                class="menu-tab"
-                data-menu="ayam"
-            >
+            <button class="menu-btn"
+                    onclick="showMenu('ayam', this)">
                 🍗 Ayam
             </button>
 
-            <button
-                class="menu-tab"
-                data-menu="lain"
-            >
+            <button class="menu-btn"
+                    onclick="showMenu('lain', this)">
                 🍽️ Menu Lain
             </button>
 
-            <button
-                class="menu-tab"
-                data-menu="coffee"
-            >
+            <button class="menu-btn"
+                    onclick="showMenu('coffee', this)">
                 ☕ Coffee
             </button>
 
-            <button
-                class="menu-tab"
-                data-menu="camilan"
-            >
+            <button class="menu-btn"
+                    onclick="showMenu('camilan', this)">
                 🍟 Camilan
             </button>
 
-            <button
-                class="menu-tab"
-                data-menu="minuman1"
-            >
+            <button class="menu-btn"
+                    onclick="showMenu('minuman', this)">
                 🥤 Minuman
             </button>
 
-            <button
-                class="menu-tab"
-                data-menu="minuman2"
-            >
-                🧋 Minuman Lain
-            </button>
-
         </div>
 
 
-        <!-- =================================================
-             BEBEK
-        ================================================== -->
+        <!-- HASIL MENU -->
+        <div id="menuContent" class="menu-result">
 
-        <div class="menu-content active" id="menu-bebek">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            🦆 Menu Bebek
-                        </h3>
-
-                        <div class="menu-item">
-                            <span>Bebek Goreng</span>
-                            <strong>Rp. 27.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Kremes</span>
-                            <strong>Rp. 30.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Gongso</span>
-                            <strong>Rp. 30.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Lombok Ijo</span>
-                            <strong>Rp. 32.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Bacem</span>
-                            <strong>Rp. 32.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Kepala Bebek Goreng</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kepala Bebek Gongso</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Bebek Utuh Goreng</span>
-                            <strong>Rp. 130.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Utuh Kremes</span>
-                            <strong>Rp. 135.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Utuh Gongso</span>
-                            <strong>Rp. 135.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Bebek Utuh Lombok Ijo</span>
-                            <strong>Rp. 135.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/menu-bebek.png"
-                            alt="Menu Bebek"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             AYAM
-        ================================================== -->
-
-        <div class="menu-content" id="menu-ayam">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            🍗 Menu Ayam
-                        </h3>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Goreng</span>
-                            <strong>Rp. 27.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Kremes</span>
-                            <strong>Rp. 30.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Gongso</span>
-                            <strong>Rp. 30.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Lombok Ijo</span>
-                            <strong>Rp. 32.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Ayam Negri Goreng</span>
-                            <strong>Rp. 16.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Negri Kremes</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Negri Gongso</span>
-                            <strong>Rp. 22.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Negri Lombok Ijo</span>
-                            <strong>Rp. 22.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Utuh Goreng</span>
-                            <strong>Rp. 135.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Utuh Kremes</span>
-                            <strong>Rp. 140.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Utuh Gongso</span>
-                            <strong>Rp. 140.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Ayam Kampung Utuh Lombol Ijo</span>
-                            <strong>Rp. 140.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/Menu-ayam.png"
-                            alt="Menu Ayam"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             MENU LAIN
-        ================================================== -->
-
-        <div class="menu-content" id="menu-lain">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            🍽️ Menu Lain
-                        </h3>
-
-                        <div class="menu-item">
-                            <span>Pepes Nila</span>
-                            <strong>Rp. 30.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Nila Telur Asin</span>
-                            <strong>Rp. 35.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Nila Crispy</span>
-                            <strong>Rp. 30.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Nila Goreng</span>
-                            <strong>Rp. 16.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Lele Goreng</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Sup Iga</span>
-                            <strong>Rp. 38.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kangkung (Tumis/Ca)</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Tauge (Tumis/Ca)</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Terong Goreng</span>
-                            <strong>Rp. 7.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Pete</span>
-                            <strong>Rp. 7.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kol Goreng</span>
-                            <strong>Rp. 5.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Tahu Goreng</span>
-                            <strong>Rp. 2.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Tempe Goreng</span>
-                            <strong>Rp. 2.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Mix Tahu Tempe</span>
-                            <strong>Rp. 4.000</strong>
-                        </div>
-
-                        <hr>
-
-                        <div class="menu-item">
-                            <span>Nasi Sambal Lalap</span>
-                            <strong>Rp. 6.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/menu-lain.png"
-                            alt="Menu Lain"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             COFFEE
-        ================================================== -->
-
-        <div class="menu-content" id="menu-coffee">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            ☕ Coffee Series
-                        </h3>
-
-                        <div class="menu-item">
-                            <span>Kopi Susu Kinanthi Hot</span>
-                            <strong>Rp. 22.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Lime Coffee Hot</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kopi Susu Blueberry Hot</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kopi Susu Blueberry Ice</span>
-                            <strong>Rp. 22.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kopi Susu Caramel Hot</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kopi Susu Caramel Ice</span>
-                            <strong>Rp. 22.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Coffee Latte Hot</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Coffee Latte Ice</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Americano Hot</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Americano Ice</span>
-                            <strong>Rp. 17.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kopi Tubruk Hot</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/menu-coffee.png"
-                            alt="Coffee Series"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             CAMILAN
-        ================================================== -->
-
-        <div class="menu-content" id="menu-camilan">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            🍟 Camilan
-                        </h3>
-
-                        <div class="menu-item">
-                            <span>Mix Platter (Sosis, Kentang, Nugget)</span>
-                            <strong>Rp. 25.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Onion Ring</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Tahu Cabai Garam</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Tahu Tuna</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Pisang Lumer</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kentang Goreng</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Singkong Goreng</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Singkong Keju</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Singkong Coklat</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Mendoan</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jamur Tepung</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Sosis Goreng</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Cireng Goreng</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Lumpia Goreng</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Pastel Goreng</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jenang</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Krasikan</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/menu-camilan.png"
-                            alt="Menu Camilan"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             MINUMAN 1
-        ================================================== -->
-
-        <div class="menu-content" id="menu-minuman1">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            🥤 Minuman
-                        </h3>
-
-                        <h5>Hot Series</h5>
-
-                        <div class="menu-item">
-                            <span>Jahe Geprek</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jahe Serai</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jahe Susu</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kopi Jahe</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Hot Coklat</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Hot Matcha</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Hot Taro</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <h5>Ice Squash</h5>
-
-                        <div class="menu-item">
-                            <span>Soda Gembira</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Lemon Squash</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Orange Squash</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jeruk Kelapa Muda</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kelapa Muda Gelas</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kelapa Muda Utuh Murni</span>
-                            <strong>Rp. 14.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Kelapa Muda Utuh + Gula</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <h5>Jus</h5>
-
-                        <div class="menu-item">
-                            <span>Alpukat</span>
-                            <strong>Rp. 14.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Mangga</span>
-                            <strong>Rp. 14.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jambu</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Sirsak</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Melon</span>
-                            <strong>Rp. 12.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Semangka</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/menu-minuman-1.png"
-                            alt="Menu Minuman"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             MINUMAN 2
-        ================================================== -->
-
-        <div class="menu-content" id="menu-minuman2">
-
-            <div class="row g-4 align-items-start">
-
-                <div class="col-lg-6">
-
-                    <div class="menu-list-card">
-
-                        <h3>
-                            🧋 Minuman Reguler & Milk
-                        </h3>
-
-                        <h5>Minuman Reguler</h5>
-
-                        <div class="menu-item">
-                            <span>Teh Tawar</span>
-                            <strong>Rp. 3.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Teh Manis Panas</span>
-                            <strong>Rp. 5.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Esteh Manis</span>
-                            <strong>Rp. 6.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Teh Leci</span>
-                            <strong>Rp. 15.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Jeruk Panas</span>
-                            <strong>Rp. 6.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Es Jeruk</span>
-                            <strong>Rp. 7.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Lemon Tea Panas</span>
-                            <strong>Rp. 6.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Es Lemon Tea</span>
-                            <strong>Rp. 7.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Milo Hot</span>
-                            <strong>Rp. 8.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Milo Es</span>
-                            <strong>Rp. 10.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Air Mineral</span>
-                            <strong>Rp. 6.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Air Putih / Air Es</span>
-                            <strong>Rp. 2.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Es Batu</span>
-                            <strong>Rp. 2.000</strong>
-                        </div>
-
-                        <h5>Milkshake</h5>
-
-                        <div class="menu-item">
-                            <span>Coklat</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Strawberry</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Vanila</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <h5>Milkblend</h5>
-
-                        <div class="menu-item">
-                            <span>Coklat</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Strawberry</span>
-                            <strong>Rp. 18.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Taro</span>
-                            <strong>Rp. 20.000</strong>
-                        </div>
-
-                        <div class="menu-item">
-                            <span>Matcha</span>
-                            <strong>Rp. 22.000</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="menu-photo-card">
-
-                        <img
-                            src="assets/menu-minuman-2.png"
-                            alt="Menu Minuman Reguler"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
+            <!-- Akan diisi JavaScript -->
 
         </div>
 
@@ -1111,17 +220,78 @@
 </section>
 
 
-<!-- =====================================================
-     FASILITAS & AREA
-===================================================== -->
-
-<section id="fasilitas" class="section-padding fasilitas-section">
+<!-- ================= PROMO ================= -->
+<section id="promo" class="section promo-section">
 
     <div class="container">
 
-        <div class="section-title text-center">
+        <div class="section-title">
 
-            <h2>Fasilitas & Area</h2>
+            <span>PROMO</span>
+
+            <h2>Promo & Keuntungan</h2>
+
+        </div>
+
+        <div class="promo-card">
+
+            <img src="assets/promo.png"
+                 alt="Promo Bebek Gongso Kinanthi">
+
+            <h3>Dapatkan Berbagai Keuntungan</h3>
+
+            <div class="promo-list">
+
+                <p>
+                    🎤 <strong>Karaoke GRATIS</strong>
+                    untuk seru-seruan bersama.
+                </p>
+
+                <p>
+                    🍦 <strong>Gratis es krim</strong>
+                    untuk setiap Google Review.
+                    <br>
+                    <small>1 akun Google = 1 es krim.</small>
+                </p>
+
+                <p>
+                    📸 <strong>Diskon 5% semua menu</strong>
+                    dengan follow Instagram,
+                    upload Story, dan mention
+                    <strong>@bebekgongsokinanthi</strong>.
+                </p>
+
+                <p>
+                    🍚 <strong>Free refill nasi & lalapan</strong>
+                    sepuasnya.
+                </p>
+
+            </div>
+
+            <a href="https://www.instagram.com/bebekgongsokinanthi/"
+               target="_blank"
+               class="btn btn-dark">
+                <i class="bi bi-instagram"></i>
+                Follow Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FASILITAS ================= -->
+<section id="fasilitas" class="section fasilitas-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>FASILITAS & AREA</span>
+
+            <h2>Nyaman untuk Makan & Berkumpul</h2>
 
             <p>
                 Nyaman untuk makan santai, kumpul keluarga,
@@ -1133,18 +303,19 @@
 
         <div class="row g-3">
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🏠</div>
                     <h4>Indoor</h4>
                     <p>
-                        Area dalam ruangan untuk makan dan
-                        berkumpul dengan nyaman.
+                        Area dalam ruangan untuk makan
+                        dan berkumpul dengan nyaman.
                     </p>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🌿</div>
                     <h4>Outdoor</h4>
@@ -1155,18 +326,20 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🔐</div>
                     <h4>VIP / Private Room</h4>
                     <p>
-                        Ruang privat untuk keluarga, meeting,
-                        dan acara khusus.
+                        Ruang privat untuk keluarga,
+                        meeting, dan acara khusus.
                     </p>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🎤</div>
                     <h4>Karaoke Gratis</h4>
@@ -1177,7 +350,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🅿️</div>
                     <h4>Parkir Luas</h4>
@@ -1188,18 +362,20 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🎉</div>
                     <h4>Acara Kecil & Besar</h4>
                     <p>
-                        Menerima kebutuhan acara dan kumpul
-                        bersama dalam berbagai skala.
+                        Menerima kebutuhan acara dan
+                        kumpul bersama dalam berbagai skala.
                     </p>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🍚</div>
                     <h4>Free Refill</h4>
@@ -1210,7 +386,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
+
+            <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
                     <div class="facility-icon">🍱</div>
                     <h4>Nasi Box</h4>
@@ -1228,116 +405,16 @@
 </section>
 
 
-<!-- =====================================================
-     PROMO
-===================================================== -->
-
-<section id="promo" class="section-padding promo-section">
+<!-- ================= PAKET ================= -->
+<section id="paket" class="section paket-section">
 
     <div class="container">
 
-        <div class="section-title text-center">
-
-            <span>PROMO</span>
-
-            <h2>
-                Promo & Keuntungan
-            </h2>
-
-            <p>
-                Dapatkan keuntungan tambahan saat berkunjung
-                ke Bebek Gongso Kinanthi.
-            </p>
-
-        </div>
-
-
-        <div class="row g-4 justify-content-center">
-
-            <!-- Google Review -->
-
-            <div class="col-md-6">
-
-                <div class="promo-card">
-
-                    <div class="promo-icon">
-                        🍦
-                    </div>
-
-                    <h3>
-                        Gratis Es Krim
-                    </h3>
-
-                    <p>
-                        Berikan Google Review dan dapatkan
-                        gratis es krim sesuai ketentuan promo.
-                    </p>
-
-                    <div class="promo-note">
-                        1 akun Google = 1 es krim
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Instagram -->
-
-            <div class="col-md-6">
-
-                <div class="promo-card">
-
-                    <div class="promo-icon">
-                        📸
-                    </div>
-
-                    <h3>
-                        Diskon 5%
-                    </h3>
-
-                    <p>
-                        Follow Instagram
-                        <strong>@bebekgongsokinanthi</strong>,
-                        upload Instagram Story, dan mention
-                        akun kami.
-                    </p>
-
-                    <a
-                        href="https://www.instagram.com/bebekgongsokinanthi/"
-                        target="_blank"
-                        class="btn btn-dark"
-                    >
-                        <i class="bi bi-instagram"></i>
-                        Follow Instagram
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PAKET
-===================================================== -->
-
-<section id="paket" class="section-padding paket-section">
-
-    <div class="container">
-
-        <div class="section-title text-center">
+        <div class="section-title">
 
             <span>LAYANAN ACARA</span>
 
-            <h2>
-                Nasi Box & Prasmanan
-            </h2>
+            <h2>Nasi Box & Prasmanan</h2>
 
             <p>
                 Cocok untuk berbagai kebutuhan acara.
@@ -1348,77 +425,53 @@
 
         <div class="row g-4">
 
-            <!-- NASI BOX -->
+            <div class="col-md-6">
 
-            <div class="col-lg-6">
+                <div class="paket-card">
 
-                <div class="package-card">
+                    <img src="assets/nasi-box.png"
+                         alt="Nasi Box">
 
-                    <img
-                        src="assets/nasi-box.png"
-                        alt="Nasi Box"
-                    >
+                    <h3>Nasi Box</h3>
 
-                    <div class="package-content">
+                    <p>
+                        Pilihan praktis untuk rapat,
+                        acara keluarga, kegiatan,
+                        dan berbagai kebutuhan lainnya.
+                    </p>
 
-                        <h3>
-                            Nasi Box
-                        </h3>
-
-                        <p>
-                            Pilihan praktis untuk rapat,
-                            acara keluarga, kegiatan,
-                            dan berbagai kebutuhan lainnya.
-                        </p>
-
-                        <a
-                            href="https://wa.me/6281226956567?text=Halo%20Bebek%20Gongso%20Kinanthi%2C%20saya%20ingin%20bertanya%20tentang%20Nasi%20Box."
-                            target="_blank"
-                            class="btn btn-primary-custom"
-                        >
-                            <i class="bi bi-whatsapp"></i>
-                            Pesan Nasi Box
-                        </a>
-
-                    </div>
+                    <a href="https://wa.me/6281226956567?text=Halo%20Bebek%20Gongso%20Kinanthi,%20saya%20ingin%20pesan%20Nasi%20Box"
+                       target="_blank"
+                       class="btn btn-success">
+                        <i class="bi bi-whatsapp"></i>
+                        Pesan Nasi Box
+                    </a>
 
                 </div>
 
             </div>
 
 
-            <!-- PRASMANAN -->
+            <div class="col-md-6">
 
-            <div class="col-lg-6">
+                <div class="paket-card">
 
-                <div class="package-card">
+                    <img src="assets/prasmanan.png"
+                         alt="Prasmanan">
 
-                    <img
-                        src="assets/prasmanan.png"
-                        alt="Prasmanan"
-                    >
+                    <h3>Prasmanan</h3>
 
-                    <div class="package-content">
+                    <p>
+                        Layanan prasmanan untuk berbagai
+                        acara kecil maupun besar.
+                    </p>
 
-                        <h3>
-                            Prasmanan
-                        </h3>
-
-                        <p>
-                            Layanan prasmanan untuk berbagai
-                            acara kecil maupun besar.
-                        </p>
-
-                        <a
-                            href="https://wa.me/628139869925?text=Halo%20Bebek%20Gongso%20Kinanthi%2C%20saya%20ingin%20bertanya%20tentang%20Prasmanan."
-                            target="_blank"
-                            class="btn btn-primary-custom"
-                        >
-                            <i class="bi bi-whatsapp"></i>
-                            Pesan Prasmanan
-                        </a>
-
-                    </div>
+                    <a href="https://wa.me/628139869925?text=Halo%20Bebek%20Gongso%20Kinanthi,%20saya%20ingin%20pesan%20Prasmanan"
+                       target="_blank"
+                       class="btn btn-success">
+                        <i class="bi bi-whatsapp"></i>
+                        Pesan Prasmanan
+                    </a>
 
                 </div>
 
@@ -1431,135 +484,25 @@
 </section>
 
 
-<!-- =====================================================
-     TENTANG + CHART JS
-===================================================== -->
-
-<section id="tentang" class="section-padding tentang-section">
+<!-- ================= KONTAK ================= -->
+<section id="kontak" class="section contact-section">
 
     <div class="container">
 
-        <div class="section-title text-center">
-
-            <span>TENTANG KAMI</span>
-
-            <h2>
-                Bebek Gongso Kinanthi
-            </h2>
-
-            <p>
-                Tempat makan dan berkumpul bersama keluarga,
-                teman, maupun rombongan.
-            </p>
-
-        </div>
-
-
-        <div class="row g-5 align-items-center">
-
-            <div class="col-lg-6">
-
-                <div class="about-text">
-
-                    <h3>
-                        Makan Enak, Kumpul Makin Asik
-                    </h3>
-
-                    <p>
-                        Bebek Gongso Kinanthi hadir sebagai tempat
-                        makan yang nyaman untuk berbagai kebutuhan,
-                        mulai dari makan bersama keluarga,
-                        nongkrong bersama teman, hingga acara
-                        kecil dan besar.
-                    </p>
-
-                    <p>
-                        Kami menyediakan berbagai pilihan menu
-                        mulai dari Bebek, Ayam, Menu Lain,
-                        Coffee, Camilan, hingga berbagai Minuman.
-                    </p>
-
-                    <div class="about-highlights">
-
-                        <div>
-                            <i class="bi bi-clock"></i>
-                            <span>11.00–21.00 WIB</span>
-                        </div>
-
-                        <div>
-                            <i class="bi bi-shop"></i>
-                            <span>Indoor & Outdoor</span>
-                        </div>
-
-                        <div>
-                            <i class="bi bi-car-front"></i>
-                            <span>Parkir Luas</span>
-                        </div>
-
-                        <div>
-                            <i class="bi bi-music-note"></i>
-                            <span>Karaoke Gratis</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- CHART -->
-
-            <div class="col-lg-6">
-
-                <div class="chart-card">
-
-                    <h3>
-                        Statistik Penjualan
-                    </h3>
-
-                    <p>
-                        Data contoh penjualan mingguan.
-                    </p>
-
-                    <canvas id="salesChart"></canvas>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     KONTAK
-===================================================== -->
-
-<section id="kontak" class="section-padding contact-section">
-
-    <div class="container">
-
-        <div class="section-title text-center">
+        <div class="section-title">
 
             <span>HUBUNGI KAMI</span>
 
-            <h2>
-                Kontak & Lokasi
-            </h2>
+            <h2>Kontak & Lokasi</h2>
 
         </div>
 
 
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4">
 
 
             <!-- ALAMAT -->
-
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-4">
 
                 <div class="contact-card">
 
@@ -1567,9 +510,7 @@
                         <i class="bi bi-geo-alt-fill"></i>
                     </div>
 
-                    <h4>
-                        Alamat
-                    </h4>
+                    <h4>Alamat</h4>
 
                     <p>
                         Krajan Jomboran,<br>
@@ -1577,13 +518,10 @@
                         Jawa Tengah 57418
                     </p>
 
-                    <a
-                        href="https://www.google.com/maps/search/?api=1&query=Bebek%20Gongso%20Kinanthi%20Klaten"
-                        target="_blank"
-                        class="btn btn-light"
-                    >
-                        <i class="bi bi-map"></i>
-                        Buka Google Maps
+                    <a href="https://www.google.com/maps/search/?api=1&query=Krajan%20Jomboran%20Klaten%20Tengah%20Klaten%20Jawa%20Tengah"
+                       target="_blank"
+                       class="btn btn-light">
+                        🗺️ Buka Google Maps
                     </a>
 
                 </div>
@@ -1591,9 +529,8 @@
             </div>
 
 
-            <!-- WHATSAPP 1 -->
-
-            <div class="col-md-6 col-lg-3">
+            <!-- WHATSAPP -->
+            <div class="col-md-4">
 
                 <div class="contact-card">
 
@@ -1601,53 +538,31 @@
                         <i class="bi bi-whatsapp"></i>
                     </div>
 
-                    <h4>
-                        WhatsApp 1
-                    </h4>
+                    <h4>WhatsApp</h4>
 
                     <p>
+                        <strong>WhatsApp 1</strong><br>
                         0812-2695-6567
                     </p>
 
-                    <a
-                        href="https://wa.me/6281226956567"
-                        target="_blank"
-                        class="btn btn-light"
-                    >
+                    <a href="https://wa.me/6281226956567"
+                       target="_blank"
+                       class="btn btn-light mb-3">
                         <i class="bi bi-whatsapp"></i>
-                        Chat WhatsApp
+                        Chat WhatsApp 1
                     </a>
 
-                </div>
-
-            </div>
-
-
-            <!-- WHATSAPP 2 -->
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        <i class="bi bi-whatsapp"></i>
-                    </div>
-
-                    <h4>
-                        WhatsApp 2
-                    </h4>
 
                     <p>
+                        <strong>WhatsApp 2</strong><br>
                         0813-9869-925
                     </p>
 
-                    <a
-                        href="https://wa.me/628139869925"
-                        target="_blank"
-                        class="btn btn-light"
-                    >
+                    <a href="https://wa.me/628139869925"
+                       target="_blank"
+                       class="btn btn-light">
                         <i class="bi bi-whatsapp"></i>
-                        Chat WhatsApp
+                        Chat WhatsApp 2
                     </a>
 
                 </div>
@@ -1656,8 +571,7 @@
 
 
             <!-- INSTAGRAM -->
-
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-4">
 
                 <div class="contact-card">
 
@@ -1665,20 +579,15 @@
                         <i class="bi bi-instagram"></i>
                     </div>
 
-                    <h4>
-                        Instagram
-                    </h4>
+                    <h4>Instagram</h4>
 
                     <p>
                         @bebekgongsokinanthi
                     </p>
 
-                    <a
-                        href="https://www.instagram.com/bebekgongsokinanthi/"
-                        target="_blank"
-                        class="btn btn-light"
-                    >
-                        <i class="bi bi-instagram"></i>
+                    <a href="https://www.instagram.com/bebekgongsokinanthi/"
+                       target="_blank"
+                       class="btn btn-light">
                         Buka Instagram
                     </a>
 
@@ -1689,40 +598,19 @@
         </div>
 
 
-        <!-- GRABFOOD -->
-
-        <div class="grabfood-box">
-
-            <i class="bi bi-bag-check-fill"></i>
+        <!-- JAM & GRAB -->
+        <div class="opening-info">
 
             <div>
-                <h4>
-                    Tersedia di GrabFood
-                </h4>
-
-                <p>
-                    Cari:
-                    <strong>bebekgongsokinanthi</strong>
-                </p>
+                <i class="bi bi-clock-fill"></i>
+                <strong>Jam Buka:</strong>
+                Setiap hari 11.00–21.00 WIB
             </div>
 
-        </div>
-
-
-        <!-- JAM BUKA -->
-
-        <div class="opening-hours">
-
-            <i class="bi bi-clock-fill"></i>
-
             <div>
-                <strong>
-                    Jam Buka
-                </strong>
-
-                <span>
-                    Setiap hari • 11.00–21.00 WIB
-                </span>
+                <i class="bi bi-bag-fill"></i>
+                <strong>GrabFood:</strong>
+                bebekgongsokinanthi
             </div>
 
         </div>
@@ -1732,106 +620,37 @@
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+<!-- ================= FOOTER ================= -->
 <footer>
 
-    <div class="container text-center">
+    <img src="assets/logo.png"
+         alt="Bebek Gongso Kinanthi">
 
-        <img
-            src="assets/logo.png"
-            alt="Logo"
-            class="footer-logo"
-        >
+    <h4>Bebek Gongso Kinanthi</h4>
 
-        <h3>
-            Bebek Gongso Kinanthi
-        </h3>
+    <p>Makan Enak, Kumpul Makin Asik</p>
 
-        <p>
-            Makan Enak, Kumpul Makin Asik
-        </p>
-
-        <div class="footer-social">
-
-            <a
-                href="https://www.instagram.com/bebekgongsokinanthi/"
-                target="_blank"
-            >
-                <i class="bi bi-instagram"></i>
-            </a>
-
-            <a
-                href="https://wa.me/6281226956567"
-                target="_blank"
-            >
-                <i class="bi bi-whatsapp"></i>
-            </a>
-
-            <a
-                href="https://wa.me/628139869925"
-                target="_blank"
-            >
-                <i class="bi bi-whatsapp"></i>
-            </a>
-
-        </div>
-
-        <hr>
-
-        <p class="copyright">
-            © 2026 Bebek Gongso Kinanthi.
-            All Rights Reserved.
-        </p>
-
-    </div>
+    <p class="copyright">
+        © 2026 Bebek Gongso Kinanthi
+    </p>
 
 </footer>
 
 
-<!-- =====================================================
-     FLOATING WHATSAPP
-===================================================== -->
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/6281226956567"
+   target="_blank"
+   class="floating-wa">
 
-<div class="whatsapp-floating">
+    <i class="bi bi-whatsapp"></i>
 
-    <a
-        href="https://wa.me/6281226956567"
-        target="_blank"
-        title="WhatsApp 1"
-    >
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <a
-        href="https://wa.me/628139869925"
-        target="_blank"
-        title="WhatsApp 2"
-    >
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-</div>
+</a>
 
 
 <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
-<!-- Chart JS -->
-
-<script
-    src="https://cdn.jsdelivr.net/npm/chart.js">
-</script>
-
-
-<!-- JavaScript kita -->
-
+<!-- JavaScript -->
 <script src="script.js"></script>
 
 </body>
