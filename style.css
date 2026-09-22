@@ -1,6 +1,4 @@
-/* =====================================================
-   GLOBAL
-===================================================== */
+/* ================= GLOBAL ================= */
 
 html {
     scroll-behavior: smooth;
@@ -27,10 +25,7 @@ img {
 }
 
 
-
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* ================= NAVBAR ================= */
 
 .navbar {
     padding: 10px 0;
@@ -61,10 +56,7 @@ img {
 }
 
 
-
-/* =====================================================
-   HERO
-===================================================== */
+/* ================= HERO ================= */
 
 .hero-section {
     min-height: 720px;
@@ -72,13 +64,12 @@ img {
     align-items: center;
     padding: 100px 0;
     color: white;
-    background:
-        linear-gradient(
-            135deg,
-            #075a30,
-            #08733d 55%,
-            #0b8b4c
-        );
+    background: linear-gradient(
+        135deg,
+        #075a30,
+        #08733d 55%,
+        #0b8b4c
+    );
 }
 
 .hero-badge {
@@ -156,10 +147,7 @@ img {
 }
 
 
-
-/* =====================================================
-   GENERAL SECTION
-===================================================== */
+/* ================= GENERAL SECTION ================= */
 
 .section-padding {
     padding: 90px 0;
@@ -191,10 +179,7 @@ img {
 }
 
 
-
-/* =====================================================
-   MENU
-===================================================== */
+/* ================= MENU ================= */
 
 .menu-section {
     background: #ffffff;
@@ -271,6 +256,10 @@ img {
     margin-bottom: 30px;
 }
 
+.menu-group:last-child {
+    margin-bottom: 0;
+}
+
 .menu-group-title {
     color: #d39a18;
     font-size: 18px;
@@ -301,10 +290,7 @@ img {
 }
 
 
-
-/* =====================================================
-   PROMO
-===================================================== */
+/* ================= PROMO ================= */
 
 .promo-section {
     background: #f4f8f5;
@@ -341,10 +327,7 @@ img {
 }
 
 
-
-/* =====================================================
-   FASILITAS
-===================================================== */
+/* ================= FASILITAS & AREA ================= */
 
 .fasilitas-section {
     background: white;
@@ -352,7 +335,7 @@ img {
 
 .facility-card {
     height: 100%;
-    padding: 30px;
+    padding: 30px 24px;
     text-align: center;
     border: 1px solid #e2e9e4;
     border-radius: 20px;
@@ -365,21 +348,20 @@ img {
     box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
-.facility-card > i {
-    display: inline-flex;
+.facility-emoji {
     width: 65px;
     height: 65px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background: #e8f4ed;
-    color: #08733d;
-    font-size: 28px;
+    font-size: 31px;
     margin-bottom: 18px;
 }
 
 .facility-card h3 {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 800;
 }
 
@@ -390,10 +372,7 @@ img {
 }
 
 
-
-/* =====================================================
-   PAKET
-===================================================== */
+/* ================= PAKET ================= */
 
 .package-section {
     background: #f4f8f5;
@@ -456,10 +435,7 @@ img {
 }
 
 
-
-/* =====================================================
-   ABOUT
-===================================================== */
+/* ================= TENTANG ================= */
 
 .about-section {
     background: white;
@@ -506,10 +482,7 @@ img {
 }
 
 
-
-/* =====================================================
-   KONTAK
-===================================================== */
+/* ================= KONTAK ================= */
 
 .contact-section {
     background: #f4f8f5;
@@ -546,16 +519,8 @@ img {
     line-height: 1.7;
 }
 
-.address-button {
-    text-align: center;
-    margin-top: 35px;
-}
 
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
+/* ================= FOOTER ================= */
 
 .footer {
     padding: 55px 0 30px;
@@ -614,22 +579,16 @@ img {
 }
 
 
-
-/* =====================================================
-   MODAL GAMBAR
-===================================================== */
+/* ================= MODAL GAMBAR ================= */
 
 .image-modal {
     position: fixed;
     inset: 0;
     z-index: 9999;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     padding: 30px;
-
     background: rgba(0,0,0,.88);
 }
 
@@ -642,11 +601,8 @@ img {
     max-height: 90vh;
     width: auto;
     height: auto;
-
     object-fit: contain;
-
     border-radius: 10px;
-
     box-shadow: 0 20px 60px rgba(0,0,0,.5);
 }
 
@@ -654,21 +610,15 @@ img {
     position: fixed;
     top: 20px;
     right: 25px;
-
     z-index: 10000;
-
     width: 48px;
     height: 48px;
-
     border: none;
     border-radius: 50%;
-
     background: rgba(255,255,255,.15);
     color: white;
-
     font-size: 35px;
     line-height: 1;
-
     cursor: pointer;
 }
 
@@ -677,10 +627,7 @@ img {
 }
 
 
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 991px) {
 
@@ -698,7 +645,6 @@ img {
     }
 
 }
-
 
 @media (max-width: 576px) {
 
