@@ -1,3 +1,7 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -23,11 +27,13 @@ section {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar {
     background: #07552e;
-    box-shadow: 0 3px 18px rgba(0,0,0,.12);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .12);
 }
 
 .navbar-logo {
@@ -65,14 +71,20 @@ section {
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero-section {
     min-height: 100vh;
     padding: 150px 0 90px;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #fff9e9, #f1f8f3);
+    background: linear-gradient(
+        135deg,
+        #fff9e9,
+        #f1f8f3
+    );
 }
 
 .hero-label {
@@ -157,7 +169,7 @@ section {
     border-radius: 25px;
     padding: 45px 30px;
     text-align: center;
-    box-shadow: 0 18px 50px rgba(0,0,0,.12);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .12);
 }
 
 .hero-card img {
@@ -194,7 +206,9 @@ section {
 }
 
 
-/* ================= SECTION TITLE ================= */
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
 .section-title {
     text-align: center;
@@ -231,7 +245,9 @@ section {
 }
 
 
-/* ================= MENU ================= */
+/* =====================================================
+   MENU
+===================================================== */
 
 .menu-section {
     background: #eef5f0;
@@ -266,7 +282,7 @@ section {
     background: white;
     border-radius: 22px;
     padding: 30px;
-    box-shadow: 0 10px 35px rgba(0,0,0,.07);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .07);
 }
 
 .menu-display h3 {
@@ -284,6 +300,7 @@ section {
 .menu-list li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
     padding: 11px 0;
     border-bottom: 1px dashed #d6ded9;
@@ -301,16 +318,24 @@ section {
 }
 
 .menu-poster {
+    display: block;
     width: 100%;
     max-height: 700px;
     object-fit: contain;
     border-radius: 14px;
     cursor: zoom-in;
     background: #f4f4f4;
+    transition: .25s;
+}
+
+.menu-poster:hover {
+    transform: scale(1.01);
 }
 
 
-/* ================= PROMO ================= */
+/* =====================================================
+   PROMO
+===================================================== */
 
 .promo-section {
     background: white;
@@ -341,7 +366,9 @@ section {
 }
 
 
-/* ================= FACILITIES ================= */
+/* =====================================================
+   FACILITIES
+===================================================== */
 
 .facilities-section {
     background: #fff9e9;
@@ -359,7 +386,7 @@ section {
 
 .facility-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
 }
 
 .facility-icon {
@@ -380,7 +407,9 @@ section {
 }
 
 
-/* ================= PACKAGE ================= */
+/* =====================================================
+   PACKAGE
+===================================================== */
 
 .package-section {
     background: #f4f8f5;
@@ -391,7 +420,7 @@ section {
     overflow: hidden;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
 
 .poster-box {
@@ -418,12 +447,13 @@ section {
     left: 50%;
     bottom: 18px;
     transform: translateX(-50%);
-    background: rgba(0,0,0,.75);
+    background: rgba(0, 0, 0, .75);
     color: white;
     padding: 9px 15px;
     border-radius: 25px;
     font-size: 13px;
     white-space: nowrap;
+    pointer-events: none;
 }
 
 .package-content {
@@ -441,7 +471,9 @@ section {
 }
 
 
-/* ================= TENTANG ================= */
+/* =====================================================
+   TENTANG
+===================================================== */
 
 .about-section {
     background: white;
@@ -460,7 +492,7 @@ section {
     border: 1px solid #e1e9e4;
     border-radius: 24px;
     padding: 35px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
 }
 
 .about-logo {
@@ -603,7 +635,9 @@ section {
 }
 
 
-/* ================= KONTAK ================= */
+/* =====================================================
+   KONTAK
+===================================================== */
 
 .contact-section {
     background: #07552e;
@@ -614,9 +648,9 @@ section {
     text-align: center;
     color: white;
     padding: 35px 25px;
-    border: 1px solid rgba(255,255,255,.18);
+    border: 1px solid rgba(255, 255, 255, .18);
     border-radius: 20px;
-    background: rgba(255,255,255,.07);
+    background: rgba(255, 255, 255, .07);
 }
 
 .contact-icon {
@@ -641,12 +675,14 @@ section {
 .grabfood {
     margin-top: 18px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255,255,255,.15);
+    border-top: 1px solid rgba(255, 255, 255, .15);
     font-size: 13px;
 }
 
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
     background: #04391f;
@@ -674,7 +710,9 @@ footer small {
 }
 
 
-/* ================= FLOATING WA ================= */
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
 
 .floating-wa {
     position: fixed;
@@ -690,7 +728,7 @@ footer small {
     border-radius: 50%;
     font-size: 28px;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
     z-index: 999;
 }
 
@@ -700,7 +738,9 @@ footer small {
 }
 
 
-/* ================= MODAL ================= */
+/* =====================================================
+   IMAGE MODAL
+===================================================== */
 
 .image-modal {
     position: fixed;
@@ -709,7 +749,7 @@ footer small {
     align-items: center;
     justify-content: center;
     padding: 25px;
-    background: rgba(0,0,0,.94);
+    background: rgba(0, 0, 0, .94);
     z-index: 99999;
 }
 
@@ -735,10 +775,13 @@ footer small {
     color: #07552e;
     font-size: 32px;
     line-height: 1;
+    cursor: pointer;
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 991px) {
 
@@ -751,6 +794,7 @@ footer small {
     }
 
 }
+
 
 @media (max-width: 576px) {
 
