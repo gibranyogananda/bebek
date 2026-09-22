@@ -516,64 +516,28 @@ function closeImage(event) {
 
 
 
-/* =====================================================
-   WHATSAPP 1
-===================================================== */
-
-function chatWA1() {
-
-    window.open(
-        "https://wa.me/6281226956567",
-        "_blank"
-    );
-
-}
-
-
-
-/* =====================================================
-   WHATSAPP 2
-===================================================== */
-
-function chatWA2() {
-
-    window.open(
-        "https://wa.me/628139869925",
-        "_blank"
-    );
-
-}
-
-
-
-/* =====================================================
-   PILIH WHATSAPP
-===================================================== */
-
 function pilihWhatsApp() {
-
-    const pilihan = confirm(
-
-        "Pilih WhatsApp:\n\n" +
-        "OK = 081226956567\n" +
-        "Cancel = 08139869925"
-
+    const pilihan = prompt(
+        "Pilih nomor WhatsApp:\n\n" +
+        "1. 081226956567\n" +
+        "2. 08139869925\n\n" +
+        "Ketik 1 atau 2:"
     );
 
-
-    if (pilihan) {
-
-        chatWA1();
-
-    } else {
-
-        chatWA2();
-
+    if (pilihan === "1") {
+        window.open(
+            "https://wa.me/6281226956567",
+            "_blank"
+        );
+    } else if (pilihan === "2") {
+        window.open(
+            "https://wa.me/628139869925",
+            "_blank"
+        );
+    } else if (pilihan !== null) {
+        alert("Pilihan tidak valid. Silakan pilih 1 atau 2.");
     }
-
 }
-
-
 
 /* =====================================================
    DOM READY
