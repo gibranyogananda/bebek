@@ -1,392 +1,378 @@
-/* =========================================================
+/* =====================================================
    DATA MENU
-========================================================= */
+===================================================== */
 
-const dataMenu = {
+const menus = {
 
     bebek: {
-        judul: "Menu Bebek",
-        poster: "assets/menu-bebek.png",
+        title: "Menu Bebek",
+        image: "assets/menu-bebek.png",
 
         items: [
-            {
-                nama: "Bebek",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Bebek Gongso",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Bebek Goreng",
-                harga: "Lihat Poster"
-            }
+            ["Bebek Goreng", "Rp27.000"],
+            ["Bebek Kremes", "Rp30.000"],
+            ["Bebek Gongso", "Rp30.000"],
+            ["Bebek Lombok Ijo", "Rp32.000"],
+            ["Bebek Bacem", "Rp32.000"]
         ]
     },
 
 
     ayam: {
-        judul: "Menu Ayam",
-        poster: "assets/menu-ayam.png",
+        title: "Menu Ayam",
+        image: "assets/Menu-ayam.png",
 
         items: [
-            {
-                nama: "Ayam",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Ayam Gongso",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Ayam Goreng",
-                harga: "Lihat Poster"
-            }
+            ["Ayam Kampung Goreng", "Rp27.000"],
+            ["Ayam Kampung Kremes", "Rp30.000"],
+            ["Ayam Kampung Gongso", "Rp30.000"],
+            ["Ayam Kampung Lombok Ijo", "Rp32.000"],
+            ["Ayam Negri Goreng", "Rp16.000"],
+            ["Ayam Negri Kremes", "Rp20.000"],
+            ["Ayam Negri Gongso", "Rp22.000"],
+            ["Ayam Negri Lombok Ijo", "Rp22.000"]
         ]
     },
 
 
-    lainnya: {
-        judul: "Menu Lain",
-        poster: "assets/menu-lain.png",
+    lain: {
+        title: "Menu Lain",
+        image: "assets/menu-lain.png",
 
         items: [
-            {
-                nama: "Menu Lainnya",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Seafood",
-                harga: "Lihat Poster"
-            }
+            ["Pepes Nila", "Rp30.000"],
+            ["Nila Telur Asin", "Rp35.000"],
+            ["Nila Crispy", "Rp30.000"],
+            ["Nila Goreng", "Rp16.000"],
+            ["Lele Goreng", "Rp12.000"],
+            ["Sup Iga", "Rp38.000"],
+            ["Kangkung", "Rp10.000"],
+            ["Tauge", "Rp10.000"],
+            ["Terong Goreng", "Rp7.000"]
         ]
     },
 
 
     coffee: {
-        judul: "Coffee",
-        poster: "assets/menu-coffee.png",
+        title: "Coffee",
+        image: "assets/menu-coffee.png",
 
         items: [
-            {
-                nama: "Coffee",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Aneka Coffee",
-                harga: "Lihat Poster"
-            }
+            ["Kopi Susu Kinanthi Hot", "Rp22.000"],
+            ["Lime Coffee Hot", "Rp20.000"],
+            ["Kopi Susu Blueberry Hot", "Rp20.000"],
+            ["Kopi Susu Blueberry Ice", "Rp22.000"],
+            ["Kopi Susu Caramel Hot", "Rp20.000"],
+            ["Kopi Susu Caramel Ice", "Rp22.000"],
+            ["Coffee Latte Hot", "Rp18.000"]
         ]
     },
 
 
     camilan: {
-        judul: "Camilan",
-        poster: "assets/menu-camilan.png",
+        title: "Camilan",
+        image: "assets/menu-camilan.png",
 
         items: [
-            {
-                nama: "Camilan",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Aneka Camilan",
-                harga: "Lihat Poster"
-            }
+            ["Mix Platter", "Rp25.000"],
+            ["Onion Ring", "Rp15.000"],
+            ["Tahu Cabai Garam", "Rp15.000"],
+            ["Tahu Tuna", "Rp15.000"],
+            ["Pisang Lumer", "Rp15.000"],
+            ["Kentang Goreng", "Rp15.000"],
+            ["Singkong Goreng", "Rp12.000"],
+            ["Singkong Keju", "Rp15.000"],
+            ["Singkong Coklat", "Rp15.000"],
+            ["Mendoan", "Rp12.000"],
+            ["Jamur Tepung", "Rp12.000"],
+            ["Sosis Goreng", "Rp12.000"],
+            ["Cireng Goreng", "Rp10.000"],
+            ["Lumpia Goreng", "Rp15.000"],
+            ["Pastel Goreng", "Rp15.000"],
+            ["Jenang", "Rp10.000"],
+            ["Krasikan", "Rp10.000"]
         ]
     },
 
 
     minuman: {
-        judul: "Minuman",
-        poster: "assets/menu-minuman-1.png",
+        title: "Minuman",
+
+        images: [
+            "assets/menu-minuman-1.png",
+            "assets/menu-minuman-2.png"
+        ],
 
         items: [
-            {
-                nama: "Minuman",
-                harga: "Lihat Poster"
-            },
-            {
-                nama: "Aneka Minuman",
-                harga: "Lihat Poster"
-            }
+            ["Jahe Geprek", "Rp10.000"],
+            ["Jahe Serai", "Rp12.000"],
+            ["Jahe Susu", "Rp12.000"],
+            ["Kopi Jahe", "Rp12.000"],
+            ["Hot Coklat", "Rp15.000"],
+            ["Hot Matcha", "Rp20.000"],
+            ["Hot Taro", "Rp18.000"],
+            ["Soda Gembira", "Rp12.000"],
+            ["Lemon Squash", "Rp12.000"],
+            ["Orange Squash", "Rp12.000"],
+            ["Jeruk Kelapa Muda", "Rp12.000"],
+            ["Kelapa Muda Gelas", "Rp12.000"],
+            ["Kelapa Muda Utuh", "Rp14.000"],
+            ["Alpukat", "Rp14.000"],
+            ["Mangga", "Rp14.000"],
+            ["Jambu", "Rp12.000"],
+            ["Sirsak", "Rp12.000"],
+            ["Melon", "Rp12.000"],
+            ["Semangka", "Rp10.000"],
+            ["Teh Tawar", "Rp3.000"],
+            ["Teh Manis Panas", "Rp5.000"],
+            ["Es Teh Manis", "Rp6.000"],
+            ["Teh Leci", "Rp15.000"],
+            ["Jeruk Panas", "Rp6.000"],
+            ["Es Jeruk", "Rp7.000"],
+            ["Lemon Tea", "Rp7.000"],
+            ["Air Mineral", "Rp6.000"]
         ]
     }
 
 };
 
 
-/* =========================================================
+/* =====================================================
    TAMPILKAN MENU
-========================================================= */
+===================================================== */
 
-function tampilkanMenu(kategori, tombol) {
+function showMenu(category, clickedButton) {
 
-    const data = dataMenu[kategori];
+    const content = document.getElementById("menuContent");
+    const menu = menus[category];
 
-    if (!data) {
-        return;
+    if (!menu) return;
+
+
+    document.querySelectorAll(".menu-btn").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    if (clickedButton) {
+        clickedButton.classList.add("active");
     }
 
 
-    /* Judul */
+    let list = "";
 
-    document.getElementById("judulKategori").textContent =
-        data.judul;
+    menu.items.forEach(item => {
 
-
-    /* Poster */
-
-    const poster = document.getElementById("posterMenu");
-
-    poster.src = data.poster;
-    poster.alt = data.judul;
-
-
-    /* Daftar */
-
-    const daftar = document.getElementById("daftarMenu");
-
-    daftar.innerHTML = "";
-
-
-    data.items.forEach(function(item) {
-
-        const div = document.createElement("div");
-
-        div.className = "menu-item";
-
-        div.innerHTML = `
-            <span class="menu-name">
-                ${item.nama}
-            </span>
-
-            <span class="menu-price">
-                ${item.harga}
-            </span>
+        list += `
+            <li>
+                <span class="menu-name">${item[0]}</span>
+                <span class="menu-price">${item[1]}</span>
+            </li>
         `;
 
-        daftar.appendChild(div);
-
     });
 
 
-    /* Active kategori */
-
-    document.querySelectorAll(".menu-category").forEach(function(button) {
-
-        button.classList.remove("active");
-
-    });
-
-
-    tombol.classList.add("active");
-
-}
-
-
-/* =========================================================
-   POSTER MENU DIPERBESAR
-========================================================= */
-
-function perbesarPosterMenu() {
-
-    const poster = document.getElementById("posterMenu");
-
-    tampilkanPoster(
-        poster.src,
-        poster.alt
-    );
-
-}
-
-
-/* =========================================================
-   TAMPILKAN POSTER MODAL
-========================================================= */
-
-function tampilkanPoster(gambar, judul) {
-
-    const modalImage =
-        document.getElementById("posterModalImage");
-
-    const modalTitle =
-        document.getElementById("posterModalTitle");
-
-
-    modalImage.src = gambar;
-
-    modalImage.alt = judul;
-
-    modalTitle.textContent = judul;
-
-
-    const modalElement =
-        document.getElementById("posterModal");
-
-
-    const modal =
-        bootstrap.Modal.getOrCreateInstance(modalElement);
-
-
-    modal.show();
-
-}
-
-
-/* =========================================================
-   MENU DEFAULT
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    const tombolPertama =
-        document.querySelector(".menu-category");
-
-    tampilkanMenu(
-        "bebek",
-        tombolPertama
-    );
-
-});
-
-
-/* =========================================================
-   ACTIVE NAVBAR + SMOOTH SCROLL
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    const navLinks =
-        document.querySelectorAll(".navbar .nav-link");
-
-    const sections =
-        document.querySelectorAll("section[id]");
-
-
-    /* Klik menu */
-
-    navLinks.forEach(function(link) {
-
-        link.addEventListener("click", function(event) {
-
-            const targetId =
-                this.getAttribute("href");
-
-
-            if (
-                targetId &&
-                targetId.startsWith("#")
-            ) {
-
-                event.preventDefault();
-
-
-                const target =
-                    document.querySelector(targetId);
-
-
-                if (target) {
-
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-
-                }
-
-
-                /* Tutup navbar mobile */
-
-                const navbar =
-                    document.getElementById("navbarNav");
-
-
-                if (
-                    navbar &&
-                    navbar.classList.contains("show")
-                ) {
-
-                    bootstrap.Collapse
-                        .getOrCreateInstance(navbar)
-                        .hide();
-
-                }
-
-            }
-
-        });
-
-    });
-
-
-    /* Active berdasarkan posisi scroll */
-
-    function updateActiveNav() {
-
-        let currentSection = "home";
-
-
-        sections.forEach(function(section) {
-
-            const sectionTop =
-                section.offsetTop - 120;
-
-            if (
-                window.scrollY >= sectionTop
-            ) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navLinks.forEach(function(link) {
-
-            link.classList.remove("active");
-
-
-            if (
-                link.getAttribute("href") ===
-                "#" + currentSection
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
+    let posters = "";
+
+    if (menu.images) {
+
+        posters = `
+            <div class="row g-3">
+
+                ${menu.images.map(image => `
+                    <div class="col-12">
+
+                        <img
+                            src="${image}"
+                            alt="${menu.title}"
+                            class="menu-poster"
+                            onclick="openImage('${image}', '${menu.title}')"
+                        >
+
+                    </div>
+                `).join("")}
+
+            </div>
+        `;
+
+    } else {
+
+        posters = `
+            <img
+                src="${menu.image}"
+                alt="${menu.title}"
+                class="menu-poster"
+                onclick="openImage('${menu.image}', '${menu.title}')"
+            >
+        `;
 
     }
 
 
-    window.addEventListener(
-        "scroll",
-        updateActiveNav
-    );
+    content.innerHTML = `
+
+        <div class="menu-display">
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <h3>${menu.title}</h3>
+
+                    <ul class="menu-list">
+                        ${list}
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-6">
+                    ${posters}
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+}
 
 
-    updateActiveNav();
+/* =====================================================
+   FOTO BESAR
+===================================================== */
+
+function openImage(src, alt) {
+
+    const modal = document.getElementById("imageModal");
+    const image = document.getElementById("modalImage");
+
+    image.src = src;
+    image.alt = alt;
+
+    modal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeImage(event) {
+
+    if (event) {
+        event.stopPropagation();
+    }
+
+    document.getElementById("imageModal")
+        .classList.remove("show");
+
+    document.body.style.overflow = "";
+}
+
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeImage();
+    }
 
 });
 
 
-/* =========================================================
+/* =====================================================
+   NAVBAR ACTIVE + SMOOTH SCROLL
+===================================================== */
+
+const navLinks =
+    document.querySelectorAll(".navbar .nav-link");
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", function(event) {
+
+        const targetId =
+            this.getAttribute("href");
+
+        const target =
+            document.querySelector(targetId);
+
+        if (!target) return;
+
+        event.preventDefault();
+
+        const position =
+            target.offsetTop - 70;
+
+        window.scrollTo({
+            top: position,
+            behavior: "smooth"
+        });
+
+
+        navLinks.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+    });
+
+});
+
+
+function updateActiveNav() {
+
+    let current = "home";
+
+    sections.forEach(section => {
+
+        const top =
+            section.offsetTop - 130;
+
+        if (window.scrollY >= top) {
+            current = section.id;
+        }
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href") === "#" + current
+        ) {
+            link.classList.add("active");
+        }
+
+    });
+
+}
+
+
+window.addEventListener("scroll", updateActiveNav);
+
+
+/* =====================================================
    CHART JS
-========================================================= */
+   DATA SESUAI DATA STATIS TUGAS
+===================================================== */
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    showMenu(
+        "bebek",
+        document.querySelector(".menu-btn")
+    );
+
 
     const canvas =
         document.getElementById("menuChart");
 
-
-    if (!canvas) {
-        return;
-    }
+    if (!canvas) return;
 
 
     new Chart(canvas, {
@@ -407,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function() {
             datasets: [
 
                 {
-                    label: "Jumlah",
+                    label: "Jumlah Menu",
 
                     data: [
                         5,
@@ -434,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function() {
             plugins: {
 
                 legend: {
-                    display: true
+                    display: false
                 }
 
             },
