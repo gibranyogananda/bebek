@@ -4,8 +4,9 @@
 
 const menus = {
 
-    bebek: {
+    /* ================= BEBEK ================= */
 
+    bebek: {
         title: "Menu Bebek",
 
         image: "assets/menu-bebek.png",
@@ -17,20 +18,22 @@ const menus = {
             ["Bebek Gongso", "Rp30.000"],
             ["Bebek Lombok Ijo", "Rp32.000"],
             ["Bebek Bacem", "Rp32.000"],
+
             ["Kepala Bebek Goreng", "Rp15.000"],
             ["Kepala Bebek Gongso", "Rp18.000"],
+
             ["Bebek Utuh Goreng", "Rp130.000"],
             ["Bebek Utuh Kremes", "Rp135.000"],
             ["Bebek Utuh Gongso", "Rp135.000"],
             ["Bebek Utuh Lombok Ijo", "Rp135.000"]
 
         ]
-
     },
 
 
-    ayam: {
+    /* ================= AYAM ================= */
 
+    ayam: {
         title: "Menu Ayam",
 
         image: "assets/Menu-ayam.png",
@@ -41,22 +44,24 @@ const menus = {
             ["Ayam Kampung Kremes", "Rp30.000"],
             ["Ayam Kampung Gongso", "Rp30.000"],
             ["Ayam Kampung Lombok Ijo", "Rp32.000"],
+
             ["Ayam Negri Goreng", "Rp16.000"],
             ["Ayam Negri Kremes", "Rp20.000"],
             ["Ayam Negri Gongso", "Rp22.000"],
             ["Ayam Negri Lombok Ijo", "Rp22.000"],
+
             ["Ayam Kampung Utuh Goreng", "Rp135.000"],
             ["Ayam Kampung Utuh Kremes", "Rp140.000"],
             ["Ayam Kampung Utuh Gongso", "Rp140.000"],
             ["Ayam Kampung Utuh Lombok Ijo", "Rp140.000"]
 
         ]
-
     },
 
 
-    lain: {
+    /* ================= MENU LAIN ================= */
 
+    lain: {
         title: "Menu Lain",
 
         image: "assets/menu-lain.png",
@@ -69,6 +74,7 @@ const menus = {
             ["Nila Goreng", "Rp16.000"],
             ["Lele Goreng", "Rp12.000"],
             ["Sup Iga", "Rp38.000"],
+
             ["Kangkung (Tumis/Ca)", "Rp10.000"],
             ["Tauge (Tumis/Ca)", "Rp10.000"],
             ["Terong Goreng", "Rp7.000"],
@@ -80,12 +86,12 @@ const menus = {
             ["Nasi Sambal Lalap", "Rp6.000"]
 
         ]
-
     },
 
 
-    coffee: {
+    /* ================= COFFEE ================= */
 
+    coffee: {
         title: "Coffee",
 
         image: "assets/menu-coffee.png",
@@ -94,26 +100,47 @@ const menus = {
 
             ["Kopi Susu Kinanthi Hot", "Rp22.000"],
             ["Lime Coffee Hot", "Rp20.000"],
-            ["Kopi Susu Blueberry", "Hot / Ice — Rp20.000 / Rp22.000"],
-            ["Kopi Susu Caramel", "Hot / Ice — Rp20.000 / Rp22.000"],
-            ["Coffee Latte", "Hot / Ice — Rp18.000 / Rp20.000"],
-            ["Americano", "Hot / Ice — Rp15.000 / Rp17.000"],
+
+            [
+                "Kopi Susu Blueberry",
+                "Hot / Ice — Rp20.000 / Rp22.000"
+            ],
+
+            [
+                "Kopi Susu Caramel",
+                "Hot / Ice — Rp20.000 / Rp22.000"
+            ],
+
+            [
+                "Coffee Latte",
+                "Hot / Ice — Rp18.000 / Rp20.000"
+            ],
+
+            [
+                "Americano",
+                "Hot / Ice — Rp15.000 / Rp17.000"
+            ],
+
             ["Kopi Tubruk Hot", "Rp15.000"]
 
         ]
-
     },
 
 
-    camilan: {
+    /* ================= CAMILAN ================= */
 
+    camilan: {
         title: "Camilan",
 
         image: "assets/menu-camilan.png",
 
         items: [
 
-            ["Mix Platter (Sosis, Kentang, Nugget)", "Rp25.000"],
+            [
+                "Mix Platter (Sosis, Kentang, Nugget)",
+                "Rp25.000"
+            ],
+
             ["Onion Ring", "Rp15.000"],
             ["Tahu Cabai Garam", "Rp15.000"],
             ["Tahu Tuna", "Rp15.000"],
@@ -132,30 +159,26 @@ const menus = {
             ["Krasikan", "Rp10.000"]
 
         ]
-
     },
 
+
+    /* ================= MINUMAN ================= */
 
     minuman: {
 
         title: "Minuman",
 
         images: [
-
             "assets/menu-minuman-1.png",
             "assets/menu-minuman-2.png"
-
         ],
-
 
         groups: [
 
             {
-
                 title: "Hot Series",
 
                 items: [
-
                     ["Jahe Geprek", "Rp10.000"],
                     ["Jahe Serai", "Rp12.000"],
                     ["Jahe Susu", "Rp12.000"],
@@ -163,18 +186,14 @@ const menus = {
                     ["Hot Coklat", "Rp15.000"],
                     ["Hot Matcha", "Rp20.000"],
                     ["Hot Taro", "Rp18.000"]
-
                 ]
-
             },
 
 
             {
-
                 title: "Ice Squash",
 
                 items: [
-
                     ["Soda Gembira", "Rp12.000"],
                     ["Lemon Squash", "Rp12.000"],
                     ["Orange Squash", "Rp12.000"],
@@ -182,36 +201,28 @@ const menus = {
                     ["Kelapa Muda Gelas", "Rp12.000"],
                     ["Kelapa Muda Utuh Murni", "Rp14.000"],
                     ["Kelapa Muda Utuh + Gula", "Rp15.000"]
-
                 ]
-
             },
 
 
             {
-
                 title: "Jus",
 
                 items: [
-
                     ["Alpukat", "Rp14.000"],
                     ["Mangga", "Rp14.000"],
                     ["Jambu", "Rp12.000"],
                     ["Sirsak", "Rp12.000"],
                     ["Melon", "Rp12.000"],
                     ["Semangka", "Rp10.000"]
-
                 ]
-
             },
 
 
             {
-
                 title: "Minuman Reguler",
 
                 items: [
-
                     ["Teh Tawar", "Rp3.000"],
                     ["Teh Manis Panas", "Rp5.000"],
                     ["Es Teh Manis", "Rp6.000"],
@@ -224,48 +235,36 @@ const menus = {
                     ["Air Mineral", "Rp6.000"],
                     ["Air Putih / Air Es", "Rp2.000"],
                     ["Es Batu", "Rp2.000"]
-
                 ]
-
             },
 
 
             {
-
                 title: "Milkshake",
 
                 items: [
-
                     ["Coklat", "Rp18.000"],
                     ["Strawberry", "Rp18.000"],
                     ["Vanila", "Rp18.000"]
-
                 ]
-
             },
 
 
             {
-
                 title: "Milkblend",
 
                 items: [
-
                     ["Coklat", "Rp18.000"],
                     ["Strawberry", "Rp18.000"],
                     ["Taro", "Rp20.000"],
                     ["Matcha", "Rp22.000"]
-
                 ]
-
             }
 
         ]
-
     }
 
 };
-
 
 
 /* =====================================================
@@ -275,7 +274,6 @@ const menus = {
 function createMenuList(items) {
 
     return `
-
         <ul class="menu-list">
 
             ${items.map(item => `
@@ -295,11 +293,8 @@ function createMenuList(items) {
             `).join("")}
 
         </ul>
-
     `;
-
 }
-
 
 
 /* =====================================================
@@ -321,9 +316,7 @@ function createMenuGroups(groups) {
         </div>
 
     `).join("");
-
 }
-
 
 
 /* =====================================================
@@ -336,7 +329,6 @@ function createPosters(menu) {
         ? menu.images
         : [menu.image];
 
-
     return `
 
         <div class="menu-posters">
@@ -344,15 +336,10 @@ function createPosters(menu) {
             ${images.map(image => `
 
                 <img
-
                     src="${image}"
-
                     alt="${menu.title}"
-
                     class="menu-poster"
-
                     onclick="openImage('${image}')"
-
                 >
 
             `).join("")}
@@ -360,9 +347,7 @@ function createPosters(menu) {
         </div>
 
     `;
-
 }
-
 
 
 /* =====================================================
@@ -378,7 +363,7 @@ function showMenu(category, clickedButton) {
     }
 
 
-    /* Hapus active dari semua tombol */
+    /* Hilangkan active dari semua tombol */
 
     document
         .querySelectorAll(".menu-btn")
@@ -401,26 +386,14 @@ function showMenu(category, clickedButton) {
     const menuContent =
         document.getElementById("menuContent");
 
-
     if (!menuContent) {
         return;
     }
 
 
-    let menuListHTML;
-
-
-    if (menu.groups) {
-
-        menuListHTML =
-            createMenuGroups(menu.groups);
-
-    } else {
-
-        menuListHTML =
-            createMenuList(menu.items);
-
-    }
+    const menuListHTML = menu.groups
+        ? createMenuGroups(menu.groups)
+        : createMenuList(menu.items);
 
 
     menuContent.innerHTML = `
@@ -428,7 +401,6 @@ function showMenu(category, clickedButton) {
         <div class="menu-display">
 
             <div class="row g-4 align-items-start">
-
 
                 <div class="col-lg-6">
 
@@ -447,15 +419,12 @@ function showMenu(category, clickedButton) {
 
                 </div>
 
-
             </div>
 
         </div>
 
     `;
-
 }
-
 
 
 /* =====================================================
@@ -470,74 +439,79 @@ function openImage(src) {
     const image =
         document.getElementById("modalImage");
 
-
     if (!modal || !image) {
         return;
     }
-
 
     image.src = src;
 
     modal.classList.add("show");
 
     document.body.style.overflow = "hidden";
-
 }
 
-
-
-/* =====================================================
-   TUTUP MODAL
-===================================================== */
 
 function closeImage(event) {
 
     if (event) {
-
         event.stopPropagation();
-
     }
-
 
     const modal =
         document.getElementById("imageModal");
-
 
     if (!modal) {
         return;
     }
 
-
     modal.classList.remove("show");
 
     document.body.style.overflow = "";
-
 }
 
 
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
 function pilihWhatsApp() {
+
     const pilihan = prompt(
         "Pilih nomor WhatsApp:\n\n" +
-        "1. 081226956567\n" +
-        "2. 08139869925\n\n" +
+        "1. 0812-2695-6567\n" +
+        "2. 0813-9869-925\n\n" +
         "Ketik 1 atau 2:"
     );
 
+
     if (pilihan === "1") {
+
         window.open(
             "https://wa.me/6281226956567",
             "_blank"
         );
-    } else if (pilihan === "2") {
+
+    }
+
+    else if (pilihan === "2") {
+
         window.open(
             "https://wa.me/628139869925",
             "_blank"
         );
-    } else if (pilihan !== null) {
-        alert("Pilihan tidak valid. Silakan pilih 1 atau 2.");
+
     }
+
+    else if (pilihan !== null) {
+
+        alert(
+            "Pilihan tidak valid. Silakan pilih 1 atau 2."
+        );
+
+    }
+
 }
+
 
 /* =====================================================
    DOM READY
@@ -548,13 +522,12 @@ document.addEventListener(
     function () {
 
 
-        /* =============================================
-           TAMPILKAN MENU BEBEK PERTAMA
-        ============================================= */
+        /* =========================
+           MENU AWAL
+        ========================= */
 
         const firstMenuButton =
             document.querySelector(".menu-btn");
-
 
         if (firstMenuButton) {
 
@@ -566,10 +539,9 @@ document.addEventListener(
         }
 
 
-
-        /* =============================================
+        /* =========================
            NAVBAR SMOOTH SCROLL
-        ============================================= */
+        ========================= */
 
         const navLinks =
             document.querySelectorAll(
@@ -593,9 +565,7 @@ document.addEventListener(
                     ) {
 
                         const target =
-                            document.querySelector(
-                                targetId
-                            );
+                            document.querySelector(targetId);
 
 
                         if (target) {
@@ -616,13 +586,8 @@ document.addEventListener(
 
 
                             const targetPosition =
-
-                                target
-                                    .getBoundingClientRect()
-                                    .top +
-
+                                target.getBoundingClientRect().top +
                                 window.scrollY -
-
                                 navbarHeight;
 
 
@@ -634,6 +599,37 @@ document.addEventListener(
 
                             });
 
+
+                            /* Tutup navbar mobile */
+
+                            const navbarCollapse =
+                                document.getElementById(
+                                    "navbarNav"
+                                );
+
+
+                            if (
+                                navbarCollapse &&
+                                navbarCollapse.classList.contains(
+                                    "show"
+                                )
+                            ) {
+
+                                const bsCollapse =
+                                    bootstrap.Collapse
+                                        .getInstance(
+                                            navbarCollapse
+                                        );
+
+
+                                if (bsCollapse) {
+
+                                    bsCollapse.hide();
+
+                                }
+
+                            }
+
                         }
 
                     }
@@ -644,10 +640,9 @@ document.addEventListener(
         });
 
 
-
-        /* =============================================
+        /* =========================
            ACTIVE NAVBAR SAAT SCROLL
-        ============================================= */
+        ========================= */
 
         const sections =
             document.querySelectorAll(
@@ -658,8 +653,7 @@ document.addEventListener(
         function updateActiveNav() {
 
             const scrollPosition =
-                window.scrollY + 120;
-
+                window.scrollY + 140;
 
             let currentSection = "";
 
@@ -674,12 +668,9 @@ document.addEventListener(
 
 
                 if (
-
                     scrollPosition >= sectionTop &&
-
                     scrollPosition <
                     sectionTop + sectionHeight
-
                 ) {
 
                     currentSection =
@@ -696,10 +687,8 @@ document.addEventListener(
 
 
                 if (
-
                     link.getAttribute("href") ===
                     `#${currentSection}`
-
                 ) {
 
                     link.classList.add("active");
@@ -713,20 +702,24 @@ document.addEventListener(
 
         window.addEventListener(
             "scroll",
-            updateActiveNav
+            updateActiveNav,
+            {
+                passive: true
+            }
         );
 
 
         updateActiveNav();
 
 
-
-        /* =============================================
+        /* =========================
            CHART JS
-        ============================================= */
+        ========================= */
 
         const canvas =
-            document.getElementById("menuChart");
+            document.getElementById(
+                "menuChart"
+            );
 
 
         if (
@@ -741,14 +734,12 @@ document.addEventListener(
                 data: {
 
                     labels: [
-
                         "Bebek",
                         "Ayam",
                         "Lainnya",
                         "Coffee",
                         "Camilan",
                         "Minuman"
-
                     ],
 
                     datasets: [{
@@ -756,14 +747,12 @@ document.addEventListener(
                         label: "Jumlah Menu",
 
                         data: [
-
                             11,
                             12,
                             15,
                             7,
                             17,
                             39
-
                         ],
 
                         borderWidth: 1
@@ -782,9 +771,7 @@ document.addEventListener(
                     plugins: {
 
                         legend: {
-
                             display: false
-
                         }
 
                     },
@@ -816,9 +803,8 @@ document.addEventListener(
 );
 
 
-
 /* =====================================================
-   ESC UNTUK MENUTUP GAMBAR
+   TOMBOL ESC UNTUK MENUTUP GAMBAR
 ===================================================== */
 
 document.addEventListener(
