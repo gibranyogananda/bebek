@@ -6,7 +6,7 @@
 
     <title>Bebek Gongso Kinanthi | Portofolio Usaha</title>
 
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -24,103 +24,63 @@
 
 <body>
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-hijau sticky-top shadow-sm">
-
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
 
-        <a class="navbar-brand d-flex align-items-center" href="#home">
-
-            <img
-                src="assets/logo.png"
-                alt="Logo Bebek Gongso Kinanthi"
-                class="logo-navbar"
-            >
-
-            <span class="ms-2 fw-bold">
-                Bebek Gongso Kinanthi
-            </span>
-
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+            <img src="assets/logo.png" alt="Logo Bebek Gongso Kinanthi">
+            <span>Bebek Gongso Kinanthi</span>
         </a>
-
 
         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
         >
-
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
-
         <div class="collapse navbar-collapse" id="navbarNav">
-
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">
-                        Home
-                    </a>
+                    <a class="nav-link active" href="#home">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#layanan">
-                        Layanan
-                    </a>
+                    <a class="nav-link" href="#layanan">Layanan</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#menu">
-                        Menu
-                    </a>
+                    <a class="nav-link" href="#menu">Menu</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#tentang">
-                        Tentang
-                    </a>
+                    <a class="nav-link" href="#tentang">Tentang</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#paket">
-                        Paket
-                    </a>
+                    <a class="nav-link" href="#paket">Paket</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#promo">
-                        Promo
-                    </a>
+                    <a class="nav-link" href="#promo">Promo</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#kontak">
-                        Kontak
-                    </a>
+                    <a class="nav-link" href="#kontak">Kontak</a>
                 </li>
 
             </ul>
-
         </div>
 
     </div>
-
 </nav>
 
 
-<!-- =====================================================
-     HOME
-===================================================== -->
-
+<!-- ================= HOME ================= -->
 <section id="home" class="hero-section">
 
     <div class="container">
@@ -129,38 +89,31 @@
 
             <div class="col-lg-7">
 
-                <span class="badge bg-warning text-dark mb-3">
-                    Kuliner Keluarga • Klaten
+                <span class="badge-custom">
+                    KULINER KELUARGA • KLATEN
                 </span>
 
-                <h1 class="display-4 fw-bold">
-                    Makan Enak,
-                    <br>
+                <h1>
+                    Makan Enak,<br>
                     Kumpul Makin Asik
                 </h1>
 
-                <p class="lead mt-3">
-                    Nikmati berbagai pilihan menu bebek, ayam,
-                    menu lain, coffee, camilan, dan minuman
-                    di Bebek Gongso Kinanthi.
+                <p class="hero-text">
+                    Nikmati berbagai pilihan menu bebek, ayam, menu lain,
+                    coffee, camilan, dan minuman di Bebek Gongso Kinanthi.
                 </p>
 
+                <div class="d-flex flex-wrap gap-3">
 
-                <div class="d-flex flex-wrap gap-2 mt-4">
-
-                    <a
-                        href="#menu"
-                        class="btn btn-warning btn-lg"
-                    >
-                        <i class="bi bi-menu-button-wide"></i>
+                    <a href="#menu" class="btn btn-primary-custom">
+                        <i class="bi bi-book"></i>
                         Lihat Menu
                     </a>
-
 
                     <a
                         href="https://wa.me/6281226956567"
                         target="_blank"
-                        class="btn btn-light btn-lg"
+                        class="btn btn-success"
                     >
                         <i class="bi bi-whatsapp"></i>
                         Pesan Sekarang
@@ -168,18 +121,17 @@
 
                 </div>
 
-
                 <div class="hero-info mt-4">
 
-                    <p>
-                        <i class="bi bi-clock-fill"></i>
+                    <div>
+                        <i class="bi bi-clock"></i>
                         Setiap hari 11.00–21.00 WIB
-                    </p>
+                    </div>
 
-                    <p>
-                        <i class="bi bi-geo-alt-fill"></i>
+                    <div>
+                        <i class="bi bi-geo-alt"></i>
                         Jomboran, Klaten
-                    </p>
+                    </div>
 
                 </div>
 
@@ -188,21 +140,18 @@
 
             <div class="col-lg-5">
 
-                <div class="hero-card text-center">
+                <div class="hero-card">
 
                     <img
                         src="assets/logo.png"
                         alt="Logo Bebek Gongso Kinanthi"
-                        class="hero-logo"
                     >
 
-                    <h3 class="mt-3 fw-bold">
-                        Bebek Gongso Kinanthi
-                    </h3>
+                    <h3>Bebek Gongso Kinanthi</h3>
 
-                    <p class="mb-0">
-                        Tempat makan, nongkrong,
-                        dan berkumpul bersama.
+                    <p>
+                        Tempat makan, nongkrong, dan berkumpul
+                        bersama keluarga maupun teman.
                     </p>
 
                 </div>
@@ -216,25 +165,20 @@
 </section>
 
 
-<!-- =====================================================
-     LAYANAN
-===================================================== -->
-
-<section id="layanan" class="section-padding">
+<!-- ================= LAYANAN ================= -->
+<section id="layanan" class="section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>Fasilitas</span>
+            <span>FASILITAS & LAYANAN</span>
 
-            <h2>
-                Fasilitas & Layanan
-            </h2>
+            <h2>Nyaman Untuk Makan & Berkumpul</h2>
 
             <p>
-                Berbagai fasilitas yang tersedia
-                di Bebek Gongso Kinanthi.
+                Berbagai fasilitas untuk membuat acara makan
+                menjadi lebih nyaman dan menyenangkan.
             </p>
 
         </div>
@@ -243,122 +187,74 @@
         <div class="row g-4">
 
             <div class="col-md-6 col-lg-4">
-
                 <div class="feature-card">
-
-                    <i class="bi bi-music-note-beamed"></i>
-
-                    <h4>
-                        Free Karaoke
-                    </h4>
-
+                    <i class="bi bi-mic-fill"></i>
+                    <h3>Free Karaoke</h3>
                     <p>
-                        Nikmati karaoke gratis
+                        Nikmati fasilitas karaoke gratis
                         bersama keluarga dan teman.
                     </p>
-
                 </div>
-
             </div>
 
 
             <div class="col-md-6 col-lg-4">
-
                 <div class="feature-card">
-
                     <i class="bi bi-car-front-fill"></i>
-
-                    <h4>
-                        Parkir Luas
-                    </h4>
-
+                    <h3>Parkir Luas</h3>
                     <p>
-                        Area parkir untuk motor,
-                        mobil, Elf hingga bus besar.
+                        Area parkir untuk motor, mobil,
+                        Elf hingga bus besar.
                     </p>
-
                 </div>
-
             </div>
 
 
             <div class="col-md-6 col-lg-4">
-
                 <div class="feature-card">
-
-                    <i class="bi bi-calendar-event"></i>
-
-                    <h4>
-                        Acara & Gathering
-                    </h4>
-
+                    <i class="bi bi-people-fill"></i>
+                    <h3>Acara & Gathering</h3>
                     <p>
-                        Bisa digunakan untuk acara
+                        Cocok untuk acara kecil maupun besar,
+                        indoor, outdoor, dan VIP.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <h3>Free Refill</h3>
+                    <p>
+                        Gratis refill nasi dan lalapan
+                        sesuai kebutuhan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <i class="bi bi-box-seam-fill"></i>
+                    <h3>Nasi Box</h3>
+                    <p>
+                        Pilihan praktis untuk rapat,
+                        kegiatan, dan berbagai acara.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <i class="bi bi-basket-fill"></i>
+                    <h3>Prasmanan</h3>
+                    <p>
+                        Layanan prasmanan untuk acara
                         kecil maupun besar.
                     </p>
-
                 </div>
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="feature-card">
-
-                    <i class="bi bi-egg-fried"></i>
-
-                    <h4>
-                        Free Refill
-                    </h4>
-
-                    <p>
-                        Gratis refill nasi dan
-                        lalapan sepuasnya.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="feature-card">
-
-                    <i class="bi bi-box-seam"></i>
-
-                    <h4>
-                        Nasi Box
-                    </h4>
-
-                    <p>
-                        Melayani kebutuhan nasi box
-                        untuk berbagai acara.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="feature-card">
-
-                    <i class="bi bi-people-fill"></i>
-
-                    <h4>
-                        Prasmanan
-                    </h4>
-
-                    <p>
-                        Layanan prasmanan untuk
-                        acara keluarga dan kegiatan.
-                    </p>
-
-                </div>
-
             </div>
 
         </div>
@@ -368,137 +264,78 @@
 </section>
 
 
-<!-- =====================================================
-     MENU
-===================================================== -->
-
-<section id="menu" class="section-padding bg-light">
+<!-- ================= MENU ================= -->
+<section id="menu" class="section menu-section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>Menu</span>
+            <span>MENU KAMI</span>
 
-            <h2>
-                Menu Bebek Gongso Kinanthi
-            </h2>
+            <h2>Pilih Menu Favoritmu</h2>
 
             <p>
-                Pilih kategori untuk melihat
-                daftar menu, harga, dan foto.
+                Pilih kategori menu untuk melihat daftar makanan
+                dan foto menunya.
             </p>
 
         </div>
 
 
-        <!-- TOMBOL KATEGORI -->
+        <!-- KATEGORI MENU -->
+        <div class="menu-tabs">
 
-        <div class="menu-buttons text-center mb-5">
-
-            <button
-                class="btn btn-menu active"
-                data-menu="bebek"
-            >
-                <i class="bi bi-egg-fried"></i>
-                Bebek
+            <button class="menu-tab active" data-category="bebek">
+                🦆 Bebek
             </button>
 
-
-            <button
-                class="btn btn-menu"
-                data-menu="ayam"
-            >
-                <i class="bi bi-egg"></i>
-                Ayam
+            <button class="menu-tab" data-category="ayam">
+                🐔 Ayam
             </button>
 
-
-            <button
-                class="btn btn-menu"
-                data-menu="lain"
-            >
-                <i class="bi bi-grid"></i>
-                Menu Lain
+            <button class="menu-tab" data-category="lain">
+                🍽️ Menu Lain
             </button>
 
-
-            <button
-                class="btn btn-menu"
-                data-menu="coffee"
-            >
-                <i class="bi bi-cup-hot"></i>
-                Coffee
+            <button class="menu-tab" data-category="coffee">
+                ☕ Coffee
             </button>
 
-
-            <button
-                class="btn btn-menu"
-                data-menu="camilan"
-            >
-                <i class="bi bi-basket"></i>
-                Camilan
+            <button class="menu-tab" data-category="camilan">
+                🍟 Camilan
             </button>
 
-
-            <button
-                class="btn btn-menu"
-                data-menu="minuman"
-            >
-                <i class="bi bi-cup-straw"></i>
-                Minuman
+            <button class="menu-tab" data-category="minuman">
+                🥤 Minuman
             </button>
 
         </div>
 
 
-        <!-- LIST + FOTO -->
+        <!-- KONTEN MENU -->
+        <div class="menu-content">
 
-        <div class="row g-4 align-items-start">
+            <!-- DAFTAR -->
+            <div class="menu-list">
 
-
-            <!-- LIST MENU -->
-
-            <div class="col-lg-6">
-
-                <div class="menu-list-card">
-
-                    <div class="menu-list-header">
-
-                        <span>
-                            Daftar Menu
-                        </span>
-
-                        <h3 id="menuTitle">
-                            Menu Bebek
-                        </h3>
-
-                    </div>
-
-
-                    <div id="menuList">
-
-                        <!-- Diisi otomatis oleh JavaScript -->
-
-                    </div>
-
+                <div class="menu-heading">
+                    <span id="menuCategoryTitle">Menu Bebek</span>
                 </div>
+
+                <div id="menuItems"></div>
 
             </div>
 
 
-            <!-- FOTO MENU -->
+            <!-- FOTO -->
+            <div class="menu-image-box">
 
-            <div class="col-lg-6">
-
-                <div
-                    id="menuImages"
-                    class="menu-images"
+                <img
+                    id="menuImage"
+                    src="assets/menu-bebek.png"
+                    alt="Menu Bebek"
                 >
-
-                    <!-- Diisi otomatis oleh JavaScript -->
-
-                </div>
 
             </div>
 
@@ -509,67 +346,41 @@
 </section>
 
 
-<!-- =====================================================
-     TENTANG
-===================================================== -->
-
-<section id="tentang" class="section-padding">
+<!-- ================= TENTANG ================= -->
+<section id="tentang" class="section about-section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>Tentang Kami</span>
+            <span>TENTANG KAMI</span>
 
-            <h2>
-                Bebek Gongso Kinanthi
-            </h2>
+            <h2>Bebek Gongso Kinanthi</h2>
+
+            <p>
+                Tempat kuliner keluarga yang menghadirkan
+                makanan lezat dengan suasana nyaman untuk berkumpul.
+            </p>
 
         </div>
 
 
         <div class="row align-items-center g-5">
 
+            <div class="col-lg-5">
 
-            <div class="col-lg-6">
+                <div class="about-card">
 
-                <h3 class="fw-bold">
-                    Tempat Makan dan Berkumpul Bersama
-                </h3>
+                    <img
+                        src="assets/logo.png"
+                        alt="Bebek Gongso Kinanthi"
+                    >
 
-                <p>
-                    Bebek Gongso Kinanthi merupakan tempat
-                    kuliner yang cocok untuk makan bersama
-                    keluarga, nongkrong bersama teman,
-                    maupun mengadakan berbagai acara.
-                </p>
-
-                <p>
-                    Dengan berbagai pilihan menu dan fasilitas,
-                    Bebek Gongso Kinanthi menjadi tempat yang
-                    cocok untuk makan dan berkumpul bersama.
-                </p>
-
-                <div class="about-list">
+                    <h3>Makan Enak, Kumpul Makin Asik</h3>
 
                     <p>
-                        <i class="bi bi-check-circle-fill"></i>
-                        Indoor
-                    </p>
-
-                    <p>
-                        <i class="bi bi-check-circle-fill"></i>
-                        Outdoor
-                    </p>
-
-                    <p>
-                        <i class="bi bi-check-circle-fill"></i>
-                        VIP / Private Room
-                    </p>
-
-                    <p>
-                        <i class="bi bi-check-circle-fill"></i>
-                        Acara Kecil & Besar
+                        Berlokasi di Krajan Jomboran,
+                        Klaten Tengah, Klaten, Jawa Tengah.
                     </p>
 
                 </div>
@@ -577,24 +388,23 @@
             </div>
 
 
-            <!-- CHART JS -->
+            <div class="col-lg-7">
 
-            <div class="col-lg-6">
+                <h3>Data Usaha</h3>
 
-                <div class="chart-card">
+                <p>
+                    Berikut merupakan data contoh perkembangan
+                    pendapatan usaha berdasarkan periode harian.
+                </p>
 
-                    <h4 class="text-center mb-4">
-                        Contoh Data Pendapatan
-                    </h4>
-
-                    <canvas id="pendapatanChart"></canvas>
-
-                    <p class="text-muted text-center mt-3 mb-0">
-                        Data statis untuk kebutuhan tugas
-                        JavaScript.
-                    </p>
-
+                <div class="chart-container">
+                    <canvas id="businessChart"></canvas>
                 </div>
+
+                <small class="text-muted">
+                    *Data pada grafik masih menggunakan data statis
+                    untuk kebutuhan tugas Web-JS.
+                </small>
 
             </div>
 
@@ -605,21 +415,16 @@
 </section>
 
 
-<!-- =====================================================
-     PAKET
-===================================================== -->
-
-<section id="paket" class="section-padding bg-light">
+<!-- ================= PAKET ================= -->
+<section id="paket" class="section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>Layanan Acara</span>
+            <span>LAYANAN ACARA</span>
 
-            <h2>
-                Nasi Box & Prasmanan
-            </h2>
+            <h2>Nasi Box & Prasmanan</h2>
 
             <p>
                 Cocok untuk berbagai kebutuhan acara.
@@ -630,21 +435,18 @@
 
         <div class="row g-4">
 
-
             <div class="col-md-6">
 
                 <div class="package-card">
 
                     <img
-                        src="assets/menu-nasi-box.png"
+                        src="assets/nasi-box.png"
                         alt="Nasi Box"
                     >
 
-                    <div class="p-4">
+                    <div class="package-content">
 
-                        <h3>
-                            Nasi Box
-                        </h3>
+                        <h3>Nasi Box</h3>
 
                         <p>
                             Pilihan praktis untuk rapat,
@@ -653,7 +455,7 @@
                         </p>
 
                         <a
-                            href="https://wa.me/6281226956567"
+                            href="https://wa.me/6281226956567?text=Halo%20Bebek%20Gongso%20Kinanthi%2C%20saya%20ingin%20pesan%20Nasi%20Box."
                             target="_blank"
                             class="btn btn-success"
                         >
@@ -673,15 +475,13 @@
                 <div class="package-card">
 
                     <img
-                        src="assets/menu-prasmanan.png"
+                        src="assets/prasmanan.png"
                         alt="Prasmanan"
                     >
 
-                    <div class="p-4">
+                    <div class="package-content">
 
-                        <h3>
-                            Prasmanan
-                        </h3>
+                        <h3>Prasmanan</h3>
 
                         <p>
                             Layanan prasmanan untuk berbagai
@@ -689,7 +489,7 @@
                         </p>
 
                         <a
-                            href="https://wa.me/6281226956567"
+                            href="https://wa.me/628139869925?text=Halo%20Bebek%20Gongso%20Kinanthi%2C%20saya%20ingin%20bertanya%20tentang%20paket%20Prasmanan."
                             target="_blank"
                             class="btn btn-success"
                         >
@@ -710,65 +510,49 @@
 </section>
 
 
-<!-- =====================================================
-     PROMO
-===================================================== -->
-
-<section id="promo" class="section-padding">
+<!-- ================= PROMO ================= -->
+<section id="promo" class="section promo-section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>Promo</span>
+            <span>PROMO</span>
 
-            <h2>
-                Promo & Keuntungan
-            </h2>
+            <h2>Promo & Keuntungan</h2>
 
         </div>
 
 
-        <div class="row justify-content-center">
+        <div class="promo-card">
 
-            <div class="col-lg-8">
-
-                <div class="promo-card text-center">
-
-                    <img
-                        src="assets/promo.png"
-                        alt="Promo Bebek Gongso Kinanthi"
-                        class="img-fluid promo-image"
-                    >
-
-                    <h3 class="mt-4">
-                        Dapatkan Berbagai Keuntungan
-                    </h3>
-
-                    <p>
-                        Follow Instagram
-                        <strong>@bebekgongsokinanthi</strong>,
-                        upload Instagram Story dan mention
-                        akun kami untuk mendapatkan diskon 5%.
-                    </p>
-
-                    <p>
-                        Berikan Google Review dan dapatkan
-                        free ice cream sesuai ketentuan promo.
-                    </p>
-
-                    <a
-                        href="https://instagram.com/bebekgongsokinanthi"
-                        target="_blank"
-                        class="btn btn-dark"
-                    >
-                        <i class="bi bi-instagram"></i>
-                        Follow Instagram
-                    </a>
-
-                </div>
-
+            <div class="promo-icon">
+                <i class="bi bi-gift-fill"></i>
             </div>
+
+            <h3>Dapatkan Berbagai Keuntungan</h3>
+
+            <p>
+                Follow Instagram
+                <strong>@bebekgongsokinanthi</strong>,
+                upload Instagram Story dan mention akun kami
+                untuk mendapatkan <strong>diskon 5%</strong>.
+            </p>
+
+            <p>
+                Berikan Google Review dan dapatkan
+                <strong>free ice cream</strong>
+                sesuai ketentuan promo.
+            </p>
+
+            <a
+                href="https://www.instagram.com/bebekgongsokinanthi/"
+                target="_blank"
+                class="btn btn-dark"
+            >
+                <i class="bi bi-instagram"></i>
+                Follow Instagram
+            </a>
 
         </div>
 
@@ -777,55 +561,40 @@
 </section>
 
 
-<!-- =====================================================
-     KONTAK
-===================================================== -->
-
-<section
-    id="kontak"
-    class="section-padding bg-hijau text-white"
->
+<!-- ================= KONTAK ================= -->
+<section id="kontak" class="contact-section">
 
     <div class="container">
 
-        <div class="section-title text-white">
+        <div class="section-title light">
 
-            <span class="text-warning">
-                Hubungi Kami
-            </span>
+            <span>HUBUNGI KAMI</span>
 
-            <h2>
-                Kontak & Lokasi
-            </h2>
+            <h2>Kontak & Lokasi</h2>
 
         </div>
 
 
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
 
 
             <!-- ALAMAT -->
-
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
 
                 <div class="contact-card">
 
-                    <i class="bi bi-geo-alt-fill"></i>
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
 
-                    <h4>
-                        Alamat
-                    </h4>
+                    <h3>Alamat</h3>
 
                     <p>
-                        Krajan Jomboran,
-                        <br>
-                        Klaten Tengah, Klaten,
-                        <br>
+                        Krajan Jomboran,<br>
+                        Klaten Tengah, Klaten,<br>
                         Jawa Tengah 57418
                     </p>
 
                     <a
-                        href="https://www.google.com/maps/search/?api=1&query=Bebek+Gongso+Kinanthi+Klaten"
+                        href="https://www.google.com/maps/search/?api=1&query=Krajan%20Jomboran%2C%20Klaten%20Tengah%2C%20Klaten%2C%20Jawa%20Tengah%2057418"
                         target="_blank"
                         class="btn btn-light"
                     >
@@ -839,29 +608,40 @@
 
 
             <!-- WHATSAPP -->
-
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
 
                 <div class="contact-card">
 
-                    <i class="bi bi-whatsapp"></i>
+                    <i class="bi bi-whatsapp contact-icon"></i>
 
-                    <h4>
-                        WhatsApp
-                    </h4>
+                    <h3>WhatsApp</h3>
 
-                    <p>
+
+                    <p class="wa-number">
                         0812-2695-6567
-                        <br>
-                        0813-9869-925
                     </p>
 
                     <a
                         href="https://wa.me/6281226956567"
                         target="_blank"
-                        class="btn btn-light"
+                        class="btn btn-success mb-3"
                     >
-                        Chat WhatsApp
+                        <i class="bi bi-whatsapp"></i>
+                        Chat WhatsApp 1
+                    </a>
+
+
+                    <p class="wa-number">
+                        0813-9869-925
+                    </p>
+
+                    <a
+                        href="https://wa.me/628139869925"
+                        target="_blank"
+                        class="btn btn-success"
+                    >
+                        <i class="bi bi-whatsapp"></i>
+                        Chat WhatsApp 2
                     </a>
 
                 </div>
@@ -870,26 +650,24 @@
 
 
             <!-- INSTAGRAM -->
-
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
 
                 <div class="contact-card">
 
-                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-instagram contact-icon"></i>
 
-                    <h4>
-                        Instagram
-                    </h4>
+                    <h3>Instagram</h3>
 
                     <p>
                         @bebekgongsokinanthi
                     </p>
 
                     <a
-                        href="https://instagram.com/bebekgongsokinanthi"
+                        href="https://www.instagram.com/bebekgongsokinanthi/"
                         target="_blank"
                         class="btn btn-light"
                     >
+                        <i class="bi bi-instagram"></i>
                         Buka Instagram
                     </a>
 
@@ -904,73 +682,47 @@
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
+<footer>
 
-<footer class="footer">
+    <img
+        src="assets/logo.png"
+        alt="Logo Bebek Gongso Kinanthi"
+    >
 
-    <div class="container text-center">
+    <h3>Bebek Gongso Kinanthi</h3>
 
-        <img
-            src="assets/logo.png"
-            alt="Logo Bebek Gongso Kinanthi"
-            class="footer-logo"
-        >
+    <p>Makan Enak, Kumpul Makin Asik</p>
 
-        <h4>
-            Bebek Gongso Kinanthi
-        </h4>
-
-        <p>
-            Makan Enak, Kumpul Makin Asik
-        </p>
-
-        <p class="mb-0">
-            © 2026 Bebek Gongso Kinanthi
-        </p>
-
-    </div>
+    <p class="copyright">
+        © 2026 Bebek Gongso Kinanthi
+    </p>
 
 </footer>
 
 
-<!-- =====================================================
-     FLOATING WHATSAPP
-===================================================== -->
-
+<!-- FLOATING WHATSAPP -->
 <a
     href="https://wa.me/6281226956567"
     target="_blank"
     class="floating-wa"
-    aria-label="WhatsApp"
+    title="Chat WhatsApp"
 >
     <i class="bi bi-whatsapp"></i>
 </a>
 
 
-<!-- =====================================================
-     BOOTSTRAP JS
-===================================================== -->
-
+<!-- Bootstrap JS -->
 <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-></script>
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
-
-<!-- =====================================================
-     CHART JS
-===================================================== -->
-
+<!-- Chart.js -->
 <script
-    src="https://cdn.jsdelivr.net/npm/chart.js"
-></script>
+    src="https://cdn.jsdelivr.net/npm/chart.js">
+</script>
 
-
-<!-- =====================================================
-     JAVASCRIPT SENDIRI
-===================================================== -->
-
+<!-- JavaScript -->
 <script src="script.js"></script>
 
 </body>
