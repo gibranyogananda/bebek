@@ -950,3 +950,66 @@ footer small {
     }
 
 }
+/* =====================================================
+   FIX - PAKET & CHART
+   Jangan mengubah CSS yang lain
+===================================================== */
+
+/* ================= PAKET ================= */
+
+.package-image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #f4f4f4;
+    padding: 15px;
+    cursor: zoom-in;
+}
+
+
+/* ================= CHART ================= */
+
+.chart-card {
+    background: #f7faf8;
+    border: 1px solid #e1e9e4;
+    border-radius: 24px;
+    padding: 30px;
+    height: 100%;
+}
+
+.chart-card h3 {
+    color: #173d29;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.chart-card p {
+    color: #6d7972;
+    margin-bottom: 20px;
+}
+
+.chart-card canvas {
+    display: block;
+    width: 100% !important;
+    height: 350px !important;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px) {
+
+    .package-image {
+        height: 250px;
+    }
+
+    .chart-card {
+        padding: 22px;
+    }
+
+    .chart-card canvas {
+        height: 300px !important;
+    }
+
+}
