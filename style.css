@@ -1,6 +1,6 @@
-/* =========================================================
+/* =====================================================
    GLOBAL
-========================================================= */
+===================================================== */
 
 html {
     scroll-behavior: smooth;
@@ -10,530 +10,418 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-    background: #fff;
+    color: #26352d;
+    background: #ffffff;
 }
 
 section {
-    scroll-margin-top: 75px;
+    scroll-margin-top: 80px;
+}
+
+img {
+    max-width: 100%;
 }
 
 .bg-hijau {
-    background: #176b3a;
-}
-
-.section-padding {
-    padding: 80px 0;
-}
-
-.section-light {
-    background: #f7f7f7;
+    background: #08733d;
 }
 
 
 
-/* =========================================================
+/* =====================================================
    NAVBAR
-========================================================= */
+===================================================== */
 
 .navbar {
-    min-height: 70px;
+    padding: 10px 0;
 }
 
 .navbar-logo {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
+    margin-right: 10px;
 }
 
-.navbar-brand {
-    font-weight: 700;
+.brand-text {
+    font-weight: 800;
+    font-size: 18px;
 }
 
-.nav-link {
-    margin-left: 10px;
-    transition: 0.3s;
+.navbar .nav-link {
+    color: rgba(255,255,255,.85);
+    font-weight: 600;
+    margin-left: 8px;
+    transition: .2s;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #ffd54f !important;
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffd45c;
 }
 
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero-section {
-    padding: 90px 0;
-
-    background: linear-gradient(
-        135deg,
-        #f4fff7,
-        #ffffff
-    );
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    color: white;
+    background:
+        linear-gradient(
+            135deg,
+            #075a30,
+            #08733d 55%,
+            #0b8b4c
+        );
 }
 
-.badge-kuliner {
+.hero-badge {
     display: inline-block;
-
-    background: #e3f4e9;
-    color: #176b3a;
-
     padding: 8px 15px;
-
     border-radius: 30px;
-
+    background: rgba(255,255,255,.14);
+    font-size: 14px;
     font-weight: 700;
-
     margin-bottom: 20px;
 }
 
-.hero-section h1 {
-    font-size: 55px;
+.hero-title {
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
 
-    line-height: 1.1;
-
-    font-weight: 800;
-
-    color: #176b3a;
-
-    margin-bottom: 20px;
+.hero-title span {
+    display: block;
+    color: #ffd45c;
 }
 
 .hero-text {
     font-size: 18px;
-
     line-height: 1.8;
-
-    max-width: 650px;
+    max-width: 680px;
+    color: rgba(255,255,255,.9);
 }
 
 .hero-buttons {
     display: flex;
-
     flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin: 25px 0;
-}
-
-.btn-hijau {
-    background: #176b3a;
-    color: white;
-}
-
-.btn-hijau:hover {
-    background: #0e512a;
-    color: white;
+    gap: 12px;
+    margin-top: 30px;
 }
 
 .hero-info {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 25px;
-
-    margin-top: 20px;
-
-    font-weight: 600;
+    margin-top: 30px;
+    color: rgba(255,255,255,.9);
 }
 
 .hero-info i {
-    color: #176b3a;
-
-    margin-right: 5px;
+    margin-right: 7px;
+    color: #ffd45c;
 }
 
 .hero-card {
+    padding: 45px 30px;
     text-align: center;
-
-    padding: 40px 25px;
-
-    background: white;
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.10);
+    border-radius: 30px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(10px);
 }
 
 .hero-logo {
-    width: 180px;
-
-    max-width: 100%;
-
-    margin-bottom: 20px;
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 25px;
 }
 
 .hero-card h3 {
-    color: #176b3a;
-
-    font-weight: 700;
-}
-
-
-
-/* =========================================================
-   SECTION TITLE
-========================================================= */
-
-.section-title {
-    text-align: center;
-
-    margin-bottom: 45px;
-}
-
-.section-title span {
-    color: #176b3a;
-
     font-weight: 800;
+}
 
+.hero-card p {
+    margin-bottom: 0;
+    color: rgba(255,255,255,.85);
+}
+
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    display: inline-block;
+    color: #08733d;
+    font-weight: 800;
     letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.section-title h2 {
-    font-size: 38px;
-
-    font-weight: 800;
-
-    margin: 8px 0 12px;
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    margin-bottom: 15px;
 }
 
-.section-title p {
-    color: #666;
+.section-heading p {
+    color: #69756f;
+    line-height: 1.7;
 }
 
 
 
-/* =========================================================
+/* =====================================================
    MENU
-========================================================= */
+===================================================== */
+
+.menu-section {
+    background: #ffffff;
+}
 
 .menu-buttons {
     display: flex;
-
-    flex-wrap: wrap;
-
     justify-content: center;
-
+    flex-wrap: wrap;
     gap: 10px;
-
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .menu-btn {
-    border: 2px solid #176b3a;
-
+    border: 2px solid #08733d;
     background: white;
-
-    color: #176b3a;
-
+    color: #08733d;
     padding: 11px 20px;
-
     border-radius: 30px;
-
     font-weight: 700;
-
     cursor: pointer;
-
-    transition: 0.3s;
+    transition: .2s;
 }
 
 .menu-btn:hover,
 .menu-btn.active {
-    background: #176b3a;
-
+    background: #08733d;
     color: white;
 }
 
-.menu-content-row {
-    display: flex;
-
-    align-items: stretch;
-
-    gap: 30px;
+.menu-display {
+    padding: 35px;
+    background: #f7faf8;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.07);
 }
 
-.menu-list-wrapper {
-    flex: 1;
-
-    background: white;
-
-    border-radius: 20px;
-
-    padding: 25px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.08);
-}
-
-.menu-list-wrapper h3 {
-    color: #176b3a;
-
-    font-weight: 800;
-
-    margin-bottom: 20px;
+.menu-display h3 {
+    color: #08733d;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 25px;
 }
 
 .menu-list {
-    list-style: none;
-
     padding: 0;
-
     margin: 0;
+    list-style: none;
 }
 
 .menu-list li {
     display: flex;
-
     justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 12px 0;
-
-    border-bottom: 1px solid #eee;
-}
-
-.menu-list li:last-child {
-    border-bottom: none;
+    align-items: center;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px dashed #d6ded9;
 }
 
 .menu-name {
+    color: #34433b;
     font-weight: 600;
+    line-height: 1.5;
 }
 
 .menu-price {
-    color: #176b3a;
-
+    color: #08733d;
     font-weight: 800;
-
+    white-space: nowrap;
     text-align: right;
 }
 
-.menu-group-title {
-    color: #176b3a;
-
-    font-size: 20px;
-
-    font-weight: 800;
-
-    margin: 25px 0 10px;
+.menu-group {
+    margin-bottom: 30px;
 }
 
-.menu-posters-wrapper {
-    flex: 1;
+.menu-group-title {
+    color: #d39a18;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
 
+.menu-posters {
     display: flex;
-
     flex-direction: column;
-
-    gap: 20px;
+    gap: 18px;
 }
 
 .menu-poster {
+    display: block;
     width: 100%;
-
-    max-height: 650px;
-
+    max-height: 700px;
     object-fit: contain;
-
-    background: #f4f4f4;
-
-    border-radius: 20px;
-
-    padding: 10px;
-
+    border-radius: 14px;
     cursor: zoom-in;
-
-    transition: 0.3s;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.08);
+    background: #f4f4f4;
+    transition: .25s;
 }
 
 .menu-poster:hover {
     transform: scale(1.015);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
 }
 
 
 
-/* =========================================================
+/* =====================================================
    PROMO
-========================================================= */
+===================================================== */
+
+.promo-section {
+    background: #f4f8f5;
+}
 
 .promo-card {
     height: 100%;
-
     padding: 35px;
-
     background: white;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.07);
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.07);
 }
 
 .promo-icon {
     width: 60px;
-
     height: 60px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    background: #e3f4e9;
-
-    color: #176b3a;
-
     border-radius: 50%;
-
-    font-size: 28px;
-
+    background: #08733d;
+    color: white;
+    font-size: 26px;
     margin-bottom: 20px;
 }
 
 .promo-card h3 {
     font-weight: 800;
-
-    color: #176b3a;
 }
 
-.promo-link {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    padding: 10px 18px;
-
-    border-radius: 30px;
-
-    background: #176b3a;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-.promo-link:hover {
-    background: #0e512a;
-
-    color: white;
+.promo-card p {
+    color: #69756f;
+    line-height: 1.7;
 }
 
 
 
-/* =========================================================
-   FACILITIES
-========================================================= */
+/* =====================================================
+   FASILITAS
+===================================================== */
+
+.fasilitas-section {
+    background: white;
+}
 
 .facility-card {
     height: 100%;
-
+    padding: 30px;
     text-align: center;
-
-    padding: 35px 25px;
-
+    border: 1px solid #e2e9e4;
     border-radius: 20px;
-
     background: white;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.07);
-
-    transition: 0.3s;
+    transition: .25s;
 }
 
 .facility-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
 .facility-card > i {
-    font-size: 42px;
-
-    color: #176b3a;
-
+    display: inline-flex;
+    width: 65px;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8f4ed;
+    color: #08733d;
+    font-size: 28px;
     margin-bottom: 18px;
-}
-
-.facility-emoji {
-    font-size: 42px;
-
-    margin-bottom: 18px;
-
-    line-height: 1;
 }
 
 .facility-card h3 {
+    font-size: 21px;
     font-weight: 800;
+}
 
-    margin-bottom: 12px;
+.facility-card p {
+    color: #69756f;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 
 
-/* =========================================================
-   PACKAGE
-========================================================= */
+/* =====================================================
+   PAKET
+===================================================== */
+
+.package-section {
+    background: #f4f8f5;
+}
 
 .package-card {
+    height: 100%;
+    overflow: hidden;
     background: white;
-
-    padding: 25px;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.08);
-}
-
-.package-card h3 {
-    color: #176b3a;
-
-    font-weight: 800;
-
-    text-align: center;
-
-    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
 .package-image-wrapper {
     position: relative;
-
     overflow: hidden;
-
-    border-radius: 15px;
+    background: #eeeeee;
 }
 
 .package-image {
     display: block;
-
     width: 100%;
-
     height: 500px;
-
     object-fit: contain;
-
     padding: 15px;
-
     background: #f4f4f4;
-
     cursor: zoom-in;
-
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .package-image:hover {
@@ -542,330 +430,207 @@ section {
 
 .image-hint {
     position: absolute;
-
+    right: 15px;
     bottom: 15px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background: rgba(0,0,0,0.7);
-
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(0,0,0,.65);
     color: white;
-
-    padding: 8px 15px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-
+    font-size: 12px;
     pointer-events: none;
 }
 
-
-
-/* =========================================================
-   ABOUT + CHART
-========================================================= */
-
-.about-text {
-    font-size: 17px;
-
-    line-height: 1.8;
+.package-content {
+    padding: 25px;
 }
 
-.chart-card {
-    padding: 30px;
-
-    background: white;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.08);
+.package-content h3 {
+    color: #08733d;
+    font-weight: 900;
 }
 
-.chart-card h3 {
-    color: #176b3a;
-
-    font-weight: 800;
-
-    text-align: center;
-
-    margin-bottom: 25px;
-}
-
-/*
-   PENTING:
-   Chart.js memakai wadah dengan tinggi yang jelas.
-   Ini mencegah grafik memanjang/berantakan.
-*/
-
-.chart-container {
-    position: relative;
-
-    width: 100%;
-
-    height: 350px;
-}
-
-.chart-container canvas {
-    width: 100% !important;
-
-    height: 100% !important;
-}
-
-
-
-/* =========================================================
-   REVIEW
-========================================================= */
-
-.review-card {
-    height: 100%;
-
-    padding: 35px 30px;
-
-    background: white;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.07);
-
-    text-align: center;
-
-    transition: 0.3s;
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-}
-
-.review-stars {
-    color: #f5b800;
-
-    font-size: 26px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 15px;
-}
-
-.review-card h3 {
-    color: #176b3a;
-
-    font-weight: 800;
-
-    margin-bottom: 15px;
-}
-
-.review-card p {
-    color: #555;
-
+.package-content p {
+    color: #69756f;
+    margin-bottom: 0;
     line-height: 1.7;
 }
 
-.review-link {
-    display: inline-block;
 
-    margin-top: 15px;
 
-    padding: 10px 18px;
+/* =====================================================
+   ABOUT
+===================================================== */
 
-    background: #176b3a;
-
-    color: white;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-    transition: 0.3s;
+.about-section {
+    background: white;
 }
 
-.review-link:hover {
-    background: #0e512a;
-
-    color: white;
+.about-section h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 25px;
 }
 
-.review-badge {
-    display: inline-block;
+.about-section p {
+    color: #69756f;
+    line-height: 1.8;
+}
 
-    margin-top: 15px;
+.about-chart-card {
+    padding: 30px;
+    background: #f7faf8;
+    border: 1px solid #e1e9e4;
+    border-radius: 24px;
+    height: 100%;
+}
 
-    padding: 8px 15px;
+.chart-header h3 {
+    color: #08733d;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
 
-    background: #e3f4e9;
+.chart-header p {
+    margin-bottom: 0;
+}
 
-    color: #176b3a;
+.chart-wrapper {
+    position: relative;
+    height: 360px;
+    margin-top: 25px;
+}
 
-    border-radius: 30px;
-
-    font-weight: 700;
+.chart-note {
+    font-size: 13px;
+    margin-top: 20px;
 }
 
 
 
-/* =========================================================
-   CONTACT
-========================================================= */
+/* =====================================================
+   KONTAK
+===================================================== */
+
+.contact-section {
+    background: #f4f8f5;
+}
 
 .contact-card {
     height: 100%;
-
+    padding: 30px;
     text-align: center;
-
-    padding: 30px 20px;
-
     background: white;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.07);
-}
-
-.contact-card.clickable {
-    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,.06);
 }
 
 .contact-card > i {
-    font-size: 38px;
-
-    color: #176b3a;
-
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    background: #e8f4ed;
+    color: #08733d;
+    border-radius: 50%;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
 .contact-card h3 {
     font-weight: 800;
-
-    margin-bottom: 15px;
 }
 
 .contact-card p {
-    color: #555;
+    color: #69756f;
+    line-height: 1.7;
 }
 
-.contact-link {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    color: #176b3a;
-
-    font-weight: 700;
-
-    text-decoration: none;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
+.address-button {
+    text-align: center;
+    margin-top: 35px;
 }
 
 
 
-/* =========================================================
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 
 .footer {
-    background: #123d26;
-
+    padding: 55px 0 30px;
+    background: #075a30;
     color: white;
-
-    padding: 50px 0 25px;
 }
 
-.footer-brand {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-.footer-brand img {
-    width: 70px;
-
-    height: 70px;
-
+.footer-logo {
+    width: 100px;
+    height: 100px;
     object-fit: contain;
+    margin-bottom: 15px;
 }
 
-.footer-brand h3 {
-    margin: 0;
+.footer h3 {
+    font-weight: 800;
 }
 
-.footer-brand p {
-    margin: 5px 0 0;
-
-    color: #d8eadf;
+.footer p {
+    color: rgba(255,255,255,.8);
 }
 
-.social-link {
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.footer-social a,
+.footer-social button {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
     color: white;
-
+    font-size: 20px;
     text-decoration: none;
-
-    margin-left: 15px;
-
-    background: transparent;
-
-    border: none;
-
-    font-size: 16px;
-}
-
-.social-link:hover {
-    color: #ffd54f;
-}
-
-.social-button {
+    transition: .2s;
     cursor: pointer;
 }
 
-.footer hr {
-    margin: 35px 0 20px;
-
-    border-color:
-        rgba(255,255,255,0.2);
+.footer-social a:hover,
+.footer-social button:hover {
+    background: #ffd45c;
+    color: #075a30;
 }
 
-.copyright {
-    text-align: center;
-
+.footer-copy {
     margin: 0;
-
-    color: #c7d8cd;
+    font-size: 13px;
 }
 
 
 
-/* =========================================================
-   IMAGE MODAL
-========================================================= */
+/* =====================================================
+   MODAL GAMBAR
+===================================================== */
 
 .image-modal {
     position: fixed;
-
     inset: 0;
-
     z-index: 9999;
 
     display: none;
-
     align-items: center;
-
     justify-content: center;
 
     padding: 30px;
 
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,.88);
 }
 
 .image-modal.show {
@@ -874,129 +639,88 @@ section {
 
 .modal-image {
     max-width: 95vw;
-
     max-height: 90vh;
+    width: auto;
+    height: auto;
 
     object-fit: contain;
 
     border-radius: 10px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
 }
 
 .modal-close {
     position: fixed;
-
     top: 20px;
-
     right: 25px;
 
     z-index: 10000;
 
-    width: 45px;
-
-    height: 45px;
+    width: 48px;
+    height: 48px;
 
     border: none;
-
     border-radius: 50%;
 
-    background: white;
+    background: rgba(255,255,255,.15);
+    color: white;
 
-    color: #111;
-
-    font-size: 30px;
-
+    font-size: 35px;
     line-height: 1;
 
     cursor: pointer;
 }
 
+.modal-close:hover {
+    background: rgba(255,255,255,.3);
+}
 
 
-/* =========================================================
+
+/* =====================================================
    RESPONSIVE
-========================================================= */
+===================================================== */
 
 @media (max-width: 991px) {
 
-    .hero-section h1 {
-        font-size: 45px;
+    .navbar .nav-link {
+        margin-left: 0;
     }
 
-    .menu-content-row {
-        flex-direction: column;
+    .hero-section {
+        padding: 80px 0;
     }
 
-    .menu-poster {
-        max-height: 600px;
+    .hero-card {
+        max-width: 500px;
+        margin: 0 auto;
     }
 
 }
 
 
-
-@media (max-width: 767px) {
+@media (max-width: 576px) {
 
     .section-padding {
-        padding: 60px 0;
+        padding: 65px 0;
     }
 
-    .hero-section {
-        padding: 60px 0;
+    .brand-text {
+        font-size: 14px;
     }
 
-    .hero-section h1 {
-        font-size: 38px;
+    .navbar-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-title {
+        font-size: 42px;
     }
 
     .hero-text {
         font-size: 16px;
-    }
-
-    .hero-info {
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-    }
-
-    .package-image {
-        height: 400px;
-    }
-
-    /*
-       Grafik lebih pendek di HP
-       supaya tidak terlalu tinggi.
-    */
-
-    .chart-container {
-        height: 300px;
-    }
-
-    .footer-brand {
-        justify-content: center;
-
-        text-align: center;
-    }
-
-    .text-md-end {
-        text-align: center !important;
-    }
-
-    .social-link {
-        margin: 5px;
-    }
-
-}
-
-
-
-@media (max-width: 500px) {
-
-    .hero-section h1 {
-        font-size: 32px;
     }
 
     .hero-buttons {
@@ -1007,30 +731,50 @@ section {
         width: 100%;
     }
 
-    .menu-buttons {
-        justify-content: stretch;
-    }
-
-    .menu-btn {
-        width: 100%;
-    }
-
-    .menu-list li {
+    .hero-info {
         flex-direction: column;
+        gap: 10px;
+    }
 
-        gap: 5px;
+    .menu-display {
+        padding: 20px;
+    }
+
+    .menu-display h3 {
+        font-size: 25px;
+    }
+
+    .menu-name {
+        max-width: 65%;
     }
 
     .menu-price {
-        text-align: left;
+        font-size: 12px;
+    }
+
+    .menu-poster {
+        max-height: 600px;
     }
 
     .package-image {
-        height: 350px;
+        height: 300px;
     }
 
-    .chart-container {
-        height: 260px;
+    .image-hint {
+        font-size: 11px;
+    }
+
+    .about-chart-card {
+        padding: 20px;
+    }
+
+    .chart-wrapper {
+        height: 300px;
+    }
+
+    .modal-image {
+        max-width: 96vw;
+        max-height: 85vh;
     }
 
 }
