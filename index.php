@@ -1,6 +1,10 @@
 <?php
 include "koneksi.php";
 
+/* =========================================================
+   PROSES FORM KONTAK
+   ========================================================= */
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nama = $_POST["nama"] ?? "";
@@ -20,11 +24,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $pesan
     );
 
-    mysqli_stmt_execute($stmt);
+    if (mysqli_stmt_execute($stmt)) {
+
+        echo "success";
+
+    } else {
+
+        echo "error";
+
+    }
+
     mysqli_stmt_close($stmt);
 
-    $pesanBerhasil = "Pesan berhasil disimpan.";
+    exit;
 }
+
+
+/* =========================================================
+   DATA DATABASE
+   ========================================================= */
 
 $query = mysqli_query($conn, "SELECT * FROM services LIMIT 1");
 $service = mysqli_fetch_assoc($query);
@@ -35,41 +53,68 @@ $statistik = [];
 while ($row = mysqli_fetch_assoc($queryStatistik)) {
     $statistik[] = $row;
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
         content="Bebek Gongso Kinanthi - Kuliner keluarga di Jomboran, Klaten">
 
-    <title>Bebek Gongso Kinanthi | Makan Enak, Kumpul Makin Asik</title>
+    <title>
+        Bebek Gongso Kinanthi | Makan Enak, Kumpul Makin Asik
+    </title>
 
-    <!-- Bootstrap -->
+
+    <!-- ================= BOOTSTRAP ================= -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
+
+    <!-- ================= BOOTSTRAP ICONS ================= -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
         rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- ================= CSS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-hijau shadow-sm">
+
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
+
+<nav
+    class="navbar navbar-expand-lg navbar-dark sticky-top bg-hijau shadow-sm">
 
     <div class="container">
 
-        <a class="navbar-brand d-flex align-items-center" href="#home">
+        <a
+            class="navbar-brand d-flex align-items-center"
+            href="#home">
+
             <img
                 src="assets/logo.png"
                 alt="Logo Bebek Gongso Kinanthi"
@@ -78,7 +123,9 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             <span class="brand-text">
                 Bebek Gongso Kinanthi
             </span>
+
         </a>
+
 
         <button
             class="navbar-toggler"
@@ -90,65 +137,124 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarNav">
 
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">
+
+                    <a
+                        class="nav-link active"
+                        href="#home">
+
                         Home
+
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#menu">
+
+                    <a
+                        class="nav-link"
+                        href="#menu">
+
                         Menu
+
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#promo">
+
+                    <a
+                        class="nav-link"
+                        href="#promo">
+
                         Promo
+
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#fasilitas">
+
+                    <a
+                        class="nav-link"
+                        href="#fasilitas">
+
                         Fasilitas & Area
+
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#paket">
+
+                    <a
+                        class="nav-link"
+                        href="#paket">
+
                         Paket
+
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#tentang">
+
+                    <a
+                        class="nav-link"
+                        href="#tentang">
+
                         Tentang
+
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#kontak">
+
+                    <a
+                        class="nav-link"
+                        href="#kontak">
+
                         Kontak
+
                     </a>
+
                 </li>
 
             </ul>
 
         </div>
+
     </div>
+
 </nav>
 
 
-<!-- ================= HOME ================= -->
-<section id="home" class="hero-section">
+<!-- =====================================================
+     HOME
+     ===================================================== -->
+
+<section
+    id="home"
+    class="hero-section">
 
     <div class="container">
 
         <div class="row align-items-center g-5">
+
 
             <div class="col-lg-7">
 
@@ -156,23 +262,39 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                     Kuliner Klaten
                 </span>
 
+
                 <h1 class="hero-title">
+
                     Makan Enak,
-                    <span>Kumpul Makin Asik</span>
+
+                    <span>
+                        Kumpul Makin Asik
+                    </span>
+
                 </h1>
 
+
                 <p class="hero-text">
-                    Nikmati berbagai pilihan menu mulai dari bebek, ayam,
-                    ikan, camilan, coffee, minuman hingga menu lain nya di
-                    Bebek Gongso Kinanthi.
+
+                    Nikmati berbagai pilihan menu mulai dari bebek,
+                    ayam, ikan, camilan, coffee, minuman hingga menu
+                    lain nya di Bebek Gongso Kinanthi.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <a href="#menu" class="btn btn-warning btn-lg">
+                    <a
+                        href="#menu"
+                        class="btn btn-warning btn-lg">
+
                         <i class="bi bi-journal-text"></i>
+
                         Lihat Menu
+
                     </a>
+
 
                     <button
                         type="button"
@@ -180,9 +302,11 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-outline-light btn-lg">
 
                         <i class="bi bi-whatsapp"></i>
+
                         Pesan Sekarang
 
                     </button>
+
 
                     <a
                         href="https://app.grab.com/s/gfFHQzP0"
@@ -191,22 +315,31 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-success btn-lg">
 
                         <i class="bi bi-bag-check-fill"></i>
+
                         Pesan di GrabFood
 
                     </a>
 
                 </div>
 
+
                 <div class="hero-info">
 
                     <div>
+
                         <i class="bi bi-clock-fill"></i>
+
                         Setiap hari 11.00–21.00 WIB
+
                     </div>
 
+
                     <div>
+
                         <i class="bi bi-geo-alt-fill"></i>
+
                         Jomboran, Klaten
+
                     </div>
 
                 </div>
@@ -223,9 +356,11 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         alt="Bebek Gongso Kinanthi"
                         class="hero-logo">
 
+
                     <h3>
                         Bebek Gongso Kinanthi
                     </h3>
+
 
                     <p>
                         Tempat makan, nongkrong,
@@ -243,10 +378,16 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= MENU ================= -->
-<section id="menu" class="section-padding menu-section">
+<!-- =====================================================
+     MENU
+     ===================================================== -->
+
+<section
+    id="menu"
+    class="section-padding menu-section">
 
     <div class="container">
+
 
         <div class="section-heading text-center">
 
@@ -254,13 +395,17 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                 PILIHAN MENU
             </span>
 
+
             <h2>
                 Menu Bebek Gongso Kinanthi
             </h2>
 
+
             <p>
+
                 Klik kategori menu untuk melihat
                 daftar makanan, harga, dan posternya.
+
             </p>
 
         </div>
@@ -268,46 +413,64 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
         <div class="menu-buttons">
 
+
             <button
                 type="button"
                 class="menu-btn active"
                 onclick="showMenu('bebek', this)">
+
                 🦆 Bebek
+
             </button>
+
 
             <button
                 type="button"
                 class="menu-btn"
                 onclick="showMenu('ayam', this)">
+
                 🍗 Ayam
+
             </button>
+
 
             <button
                 type="button"
                 class="menu-btn"
                 onclick="showMenu('lain', this)">
+
                 🍽️ Menu Lain
+
             </button>
+
 
             <button
                 type="button"
                 class="menu-btn"
                 onclick="showMenu('coffee', this)">
+
                 ☕ Coffee
+
             </button>
+
 
             <button
                 type="button"
                 class="menu-btn"
                 onclick="showMenu('camilan', this)">
+
                 🍟 Camilan
+
             </button>
+
 
             <button
                 type="button"
                 class="menu-btn"
                 onclick="showMenu('minuman', this)">
+
                 🥤 Minuman
+
             </button>
 
         </div>
@@ -320,16 +483,23 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= PROMO ================= -->
-<section id="promo" class="section-padding promo-section">
+<!-- =====================================================
+     PROMO
+     ===================================================== -->
+
+<section
+    id="promo"
+    class="section-padding promo-section">
 
     <div class="container">
+
 
         <div class="section-heading text-center">
 
             <span class="section-label">
                 PROMO
             </span>
+
 
             <h2>
                 Promo & Keuntungan
@@ -340,19 +510,25 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
         <div class="row g-4">
 
+
             <div class="col-md-6">
 
                 <div class="promo-card">
 
                     <div class="promo-icon">
+
                         <i class="bi bi-instagram"></i>
+
                     </div>
+
 
                     <h3>
                         Diskon 5%
                     </h3>
 
+
                     <p>
+
                         Dapatkan diskon 5% untuk pembelian
                         semua menu.
 
@@ -362,7 +538,9 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         <strong>@bebekgongsokinanthi</strong>,
                         lalu upload Instagram Story dan
                         mention akun kami.
+
                     </p>
+
 
                     <a
                         href="https://instagram.com/bebekgongsokinanthi"
@@ -371,6 +549,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-outline-success">
 
                         <i class="bi bi-instagram"></i>
+
                         Instagram
 
                     </a>
@@ -385,14 +564,19 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                 <div class="promo-card">
 
                     <div class="promo-icon">
+
                         <i class="bi bi-star-fill"></i>
+
                     </div>
+
 
                     <h3>
                         Free Ice Cream
                     </h3>
 
+
                     <p>
+
                         Berikan review di Google dan dapatkan
                         free ice cream.
 
@@ -400,7 +584,9 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
                         Ketentuan:
                         <strong>1 akun = 1 ice cream</strong>.
+
                     </p>
+
 
                     <a
                         href="https://maps.app.goo.gl/vMV2y6fyjAmCsqfk8"
@@ -409,6 +595,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-warning">
 
                         <i class="bi bi-google"></i>
+
                         Beri Review
 
                     </a>
@@ -424,10 +611,16 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= FASILITAS ================= -->
-<section id="fasilitas" class="section-padding fasilitas-section">
+<!-- =====================================================
+     FASILITAS
+     ===================================================== -->
+
+<section
+    id="fasilitas"
+    class="section-padding fasilitas-section">
 
     <div class="container">
+
 
         <div class="section-heading text-center">
 
@@ -435,14 +628,18 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                 FASILITAS & AREA
             </span>
 
+
             <h2>
                 Fasilitas & Area
             </h2>
 
+
             <p>
+
                 Nikmati berbagai fasilitas dan area
                 yang tersedia untuk membuat waktu
                 berkumpul semakin nyaman.
+
             </p>
 
         </div>
@@ -450,7 +647,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
         <div class="row g-4">
 
-            <!-- Indoor Outdoor -->
+
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -473,7 +670,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- VIP -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -496,7 +692,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Karaoke -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -519,7 +714,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Parkir -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -542,7 +736,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Acara -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -565,7 +758,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Refill -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -588,7 +780,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Nasi Box -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -611,7 +802,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Prasmanan -->
             <div class="col-md-6 col-lg-3">
 
                 <div class="facility-card">
@@ -640,10 +830,16 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= PAKET ================= -->
-<section id="paket" class="section-padding package-section">
+<!-- =====================================================
+     PAKET
+     ===================================================== -->
+
+<section
+    id="paket"
+    class="section-padding package-section">
 
     <div class="container">
+
 
         <div class="section-heading text-center">
 
@@ -651,13 +847,17 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                 PAKET
             </span>
 
+
             <h2>
                 Nasi Box & Prasmanan
             </h2>
 
+
             <p>
+
                 Cocok untuk acara keluarga, rapat,
                 gathering, dan berbagai acara lainnya.
+
             </p>
 
         </div>
@@ -665,7 +865,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
         <div class="row g-4">
 
-            <!-- Nasi Box -->
+
             <div class="col-lg-6">
 
                 <div class="package-card">
@@ -678,12 +878,17 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                             class="package-image"
                             onclick="openImage('assets/nasi-box.png')">
 
+
                         <div class="image-hint">
+
                             <i class="bi bi-zoom-in"></i>
+
                             Klik untuk memperbesar
+
                         </div>
 
                     </div>
+
 
                     <div class="package-content">
 
@@ -691,9 +896,12 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                             Nasi Box
                         </h3>
 
+
                         <p>
+
                             Pilihan nasi box untuk kebutuhan
                             acara kecil maupun besar.
+
                         </p>
 
                     </div>
@@ -703,7 +911,6 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Prasmanan -->
             <div class="col-lg-6">
 
                 <div class="package-card">
@@ -716,12 +923,17 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                             class="package-image"
                             onclick="openImage('assets/menu-prasmanan.png')">
 
+
                         <div class="image-hint">
+
                             <i class="bi bi-zoom-in"></i>
+
                             Klik untuk memperbesar
+
                         </div>
 
                     </div>
+
 
                     <div class="package-content">
 
@@ -729,9 +941,12 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                             Prasmanan
                         </h3>
 
+
                         <p>
+
                             Layanan prasmanan untuk berbagai
                             acara dan gathering.
+
                         </p>
 
                     </div>
@@ -747,12 +962,19 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= TENTANG ================= -->
-<section id="tentang" class="section-padding about-section">
+<!-- =====================================================
+     TENTANG
+     ===================================================== -->
+
+<section
+    id="tentang"
+    class="section-padding about-section">
 
     <div class="container">
 
+
         <div class="row g-5 align-items-center">
+
 
             <div class="col-lg-6">
 
@@ -760,24 +982,36 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                     TENTANG KAMI
                 </span>
 
-               <h2>
-    <?php echo $service['judul']; ?>
-</h2>
 
-<p>
-    <?php echo $service['deskripsi']; ?>
-</p>
+                <h2>
+
+                    <?php echo $service['judul']; ?>
+
+                </h2>
+
 
                 <p>
+
+                    <?php echo $service['deskripsi']; ?>
+
+                </p>
+
+
+                <p>
+
                     Kami menyediakan berbagai pilihan menu
                     seperti bebek, ayam, ikan, camilan,
                     coffee, minuman, dan menu lain nya.
+
                 </p>
 
+
                 <p>
+
                     Selain bisa kulineran, pelanggan juga
                     dapat menikmati fasilitas karaoke,
                     area indoor, outdoor, serta VIP/private room.
+
                 </p>
 
             </div>
@@ -787,11 +1021,13 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
                 <div class="about-chart-card">
 
+
                     <div class="chart-header">
 
                         <h3>
                             Jumlah Menu
                         </h3>
+
 
                         <p>
                             Data menu berdasarkan kategori
@@ -799,15 +1035,19 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
                     </div>
 
+
                     <div class="chart-wrapper">
 
                         <canvas id="menuChart"></canvas>
 
                     </div>
 
+
                     <p class="chart-note">
+
                         Data grafik saat ini menggunakan
                         data statis untuk kebutuhan website.
+
                     </p>
 
                 </div>
@@ -821,10 +1061,16 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= KONTAK ================= -->
-<section id="kontak" class="section-padding contact-section">
+<!-- =====================================================
+     KONTAK
+     ===================================================== -->
+
+<section
+    id="kontak"
+    class="section-padding contact-section">
 
     <div class="container">
+
 
         <div class="section-heading text-center">
 
@@ -832,108 +1078,164 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                 KONTAK
             </span>
 
+
             <h2>
                 Hubungi Kami
             </h2>
 
-        </div>
 
-        <!-- FORM KONTAK -->
-<div class="row justify-content-center mt-4">
+            <!-- PESAN BERHASIL -->
 
-    <div class="col-lg-8">
+            <div
+                id="pesanBerhasil"
+                class="alert alert-success text-center mt-4 d-none"
+                role="alert">
 
-        <div class="contact-form">
+                <i class="bi bi-check-circle-fill"></i>
 
-            <form method="POST" action="index.php">
+                Pesan berhasil disimpan.
 
-                <div class="mb-3">
-
-                    <label for="nama" class="form-label">
-                        Nama
-                    </label>
-
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="nama"
-                        name="nama"
-                        placeholder="Masukkan nama"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="mb-3">
-
-                    <label for="email" class="form-label">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Masukkan email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="mb-3">
-
-                    <label for="pesan" class="form-label">
-                        Pesan
-                    </label>
-
-                    <textarea
-                        class="form-control"
-                        id="pesan"
-                        name="pesan"
-                        rows="5"
-                        placeholder="Tulis pesan kamu..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="btn btn-success"
-                >
-                    Kirim Pesan
-                </button>
-
-            </form>
+            </div>
 
         </div>
 
-    </div>
 
-</div>
+        <!-- ================= FORM KONTAK ================= -->
 
+        <div class="row justify-content-center mt-4">
+
+            <div class="col-lg-8">
+
+                <div class="contact-form">
+
+
+                    <form
+                        method="POST"
+                        action="index.php"
+                        id="contactForm">
+
+
+                        <!-- NAMA -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="nama"
+                                class="form-label">
+
+                                Nama
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nama"
+                                name="nama"
+                                placeholder="Masukkan nama"
+                                required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="email"
+                                class="form-label">
+
+                                Email
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="Masukkan email"
+                                required>
+
+                        </div>
+
+
+                        <!-- PESAN -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="pesan"
+                                class="form-label">
+
+                                Pesan
+
+                            </label>
+
+
+                            <textarea
+                                class="form-control"
+                                id="pesan"
+                                name="pesan"
+                                rows="5"
+                                placeholder="Tulis pesan kamu..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <!-- TOMBOL -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-success">
+
+                            Kirim Pesan
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             INFO KONTAK
+             ================================================= -->
 
         <div class="row g-4">
 
-            <!-- Alamat -->
+
+            <!-- ALAMAT -->
+
             <div class="col-md-6">
 
                 <div class="contact-card">
 
+
                     <i class="bi bi-geo-alt-fill"></i>
+
 
                     <h3>
                         Alamat
                     </h3>
 
+
                     <p>
+
                         Krajan Jomboran, Klaten Tengah,
                         Klaten, Jawa Tengah 57418
+
                     </p>
+
 
                     <a
                         href="https://www.google.com/maps/search/?api=1&query=Bebek%20Gongso%20Kinanthi%2C%20Krajan%20Jomboran%2C%20Klaten%20Tengah%2C%20Klaten%2C%20Jawa%20Tengah%2057418"
@@ -942,6 +1244,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-outline-success">
 
                         <i class="bi bi-map-fill"></i>
+
                         Buka Lokasi di Google Maps
 
                     </a>
@@ -951,21 +1254,27 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Jam -->
+            <!-- JAM -->
+
             <div class="col-md-6">
 
                 <div class="contact-card">
 
+
                     <i class="bi bi-clock-fill"></i>
+
 
                     <h3>
                         Jam Buka
                     </h3>
 
+
                     <p>
+
                         Setiap hari
                         <br>
                         11.00–21.00 WIB
+
                     </p>
 
                 </div>
@@ -973,22 +1282,29 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- WhatsApp -->
+            <!-- WHATSAPP -->
+
             <div class="col-md-6">
 
                 <div class="contact-card">
 
+
                     <i class="bi bi-whatsapp"></i>
+
 
                     <h3>
                         WhatsApp
                     </h3>
 
+
                     <p>
+
                         0812-2695-6567
                         <br>
                         0813-9869-925
+
                     </p>
+
 
                     <button
                         type="button"
@@ -996,6 +1312,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-success">
 
                         <i class="bi bi-whatsapp"></i>
+
                         Chat WhatsApp
 
                     </button>
@@ -1005,20 +1322,25 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
             </div>
 
 
-            <!-- Grab -->
+            <!-- GRABFOOD -->
+
             <div class="col-md-6">
 
                 <div class="contact-card">
 
+
                     <i class="bi bi-bag-check-fill"></i>
+
 
                     <h3>
                         GrabFood
                     </h3>
 
+
                     <p>
                         Pesan makanan melalui GrabFood.
                     </p>
+
 
                     <a
                         href="https://app.grab.com/s/gfFHQzP0"
@@ -1027,6 +1349,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
                         class="btn btn-success">
 
                         <i class="bi bi-bag-check-fill"></i>
+
                         Buka GrabFood
 
                     </a>
@@ -1042,19 +1365,25 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
 <footer class="footer">
 
     <div class="container text-center">
+
 
         <img
             src="assets/logo.png"
             alt="Bebek Gongso Kinanthi"
             class="footer-logo">
 
+
         <h3>
             Bebek Gongso Kinanthi
         </h3>
+
 
         <p>
             Makan Enak, Kumpul Makin Asik
@@ -1062,6 +1391,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
 
         <div class="footer-social">
+
 
             <a
                 href="https://instagram.com/bebekgongsokinanthi"
@@ -1073,6 +1403,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
             </a>
 
+
             <a
                 href="https://app.grab.com/s/gfFHQzP0"
                 target="_blank"
@@ -1083,6 +1414,7 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
             </a>
 
+
             <button
                 type="button"
                 onclick="pilihWhatsApp()"
@@ -1092,12 +1424,15 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 
             </button>
 
+
         </div>
 
 
         <p class="footer-copy">
+
             © 2026 Bebek Gongso Kinanthi.
             All Rights Reserved.
+
         </p>
 
     </div>
@@ -1105,18 +1440,25 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </footer>
 
 
-<!-- ================= MODAL GAMBAR ================= -->
+<!-- =====================================================
+     MODAL GAMBAR
+     ===================================================== -->
+
 <div
     id="imageModal"
     class="image-modal"
     onclick="closeImage(event)">
 
+
     <button
         type="button"
         class="modal-close"
         onclick="closeImage(event)">
+
         &times;
+
     </button>
+
 
     <img
         id="modalImage"
@@ -1128,18 +1470,169 @@ while ($row = mysqli_fetch_assoc($queryStatistik)) {
 </div>
 
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- =====================================================
+     BOOTSTRAP JS
+     ===================================================== -->
 
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-    const statistikData = <?php echo json_encode($statistik); ?>;
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
-<!-- JavaScript -->
+
+<!-- =====================================================
+     CHART.JS
+     ===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/chart.js">
+</script>
+
+
+<script>
+
+    const statistikData =
+        <?php echo json_encode($statistik); ?>;
+
+</script>
+
+
+<!-- =====================================================
+     JAVASCRIPT UTAMA
+     ===================================================== -->
+
 <script src="script.js"></script>
 
+
+<!-- =====================================================
+     AJAX FORM KONTAK
+     ===================================================== -->
+
+<script>
+
+document
+    .getElementById("contactForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const form = this;
+
+        const tombol =
+            form.querySelector(
+                "button[type='submit']"
+            );
+
+        const pesanBerhasil =
+            document.getElementById(
+                "pesanBerhasil"
+            );
+
+
+        /* Sembunyikan pesan sebelumnya */
+
+        pesanBerhasil.classList.add("d-none");
+
+
+        /* Ubah tombol */
+
+        tombol.disabled = true;
+
+        tombol.innerHTML =
+            '<span class="spinner-border spinner-border-sm me-2"></span>' +
+            'Mengirim...';
+
+
+        /* Ambil data form */
+
+        const formData =
+            new FormData(form);
+
+
+        /* Kirim ke PHP tanpa reload */
+
+        fetch("index.php", {
+
+            method: "POST",
+
+            body: formData
+
+        })
+
+
+        .then(function(response) {
+
+            return response.text();
+
+        })
+
+
+        .then(function(data) {
+
+            if (data.trim() === "success") {
+
+
+                /* Tampilkan pesan berhasil */
+
+                pesanBerhasil.classList.remove(
+                    "d-none"
+                );
+
+
+                /* Kosongkan form */
+
+                form.reset();
+
+
+                /* Kembalikan tombol */
+
+                tombol.disabled = false;
+
+                tombol.innerHTML =
+                    "Kirim Pesan";
+
+
+            } else {
+
+
+                alert(
+                    "Pesan gagal disimpan."
+                );
+
+
+                tombol.disabled = false;
+
+                tombol.innerHTML =
+                    "Kirim Pesan";
+
+            }
+
+        })
+
+
+        .catch(function(error) {
+
+
+            console.error(error);
+
+
+            alert(
+                "Terjadi kesalahan saat mengirim pesan."
+            );
+
+
+            tombol.disabled = false;
+
+            tombol.innerHTML =
+                "Kirim Pesan";
+
+        });
+
+    });
+
+</script>
+
+
 </body>
+
 </html>
